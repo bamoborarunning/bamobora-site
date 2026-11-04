@@ -504,6 +504,58 @@ html[data-page="events"] .hp-intro b{color:var(--tijolo)}
 .pd__moreh{margin:0 0 28px;font-family:var(--photo);font-weight:700;font-size:clamp(24px,2.2vw,34px);text-transform:uppercase}
 .more .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
 @media (max-width:900px){.more .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* ---------- mobile ---------- */
+.mbtn{display:none;background:none;border:0;padding:6px 0;cursor:pointer;color:inherit;font-family:var(--photo);font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.mpanel{position:fixed;left:0;right:0;top:64px;bottom:0;z-index:48;background:var(--ground);color:var(--ink);display:flex;flex-direction:column;gap:6px;padding:28px max(16px,env(safe-area-inset-left,0px)) calc(28px + env(safe-area-inset-bottom,0px));overflow-y:auto}
+.mpanel[hidden]{display:none}
+.hdr .mpanel{align-items:flex-start;justify-content:flex-start;text-align:left}
+.hdr .mpanel a{margin:0;padding:0;opacity:1;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(46px,14vw,72px);line-height:.92;letter-spacing:-.01em}
+.hdr .mpanel a.mpanel__s{margin-top:auto;font-family:var(--photo);font-weight:500;font-size:13px;letter-spacing:.16em;border-bottom:1px solid currentColor;align-self:flex-start;padding-bottom:3px}
+html.m-open{overflow:hidden}
+html.m-open .hdr{background:var(--ground)!important;color:var(--ink)!important}
+@media (max-width:760px){
+  .mbtn{display:block}
+  .hdr nav.spread{grid-template-columns:auto auto!important;gap:22px!important;justify-content:end;justify-items:end}
+  .hdr nav.spread>a{display:none!important}
+  .mega{display:none!important}
+}
+@media (max-width:640px){
+  /* readable text: no justified gaps on narrow screens */
+  .sx-txt p.big,.sx-txt h2.big,.shop-intro{text-align:left!important;-webkit-hyphens:manual!important;hyphens:manual!important}
+  .sx-txt p.big,.sx-txt h2.big,.shop-intro{font-size:22px!important;line-height:1.16!important}
+  .pd__big{font-size:24px;margin-top:44px}
+  /* collection cards: name on one line, price under, coming-soon label at the bottom */
+  .sc__meta{flex-direction:column;gap:2px;font-size:10px;letter-spacing:.1em}
+  .sc .soon-stamp{top:auto;bottom:34px;font-size:10px}
+  .shop-grid{gap:4px;padding:4px}
+  .card__meta{flex-direction:column;gap:6px}
+  .card__name{font-size:24px}
+  .more .grid{gap:4px}
+  /* product page */
+  .car{aspect-ratio:4/5}
+  .car img:not(.full){transform:scale(1.45)}
+  .car__btn{font-size:44px;padding:6px 8px}
+  .car__bars i{width:40px}
+  .pd__buy h1{font-size:60px}
+  .pd__buy .sizes{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+  .pd__buy .sizes button{min-width:0;padding:16px 4px}
+  .pd__pills span{padding:8px 10px;font-size:11px}
+  .pd__acc summary{font-size:20px;padding:20px 0}
+  .pd__acc .body{padding:0 0 22px;font-size:16px}
+  .wx span,.temp__s{font-size:10px}
+  /* picks and footer spacing */
+  .pk h3{font-size:20px}
+  .picks{padding-block:24px 56px}
+  .ftr{padding-block:56px calc(40px + env(safe-area-inset-bottom,0px))!important;gap:26px 20px!important}
+  .sx-join{padding-bottom:40px}
+  .stick-buy{padding:12px 14px}
+  /* training division */
+  .td-cities{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .td-cities button{min-width:0;padding:18px 6px;font-size:13px}
+  .td-cities small{font-size:9px}
+  /* yard takeovers */
+  .hp-grid{row-gap:30px}
+}
 /* collection mega menu */
 .mega{position:fixed;left:0;right:0;z-index:49;background:var(--ground);color:var(--ink);border-bottom:1px solid var(--line)}
 .mega[hidden]{display:none}
@@ -628,9 +680,18 @@ body:has(.hdr.over) .stick-buy{opacity:0;pointer-events:none}
     <a href="#prints" class="opt">Prints</a>
     <a href="#events" class="opt">Yard Takeovers</a>
     <a href="#training-division" class="opt">Training Division</a>
+    <button type="button" class="mbtn" id="mbtn" aria-expanded="false" aria-controls="mpanel" data-pt="Menu">Menu</button>
     <div class="hdr__end"><span class="langs" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="pt" aria-pressed="false">PT</button></span><a href="#collection" aria-label="Bag" data-pt-aria-label="Cesto"><span data-pt="Cesto">Bag</span><span class="bagcount" id="bag">0</span></a></div>
   </nav>
   <div class="mega" id="mega" hidden><div class="mega__in pad"><ul class="mega__lead"><li><a href="#collection/new" data-pt="Novidades">New arrivals</a></li><li><a href="#collection" data-pt="Coleção #001">Collection #001</a></li><li><a href="#collection/t38">38°41′N</a></li><li><a href="#collection/bora">BORA</a></li><li><a href="#collection" data-pt="Ver tudo">Shop all</a></li></ul><div><h4 data-pt="Vestuário">Apparel</h4><ul><li><a href="#collection/tees" data-pt="T-shirts">Tees</a></li><li><a href="#collection/perf" data-pt="T-shirts de performance">Performance tees</a></li><li><a href="#collection/shorts" data-pt="Calções">Shorts</a></li><li><a href="#collection/apparel" data-pt="Tudo">All</a></li></ul></div><div><h4 data-pt="Acessórios">Accessories</h4><ul><li><a href="#collection/socks" data-pt="Meias">Socks</a></li><li><a href="#collection/accessories" data-pt="Tudo">All</a></li></ul></div><div><h4 data-pt="Mais">More</h4><ul><li><a href="#prints">Prints</a></li><li><a href="#training-division">Training Division</a></li><li><a href="#events">Yard Takeovers</a></li></ul></div><a class="mega__img" href="#collection/new"><img src="img/run-duo-white-wall.jpg" alt="" loading="lazy"><span data-pt="Novidades">New<br>arrivals</span></a></div></div>
+  <nav class="mpanel" id="mpanel" aria-label="Menu" hidden>
+    <a href="#home" data-pt="Início">Home</a>
+    <a href="#collection" data-pt="Coleção">Collection</a>
+    <a href="#prints">Prints</a>
+    <a href="#events">Yard Takeovers</a>
+    <a href="#training-division">Training Division</a>
+    <a href="#signup" class="mpanel__s" data-pt="Junta-te ao coletivo">Join the collective</a>
+  </nav>
 </header>
 
 <main>
@@ -779,7 +840,7 @@ body:has(.hdr.over) .stick-buy{opacity:0;pointer-events:none}
   };
   var PT={"tee-nata": {"variant_pt": "Nata", "sub_pt": "Nata · Edição de 30", "alt_pt": "Tee #001 em Nata, branco-sujo com um pequeno logótipo cinzento no peito", "story_pt": ["A primeira. Branco-sujo, pesada e quase silenciosa: um logótipo cinzento que só se lê de perto.", "Nata é a cor do papel onde imprimimos e do leite no galão das 10h, depois da corrida. É a t-shirt que vestes da partida às 07:30 até ao café, e depois para tudo o resto.", "Foram feitas trinta, cada uma numerada na etiqueta interior. Quando acabarem, esta cor da #001 acabou."], "material_pt": [["Tecido", "100% algodão"], ["Gramagem", "230 g/m², heavyweight"], ["Corte", "Largo, boxy, unissexo"], ["Estampado", "Logótipo cinzento tom sobre tom, peito"], ["Etiqueta", "Numerada, com curadoria de artistas locais"], ["Edição", "30 peças"]], "care_pt": ["Lavar a 30°C, do avesso, com cores semelhantes.", "Não usar máquina de secar. Secar na horizontal para manter a forma.", "Passar a ferro do avesso, nunca sobre o estampado."]}, "tee-asfalto": {"variant_pt": "Asfalto", "sub_pt": "Asfalto · Edição de 30", "alt_pt": "Tee #001 em Asfalto, preta com um pequeno logótipo creme no peito", "story_pt": ["A mesma t-shirt, depois de anoitecer. Asfalto é a estrada debaixo das corridas longas e a tinta com que escrevemos o manifesto.", "Algodão heavyweight preto com um pequeno logótipo creme que apanha a luz dos candeeiros. Para corridas noturnas, jantares longos e o caminho para casa.", "Foram feitas trinta, cada uma numerada na etiqueta interior. Sem reposição."], "material_pt": [["Tecido", "100% algodão"], ["Gramagem", "230 g/m², heavyweight"], ["Corte", "Largo, boxy, unissexo"], ["Estampado", "Logótipo creme, peito"], ["Etiqueta", "Numerada, com curadoria de artistas locais"], ["Edição", "30 peças"]], "care_pt": ["Lavar a 30°C, do avesso, com cores escuras.", "Não usar máquina de secar. Secar na horizontal para manter a forma.", "Passar a ferro do avesso, nunca sobre o estampado."]}, "sock-sorriso": {"variant_pt": "Branco", "sub_pt": "Meia de performance · Branco", "alt_pt": "Meia Sorriso, branca com um sorriso vermelho a derreter", "story_pt": ["Um sorriso que derrete. Lisboa em agosto, o asfalto a 40 graus e o grupo a aparecer às 07:30 na mesma.", "Malha de performance branca, sorriso vermelho em jacquard, o nosso BB no punho e Made in Portugal debaixo do pé. Feita para as longas, usada no café a seguir.", "Mantém o sorriso até ao quilómetro 18."], "material_pt": [["Composição", "67% poliamida, 29% poliéster, 4% elastano"], ["Malha", "Performance, respirável"], ["Altura", "Média (crew)"], ["Detalhes", "Sorriso em jacquard, BB no punho, letras na sola"], ["Origem", "Feita em Portugal"]], "care_pt": ["Lavar a 30°C, do avesso.", "Sem amaciador: bloqueia as fibras que afastam o suor.", "Não usar máquina de secar."]}, "sock-cereja": {"variant_pt": "Amarelo", "sub_pt": "Meia de performance · Amarelo", "alt_pt": "Meia Cereja, amarelo-clara com duas cerejas vermelhas", "story_pt": ["Junho no norte é cerejas em todas as bancas do mercado, vendidas ao quilo em cartuchos de papel.", "Malha de performance amarelo-clara com duas cerejas vermelhas, o nosso BB no punho e Made in Portugal debaixo do pé. O verão por fora, a parte técnica por dentro.", "A recompensa depois da corrida."], "material_pt": [["Composição", "67% poliamida, 29% poliéster, 4% elastano"], ["Malha", "Performance, respirável"], ["Altura", "Média (crew)"], ["Detalhes", "Cerejas em jacquard, BB no punho, letras na sola"], ["Origem", "Feita em Portugal"]], "care_pt": ["Lavar a 30°C, do avesso.", "Sem amaciador: bloqueia as fibras que afastam o suor.", "Não usar máquina de secar."]}};
   Object.keys(PT).forEach(function(k){var x=PT[k];for(var f in x)P[k][f]=x[f];});
-  ["tee-nata","tee-asfalto","sock-sorriso","sock-cereja"].forEach(function(k){var p=P[k]; p.card=p.img.replace(".jpg","-card.jpg"); p.extra=[p.d1,p.d2];});
+  ["tee-nata","tee-asfalto","sock-sorriso","sock-cereja"].forEach(function(k){var p=P[k]; p.card=p.img.replace(".jpg","-card.jpg"); p.extra=[p.d1,p.d2,p.img.replace(".jpg","-detail-a.jpg")];});
   P["tee-nata"].img=P["tee-nata"].card="img/tee-nata-v2.jpg"; P["tee-asfalto"].img=P["tee-asfalto"].card="img/tee-asfalto-v2.jpg";
   var NEW={"bora-nata": {"name": "BORA Tee", "variant": "Nata", "variant_pt": "Nata", "group": "bora", "swatch": "#f6f6e6", "sub": "Nata · Collection #001", "sub_pt": "Nata · Coleção #001", "img": "img/bora-nata.jpg", "card": "img/bora-nata.jpg", "defaultSize": "M", "alt": "BORA Tee in Nata, back print: BORA in Asfalto over a blue halftone ring", "alt_pt": "BORA Tee em Nata, estampado nas costas: BORA em Asfalto sobre um anel azul em meio-tom", "story": ["BORA. Portuguese expression meaning moving forward.", "If you are reading this, keep pushing your limits. Always."], "story_pt": ["BORA. Expressão portuguesa que quer dizer seguir em frente.", "Se estás a ler isto, continua a puxar pelos teus limites. Sempre."]}, "t38-asfalto": {"name": "38°41′N Tee", "variant": "Asfalto", "variant_pt": "Asfalto", "group": "t38", "swatch": "#161616", "sub": "Asfalto · Collection #001", "sub_pt": "Asfalto · Coleção #001", "img": "img/t38-asfalto.jpg", "card": "img/t38-asfalto.jpg", "defaultSize": "M", "alt": "38°41′N Tee in Asfalto, back print: the coordinates over a red horse", "alt_pt": "38°41′N Tee em Asfalto, estampado nas costas: as coordenadas sobre um cavalo vermelho", "story": ["Art, culture and fashion live deep inside the heart of the unadapted individuals.", "Run with identity. Rooted in Portugal."], "story_pt": ["Arte, cultura e moda vivem bem dentro do coração dos inadaptados.", "Corre com identidade. Com raízes em Portugal."]}, "t38-nata": {"name": "38°41′N Tee", "variant": "Nata", "variant_pt": "Nata", "group": "t38", "swatch": "#f6f6e6", "sub": "Nata · Collection #001", "sub_pt": "Nata · Coleção #001", "img": "img/t38-nata.jpg", "card": "img/t38-nata.jpg", "defaultSize": "M", "alt": "38°41′N Tee in Nata, back print: red coordinates over a grey horse", "alt_pt": "38°41′N Tee em Nata, estampado nas costas: coordenadas vermelhas sobre um cavalo cinzento", "story": ["Art, culture and fashion live deep inside the heart of the unadapted individuals.", "Run with identity. Rooted in Portugal."], "story_pt": ["Arte, cultura e moda vivem bem dentro do coração dos inadaptados.", "Corre com identidade. Com raízes em Portugal."]}, "perf-white": {"name": "Performance Tee", "variant": "White", "variant_pt": "Branco", "group": "perf", "swatch": "#ffffff", "sub": "White · Collection #001", "sub_pt": "Branco · Coleção #001", "img": "img/perf-white.jpg", "card": "img/perf-white.jpg", "defaultSize": "M", "alt": "Performance Tee in white with a small red BAMOBORA tab at the hem", "alt_pt": "Performance Tee branca com uma pequena etiqueta BAMOBORA vermelha na bainha"}, "short-brown": {"name": "Ribbed Short", "variant": "Brown", "variant_pt": "Castanho", "group": "short", "swatch": "#7a6d63", "sub": "Brown · Collection #001", "sub_pt": "Castanho · Coleção #001", "img": "img/short-brown.jpg", "card": "img/short-brown.jpg", "defaultSize": "M", "alt": "Ribbed Short in brown with a black drawcord and BAMOBORA tab", "alt_pt": "Ribbed Short castanho com cordão preto e etiqueta BAMOBORA"}, "short-grey": {"name": "Ribbed Short", "variant": "Grey", "variant_pt": "Cinzento", "group": "short", "swatch": "#6e6e6e", "sub": "Grey · Collection #001", "sub_pt": "Cinzento · Coleção #001", "img": "img/short-grey.jpg", "card": "img/short-grey.jpg", "defaultSize": "M", "alt": "Ribbed Short in grey with a black drawcord and BAMOBORA tab", "alt_pt": "Ribbed Short cinzento com cordão preto e etiqueta BAMOBORA"}, "short-black": {"name": "Ribbed Short", "variant": "Black", "variant_pt": "Preto", "group": "short", "swatch": "#1c1c1c", "sub": "Black · Collection #001", "sub_pt": "Preto · Coleção #001", "img": "img/short-black.jpg", "card": "img/short-black.jpg", "defaultSize": "M", "alt": "Ribbed Short in black with a red BAMOBORA tab", "alt_pt": "Ribbed Short preto com etiqueta BAMOBORA vermelha"}};
   Object.keys(NEW).forEach(function(k){var x=NEW[k]; x.soon=1; x.sizes=TEE_SIZES; x.extra=[1,2,3].map(function(i){return "img/"+k+"-c"+i+".jpg";}); x.d1=x.extra[0]; x.d2=x.extra[1]; P[k]=x;});
@@ -966,6 +1027,16 @@ body:has(.hdr.over) .stick-buy{opacity:0;pointer-events:none}
     window.addEventListener("hashchange",close);
   })();
   renderPicks();
+  (function(){ var b=document.getElementById("mbtn"), m=document.getElementById("mpanel"); if(!b||!m) return;
+    function set(o){ m.hidden=!o; b.setAttribute("aria-expanded",String(o)); document.documentElement.classList.toggle("m-open",o); b.textContent=o?(LANG==="pt"?"Fechar":"Close"):(LANG==="pt"?"Menu":"Menu"); }
+    b.addEventListener("click",function(){ set(m.hidden); });
+    m.addEventListener("click",function(e){ if(e.target.closest("a")) set(false); });
+    document.addEventListener("keydown",function(e){ if(e.key==="Escape"&&!m.hidden) set(false); });
+    window.addEventListener("resize",function(){ if(innerWidth>760&&!m.hidden) set(false); });
+  })();
+  (function(){ var sx=null; document.getElementById("pdp").addEventListener("touchstart",function(e){ if(e.target.closest(".car")) sx=e.touches[0].clientX; },{passive:true});
+    document.getElementById("pdp").addEventListener("touchend",function(e){ if(sx===null) return; var dx=e.changedTouches[0].clientX-sx; sx=null; if(Math.abs(dx)<35) return; var btn=document.querySelector(dx<0?".car__next":".car__prev"); if(btn) btn.click(); });
+  })();
   window.addEventListener("hashchange",route); route(); setLang(LANG,false);
   function over(){ var home=document.querySelector('[data-view="home"]'), hero=document.querySelector(".sx-hero");
     var on=!home.hidden && hero && window.scrollY < hero.offsetHeight-70; hdr.classList.toggle("over",!!on); }
