@@ -616,6 +616,12 @@ html.on-coll:not(.pt) .hdr.menu-open .lg-a,html.on-coll:not(.pt) .hdr.menu-open 
 .tdc__info{margin:12px 0 0;font-family:var(--text);font-size:14px;line-height:1.45;color:var(--muted)}
 .tdc__rsvp{display:block;margin-top:14px;padding:14px 10px;text-align:center;background:var(--asfalto);color:var(--paper);font-family:var(--photo);font-weight:500;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
 .tdc__rsvp:hover{background:var(--tijolo)}
+/* Luma-driven card: the event's Luma cover is the poster */
+.tp--luma{aspect-ratio:1/1;background:#1e1e1e}
+.tp--luma img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.tp--wait{aspect-ratio:1/1;background:var(--panel);animation:tdpulse 1.4s ease-in-out infinite}
+@keyframes tdpulse{50%{opacity:.55}}
+.tdc__info{white-space:normal}
 html.pt .tdc__rsvp{background:var(--paper);color:var(--asfalto)}
 html.pt .tdc__rsvp:hover{background:var(--tijolo);color:var(--paper)}
 /* info pages */
@@ -959,37 +965,48 @@ body:has(.hdr.over) .stick-buy{opacity:0;pointer-events:none}
   function tdSoon(c){ var t=SOON[LANG], name=c[LANG], up=name.toUpperCase(), fs=Math.min(44,250/up.length), bg=""; for(var i=0;i<5;i++) bg+='<span'+(i%2?' class="o"':'')+'>'+esc(up)+'</span>';
     return '<article class="tdc tdc--soon"><div class="tp" style="--fs:'+fs.toFixed(1)+'cqw"><div class="tp__bg" aria-hidden="true">'+bg+'</div><div class="tp__txt"><div class="r sp"><span>BAMOBORA</span><span>'+esc(up)+'</span></div><div class="r c"><span class="ov">'+t.lab+'</span></div><div class="r sp"><span>Training</span><b>Division</b></div></div></div>'+
       '<h3>Training Division · '+esc(name)+'</h3><p class="tdc__when">'+t.lab+'</p><p class="tdc__where">'+t.line+'</p><a class="tdc__rsvp" href="#signup">'+t.cta+'</a></article>'; }
-  var TD={en:{every:"Every",day:"Saturday",day1:"Saturday",km:"KM",paces:"Pace groups",meet:"Meet",at:"at",run:"Run",point:"Meeting point · TBA",coffee:"Coffee",after:"After",where:"Meeting point to be announced, ",details:"View details",share:"Share",rsvp:"RSVP",more:"5 km in pace groups, each with its own pacer, led by a host. Meet at 08:15, run at 08:30, café after. Places are limited: RSVP to get the meeting point.",copied:"Link copied"},
-            pt:{every:"Todos os",day:"Sábados",day1:"Sábado",km:"KM",paces:"Grupos por ritmo",meet:"Encontro",at:"às",run:"Corrida",point:"Ponto de encontro · a anunciar",coffee:"Café",after:"Depois",where:"Ponto de encontro a anunciar, ",details:"Ver detalhes",share:"Partilhar",rsvp:"RSVP",more:"5 km em grupos por ritmo, cada um com o seu pacer, com host. Encontro às 08:15, corrida às 08:30, café a seguir. Lugares limitados: faz RSVP para receber o ponto de encontro.",copied:"Link copiado"}};
+  var TD={en:{every:"Every",day:"Saturday",day1:"Saturday",km:"KM",paces:"Pace groups",meet:"Meet",at:"at",run:"Run",point:"Meeting point · TBA",coffee:"Coffee",after:"After",where:"Meeting point to be announced, ",details:"View details",share:"Share",rsvp:"RSVP",more:"5 km in pace groups, each with its own pacer, led by a host. Café after. Places are limited: RSVP to get the meeting point.",copied:"Link copied",none:"Next date soon",noneLine:"No run on the calendar here yet. Get the date first.",cta:"Hear first",loading:"Loading the next run",onluma:"RSVP on Luma, the meeting point arrives by email."},
+            pt:{every:"Todos os",day:"Sábados",day1:"Sábado",km:"KM",paces:"Grupos por ritmo",meet:"Encontro",at:"às",run:"Corrida",point:"Ponto de encontro · a anunciar",coffee:"Café",after:"Depois",where:"Ponto de encontro a anunciar, ",details:"Ver detalhes",share:"Partilhar",rsvp:"RSVP",more:"5 km em grupos por ritmo, cada um com o seu pacer, com host. Café a seguir. Lugares limitados: faz RSVP para receber o ponto de encontro.",copied:"Link copiado",none:"Próxima data em breve",noneLine:"Ainda não há corrida marcada aqui. Sabe a data primeiro.",cta:"Saber primeiro",loading:"A carregar a próxima corrida",onluma:"RSVP no Luma, o ponto de encontro chega por email."}};
   var TDCITY="braga"; try{ var sc=localStorage.getItem("bmb-city"); if(sc) TDCITY=sc; }catch(e){}
-  function nextSat(n){ var d=new Date(), add=(6-d.getDay()+7)%7; if(add===0&&d.getHours()>=9) add=7; d.setDate(d.getDate()+add+7*(n||0)); var t=d.toLocaleDateString(LANG==="pt"?"pt-PT":"en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"}); return t.charAt(0).toUpperCase()+t.slice(1); }
-  function satShort(n){ var d=new Date(), add=(6-d.getDay()+7)%7; if(add===0&&d.getHours()>=9) add=7; d.setDate(d.getDate()+add+7*(n||0)); return ("0"+d.getDate()).slice(-2)+"."+("0"+(d.getMonth()+1)).slice(-2); }
-  function tdCard(c,n){ var t=TD[LANG], name=c[LANG], up=name.toUpperCase(), fs=Math.min(44,250/up.length);
-    var bg=""; for(var i=0;i<5;i++) bg+='<span'+(i%2?' class="o"':'')+'>'+esc(up)+'</span>';
+  /* Events come from the BAMOBORA backend, which mirrors Luma (times, place, cover). Luma is always right. */
+  var SB_URL="https://cdmsvjermsfcxqdauzaq.supabase.co", SB_KEY="sb_publishable_sAkrOc2avXmZDxMRYhlFlQ_5iBdUODM";
+  var CITY_OF={braga:"braga",lisboa:"lisbon",porto:"porto"}, EVENTS=null, EV_FAIL=false, EV_LOADING=false;
+  var LUMA_URL=/^https:\/\/(www\.)?(luma\.com|lu\.ma)\/[A-Za-z0-9_-]{3,64}\/?$/, LUMA_IMG=/^https:\/\/images\.lumacdn\.com\//;
+  function loadEvents(){ if(EVENTS||EV_LOADING) return; EV_LOADING=true;
+    fetch(SB_URL+"/rest/v1/rpc/list_upcoming_events",{method:"POST",headers:{"Content-Type":"application/json","apikey":SB_KEY},body:JSON.stringify({p_limit:20})})
+      .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function(rows){ EVENTS=Array.isArray(rows)?rows:[]; })
+      .catch(function(){ EVENTS=[]; EV_FAIL=true; })
+      .then(function(){ EV_LOADING=false; if((location.hash||"").slice(1)==="training-division") renderTraining(); }); }
+  function fmtWhen(ev){ var loc=LANG==="pt"?"pt-PT":"en-GB", tz=ev.timezone||"Europe/Lisbon", s=new Date(ev.starts_at), e=ev.ends_at?new Date(ev.ends_at):null;
+    var d=new Intl.DateTimeFormat(loc,{timeZone:tz,weekday:"long",day:"numeric",month:"long"}).format(s), tf=new Intl.DateTimeFormat(loc,{timeZone:tz,hour:"2-digit",minute:"2-digit",hour12:false});
+    return d.charAt(0).toUpperCase()+d.slice(1)+" · "+tf.format(s)+(e?"–"+tf.format(e):""); }
+  function tdEvent(ev,c){ var t=TD[LANG], name=c[LANG], img=LUMA_IMG.test(ev.cover_url||"")?ev.cover_url:"", href=LUMA_URL.test(ev.rsvp_url||"")?ev.rsvp_url:"";
+    var info=ev.description?esc(ev.description).replace(/\n+/g,"<br>"):t.more;
     return '<article class="tdc">'+
-      '<div class="tp" style="--fs:'+fs.toFixed(1)+'cqw"><div class="tp__bg" aria-hidden="true">'+bg+'</div><div class="tp__txt">'+
-        '<div class="r sp"><span>BAMOBORA</span><span>'+esc(up)+'</span></div>'+
-        '<div class="r c"><span>'+t.day1+'</span><span class="ov">'+satShort(n)+'</span></div>'+
-        '<div class="r sp"><span>5</span><span>'+t.paces+'</span><span>'+t.km+'</span></div>'+
-        '<div class="r sp"><span>'+t.meet+'</span><span>'+t.at+'</span><span>08:15</span><span>/</span><span>'+t.run+'</span><span>'+t.at+'</span><span>08:30</span></div>'+
-        '<div class="r c"><span>'+t.point+'</span></div>'+
-        '<div class="r sp"><span>'+t.coffee+'</span><b>'+t.after+'</b></div>'+
-      '</div></div>'+
-      '<h3>Training Division · '+esc(name)+'</h3>'+
-      '<p class="tdc__when">'+nextSat(n)+' · 08:30 <span aria-hidden="true">⟲</span></p>'+
-      '<p class="tdc__where">'+t.where+esc(name)+'</p>'+
-      '<div class="tdc__row"><button type="button" class="tdc__more" aria-expanded="false">'+t.details+'</button><span aria-hidden="true">→</span><button type="button" class="tdc__share" data-city="'+esc(name)+'">'+t.share+'</button></div>'+
-      '<p class="tdc__info" hidden>'+t.more+'</p>'+
-      '<a class="tdc__rsvp" href="mailto:geral@bamobora.com?subject='+encodeURIComponent("RSVP Training Division "+c.en)+'">'+t.rsvp+'</a>'+
+      '<div class="tp tp--luma">'+(img?'<img src="'+esc(img)+'" alt="'+esc(ev.title)+'" loading="lazy" referrerpolicy="no-referrer">':'')+'</div>'+
+      '<h3>'+esc(ev.title)+'</h3>'+
+      '<p class="tdc__when">'+esc(fmtWhen(ev))+'</p>'+
+      '<p class="tdc__where">'+esc(name)+'</p>'+
+      '<div class="tdc__row"><button type="button" class="tdc__more" aria-expanded="false">'+t.details+'</button><span aria-hidden="true">→</span><button type="button" class="tdc__share" data-city="'+esc(name)+'" data-url="'+esc(href)+'">'+t.share+'</button></div>'+
+      '<p class="tdc__info" hidden>'+info+'<br><br>'+t.onluma+'</p>'+
+      (href?'<a class="tdc__rsvp" href="'+esc(href)+'" target="_blank" rel="noopener noreferrer">'+t.rsvp+'</a>':'')+
     '</article>'; }
+  function tdNone(c){ var t=TD[LANG], name=c[LANG], up=name.toUpperCase(), fs=Math.min(44,250/up.length), bg=""; for(var i=0;i<5;i++) bg+='<span'+(i%2?' class="o"':'')+'>'+esc(up)+'</span>';
+    return '<article class="tdc tdc--soon"><div class="tp" style="--fs:'+fs.toFixed(1)+'cqw"><div class="tp__bg" aria-hidden="true">'+bg+'</div><div class="tp__txt"><div class="r sp"><span>BAMOBORA</span><span>'+esc(up)+'</span></div><div class="r c"><span class="ov">'+t.none+'</span></div><div class="r sp"><span>Training</span><b>Division</b></div></div></div>'+
+      '<h3>Training Division · '+esc(name)+'</h3><p class="tdc__when">'+t.none+'</p><p class="tdc__where">'+t.noneLine+'</p><a class="tdc__rsvp" href="#signup">'+t.cta+'</a></article>'; }
+  function tdWait(){ return '<article class="tdc" aria-busy="true"><div class="tp tp--wait"></div><h3>&nbsp;</h3><p class="tdc__when">'+TD[LANG].loading+'</p></article>'; }
   function renderTraining(){ var g=document.getElementById("tdgrid"), cb=document.getElementById("tdcities"); if(!g) return;
     if(!CITIES.some(function(c){return c.k===TDCITY})) TDCITY="braga";
     cb.innerHTML=CITIES.map(function(c){return '<button type="button" data-city="'+c.k+'" aria-pressed="'+(c.k===TDCITY)+'">'+esc(c[LANG])+(c.soon?'<small>'+SOON[LANG].lab+'</small>':'')+'</button>'}).join("");
     cb.querySelectorAll("button").forEach(function(b){ b.addEventListener("click",function(){ TDCITY=b.getAttribute("data-city"); try{ localStorage.setItem("bmb-city",TDCITY); }catch(e){} renderTraining(); }); });
     var city=CITIES.filter(function(c){return c.k===TDCITY})[0];
-    g.innerHTML=city.soon?tdSoon(city):tdCard(city,0);
+    if(city.soon){ g.innerHTML=tdSoon(city); return; }
+    if(EVENTS===null){ g.innerHTML=tdWait(); loadEvents(); return; }
+    var mine=EVENTS.filter(function(ev){ return CITY_OF[ev.city]===city.k; });
+    g.innerHTML=mine.length?mine.slice(0,4).map(function(ev){return tdEvent(ev,city)}).join(""):tdNone(city);
     g.querySelectorAll(".tdc__more").forEach(function(btn){ btn.addEventListener("click",function(){ var info=btn.closest(".tdc").querySelector(".tdc__info"), open=info.hidden; info.hidden=!open; btn.setAttribute("aria-expanded",String(open)); }); });
-    g.querySelectorAll(".tdc__share").forEach(function(btn){ btn.addEventListener("click",function(){ var url=location.href.split("#")[0]+"#training-division", title="BAMOBORA Training Division · "+btn.getAttribute("data-city");
+    g.querySelectorAll(".tdc__share").forEach(function(btn){ btn.addEventListener("click",function(){ var url=btn.getAttribute("data-url")||(location.href.split("#")[0]+"#training-division"), title="BAMOBORA Training Division · "+btn.getAttribute("data-city");
       if(navigator.share){ navigator.share({title:title,url:url}).catch(function(){}); }
       else if(navigator.clipboard){ navigator.clipboard.writeText(url).then(function(){ if(typeof say==="function") say(TD[LANG].copied); }).catch(function(){}); } }); }); }
   var PICKS=[["t38-asfalto","t38-nata"],["short-black","short-brown","short-grey"],["bora-nata"],["tee-nata","tee-asfalto"]];
