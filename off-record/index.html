@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" class="night">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Off Record · Yard Takeovers Pilot 001</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Off Record. Yard Takeovers Nº 001. Braga, 14.11.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:"BMB Ultra";src:url("fonts/OTNeueMontreal-BoldUltraSqueezed.otf") format("opentype");font-weight:700;font-display:swap}
+@font-face{font-family:"BMB Extra";src:url("fonts/OTNeueMontreal-MediumExtraSqueezed.otf") format("opentype");font-weight:500;font-display:swap}
+@font-face{font-family:"BMB Semi";src:url("fonts/OTNeueMontreal-BookSemiSqueezed.otf") format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:"BMB Semi";src:url("fonts/OTNeueMontreal-MediumSemiSqueezed.otf") format("opentype");font-weight:500;font-display:swap}
+@font-face{font-family:"BMB Squeezed";src:url("fonts/OTNeueMontreal-BoldSqueezed.otf") format("opentype");font-weight:700;font-display:swap}
+:root{
+  --ground:#f0f0f0; --panel:#e4e4e4; --line:#cfcfcf;
+  --ink:#353535; --muted:#5c5c5c; --tijolo:#a63737; --paper:#fffbf0;
+  --display:"BMB Ultra","Arial Narrow",sans-serif;
+  --label:"BMB Extra","Arial Narrow",sans-serif;
+  --text:"BMB Semi","Helvetica Neue",Arial,sans-serif;
+  --big:"BMB Squeezed","Arial Narrow",Helvetica,sans-serif;
+  --gx:clamp(16px,3.2vw,48px);
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--ground)}
+body{background:var(--ground);color:var(--ink);font-family:var(--text);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid #337baf;outline-offset:3px}
+.pad{padding-left:var(--gx);padding-right:var(--gx)}
+.lab{font-family:var(--label);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;line-height:1.3}
+.muted{color:var(--muted)}
+.ulink{border-bottom:1px solid currentColor;padding-bottom:3px;cursor:pointer}
+.ulink:hover{color:var(--tijolo)}
+.hidden{display:none!important}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding-block:18px;background:var(--ground);border-bottom:1px solid var(--tijolo);color:var(--tijolo)}
+.hdr img{width:118px;display:block}
+
+/* intro, set like the store */
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;padding-block:clamp(28px,3.4vw,52px) 0}
+.intro{padding-block:clamp(28px,4vw,64px) clamp(40px,5vw,80px);color:var(--tijolo);font-family:var(--text);font-weight:400;font-size:clamp(25px,2.85vw,52px);line-height:1.1;letter-spacing:-.012em;text-align:justify;text-align-last:left;hyphens:auto;-webkit-hyphens:auto}
+.intro p{margin:0 0 .55em}
+.intro p:last-child{margin:0}
+.intro b{font-family:var(--big);font-weight:700}
+
+/* sections */
+.sec{border-top:1px solid var(--line);padding-block:clamp(28px,3.4vw,52px) clamp(48px,6vw,96px)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:clamp(24px,3vw,44px)}
+.sec-head .lab:first-child{color:var(--muted)}
+.lede{font-size:clamp(19px,1.6vw,24px);line-height:1.3;max-width:34ch;margin-bottom:28px}
+.rows{list-style:none;border-top:1px solid var(--line)}
+.rows li{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:16px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line)}
+.rows .lab{color:var(--muted)}
+.rows h3{font-weight:500;font-size:clamp(18px,1.4vw,21px);line-height:1.25}
+.rows p{color:var(--muted);margin-top:4px;max-width:52ch}
+.rows .val{font-weight:500;font-size:clamp(18px,1.4vw,21px);white-space:nowrap;text-align:right}
+.tie{display:flex;justify-content:space-between;padding-top:18px}
+.tie .lab:first-child{color:var(--muted)}
+.sub-title{margin:clamp(36px,4vw,56px) 0 14px}
+
+/* buttons and fields */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;font-family:var(--label);font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase;line-height:1;padding:16px 22px;border:1px solid var(--ink);background:transparent;cursor:pointer;border-radius:0}
+.btn:hover{background:var(--ink);color:var(--ground)}
+.btn--red{background:var(--tijolo);border-color:var(--tijolo);color:var(--paper)}
+.btn--red:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.btn--sm{padding:12px 16px;font-size:12px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.form{display:flex;max-width:520px}
+.field{flex:1;min-width:0;background:transparent;border:1px solid var(--ink);border-right:0;border-radius:0;padding:14px 16px;font-family:var(--label);font-weight:500;font-size:14px;letter-spacing:.2em;text-transform:uppercase;outline:none}
+.field::placeholder{color:#8a8478}
+.msg{margin-top:12px;min-height:22px;color:var(--tijolo)}
+
+/* meeting point */
+.meet-big{font-size:clamp(25px,2.85vw,52px);line-height:1.1;letter-spacing:-.012em}
+.clock{font-family:var(--text);font-weight:400;font-size:clamp(48px,9vw,120px);line-height:1;letter-spacing:-.02em;margin:8px 0 16px}
+
+footer{border-top:1px solid var(--line);padding-block:22px 40px;display:flex;justify-content:space-between;align-items:baseline}
+
+/* jury */
+.crew{border-top:1px solid var(--ink);padding:16px 0 24px}
+.crew-top{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+.crew-name{flex:1;min-width:0;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;font-weight:500;font-size:22px;padding:4px 0;outline:none}
+.x{background:transparent;border:1px solid var(--line);width:34px;height:34px;cursor:pointer;font-size:16px;line-height:1;border-radius:0;flex:none}
+.x:hover{border-color:var(--ink)}
+.grid-h,.runner{display:grid;grid-template-columns:1.4fr .9fr .7fr 44px 34px;gap:6px;align-items:center}
+.grid-h{padding:6px 0;color:var(--muted)}
+.runner{padding:5px 0}
+.in{background:var(--paper);border:1px solid var(--line);padding:9px 8px;width:100%;border-radius:0;font-size:16px;outline:none;min-width:0}
+.in:focus,.crew-name:focus{border-color:var(--ink)}
+.in.bad{border-color:var(--tijolo)}
+.chk{width:20px;height:20px;accent-color:var(--tijolo);justify-self:center}
+.crew-extra{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.crew-extra label{display:flex;flex-direction:column;gap:6px}
+.crew-extra .lab{color:var(--muted)}
+.row-btns{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+table{width:100%;border-collapse:collapse}
+th,td{padding:14px 4px;text-align:right;border-bottom:1px solid var(--line);vertical-align:baseline}
+th{font-family:var(--label);font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--ink)}
+th:nth-child(-n+2),td:nth-child(-n+2){text-align:left}
+td.rk{color:var(--muted);width:36px}
+td.cn{font-weight:500;font-size:18px}
+td.tt{font-weight:500;font-size:20px}
+.detail{display:block;font-size:13px;font-weight:400;color:var(--muted);margin-top:2px}
+.note{color:var(--muted);font-size:14px;margin-top:14px}
+.modal{position:fixed;inset:0;background:rgba(240,240,240,.92);display:flex;align-items:center;justify-content:center;padding:24px;z-index:60}
+.modal .box{border:1px solid var(--ink);background:var(--ground);padding:24px;max-width:380px;width:100%}
+.modal .box p{margin:10px 0 18px;color:var(--muted)}
+@media (max-width:620px){
+  .intro{text-align:left;hyphens:manual;-webkit-hyphens:manual;font-size:24px;line-height:1.16}
+  .rows li{grid-template-columns:36px minmax(0,1fr) auto;gap:10px}
+  .grid-h,.runner{grid-template-columns:1.2fr .95fr .7fr 34px 32px;gap:4px}
+  .hide-s{display:none}
+}
+
+/* Off Record night: red grain backdrop, Nata ink */
+.bg{position:fixed;inset:0;z-index:-1;overflow:hidden;background:#8e1414}
+.bg::before{content:"";position:absolute;inset:0;background:url("img/bg-red.jpg") center/cover no-repeat;transform:scale(1.55);transform-origin:30% 48%}
+.bg::after{content:"";position:absolute;inset:0;background:rgba(120,12,12,.12)}
+html.night,html.night body{background:transparent}
+html.night{--ink:#fffbf0;--muted:rgba(255,251,240,.82);--line:rgba(255,251,240,.5);color-scheme:dark}
+html.night body{color:var(--ink);text-shadow:0 0 18px rgba(110,10,10,.35)}
+html.night .hdr{position:static;background:transparent;border-bottom-color:var(--line);color:var(--ink)}
+html.night .lg-t,.lg-n{display:none}
+html.night .lg-n{display:block}
+html:not(.night) .lg-t{display:block}
+html.night .intro{color:var(--ink)}
+html.night .btn{border-color:var(--ink);color:var(--ink)}
+html.night .btn:hover{background:var(--ink);color:#8e1414}
+html.night .btn--red{background:var(--ink);border-color:var(--ink);color:#8e1414;text-shadow:none}
+html.night .btn--red:hover{background:transparent;color:var(--ink)}
+html.night .field{border-color:var(--ink)}
+html.night .field::placeholder{color:rgba(255,251,240,.6)}
+html.night .msg{color:var(--ink)}
+html.night .ulink:hover{color:inherit;opacity:.7}
+html.night :focus-visible{outline-color:#fffbf0}
+html:not(.night) .bg{display:none}
+.langs{display:flex;gap:6px;align-items:baseline}
+.langs button{background:none;border:0;cursor:pointer;font:inherit;letter-spacing:inherit;color:inherit;opacity:.55;padding:2px 0}
+.langs button[aria-pressed="true"]{opacity:1;border-bottom:1px solid currentColor}
+.sub-title.first{margin-top:0}
+.meet-big{font-size:clamp(28px,3.2vw,56px);line-height:1.08;letter-spacing:-.012em}
+.plain{background:none;border:0;border-bottom:1px solid currentColor}
+.dq{display:flex;align-items:center;gap:8px;margin-left:auto;color:var(--muted)}
+.row-btns{align-items:center}
+
+.sched li{grid-template-columns:72px minmax(0,1fr)}
+.sched .t{font-weight:500;font-size:clamp(18px,1.4vw,21px)}
+.sched .on h3{font-family:var(--big);font-weight:700}
+.nw{white-space:nowrap}
+.lede{hyphens:manual;-webkit-hyphens:manual}
+.langs button{padding:8px 2px;min-height:40px}
+.field{font-size:16px}
+html{-webkit-text-size-adjust:100%}
+body{overflow-x:hidden}
+.pad{padding-left:max(var(--gx),env(safe-area-inset-left,0px));padding-right:max(var(--gx),env(safe-area-inset-right,0px))}
+footer{padding-bottom:calc(40px + env(safe-area-inset-bottom,0px))}
+@media (max-width:620px){
+  :root{--gx:20px}
+  .hdr{padding-block:14px}
+  .hdr img{width:104px}
+  .head{padding-top:22px;gap:8px}
+  .intro{font-size:23px;line-height:1.18;padding-block:24px 44px;text-align:left}
+  .intro p{margin-bottom:.6em}
+  .sec{padding-block:24px 52px}
+  .sec-head{margin-bottom:22px}
+  .lede{font-size:20px;margin-bottom:22px}
+  .meet-big{font-size:28px;line-height:1.1}
+  .rows li{grid-template-columns:30px minmax(0,1fr) auto;gap:10px;padding:16px 0}
+  .rows h3{font-size:18px}
+  .rows p{font-size:15.5px;line-height:1.45}
+  .rows .val{font-size:18px}
+  .sched li{grid-template-columns:62px minmax(0,1fr)}
+  .sub-title{margin:36px 0 12px}
+  .cta{flex-direction:column}
+  .cta .btn{width:100%;padding:18px}
+  .form .btn{padding:16px 18px}
+  .tie{flex-wrap:wrap;gap:8px}
+  .crew-extra{grid-template-columns:1fr 1fr}
+  td.cn{font-size:16px}
+  .dq{margin-left:0}
+}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<header class="hdr pad">
+  <a href="#" id="home" aria-label="BAMOBORA"><img class="lg-t" src="img/bamobora-wordmark-tijolo.svg" alt="BAMOBORA®"><img class="lg-n" src="img/bamobora-wordmark-nata.svg" alt="BAMOBORA®"></a>
+  <nav class="langs lab" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><span>/</span><button type="button" data-lang="pt" aria-pressed="false">PT</button></nav>
+</header>
+
+<!-- ============ PUBLIC VIEW ============ -->
+<main id="public">
+  <div class="head pad">
+    <span class="lab muted">Off Record · Yard Takeovers Nº 001</span>
+    <span class="lab muted">14.11 · 10:30 · Braga</span>
+  </div>
+
+  <div class="intro pad" aria-label="Manifesto" data-pt="&lt;p&gt;&lt;b&gt;Off Record.&lt;/b&gt; Todas as culturas que alguma vez importaram começaram num sítio onde ninguém devia estar. Uma cave. Um armazém vazio. Uma rua às quatro da manhã, à chuva, com gente que nunca pediu licença.&lt;/p&gt;&lt;p&gt;Ninguém lhes deu um plano. Ninguém lhes disse as regras. Apareceram, e isso bastou.&lt;/p&gt;&lt;p&gt;A corrida esqueceu-se disto. Tornou-se planos de treino, ritmos, apps, relógios a dizer-nos quem somos. Tudo medido. Tudo previsto. Tudo seguro.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Nós não acreditamos no seguro.&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Acreditamos que correr é outro estado de arte. Que a melhor coisa que pode acontecer é aquilo que ninguém planeou. Que a cidade é mais honesta quando está molhada, escura e vazia.&lt;/p&gt;&lt;p&gt;Não te vamos dizer o que acontece. Vais descobrir quando já for tarde demais para te preparares. Traz quem nunca te deixaria para trás.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Running into things. Bem-vindo à crew.&lt;/b&gt;&lt;/p&gt;">
+    <p><b>Off Record.</b> Every culture that ever mattered started somewhere no one was supposed to be. A basement. An empty warehouse. A street at four in the morning, in the rain, with people who never asked permission.</p>
+    <p>No one gave them a plan. No one told them the rules. They showed up, and that was enough.</p>
+    <p>Running forgot this. It became training plans, paces, apps, watches telling us who we are. Everything measured. Everything predicted. Everything safe.</p>
+    <p><b>We don’t believe in safe.</b></p>
+    <p>We believe running is another state of art. That the best thing that can happen is the thing nobody planned. That the city is most honest when it’s wet, dark and empty.</p>
+    <p>We won’t tell you what happens. You’ll find out when it’s too late to prepare. Bring the ones who would never leave you behind.</p>
+    <p><b>Running into things. Welcome to the crew.</b></p>
+  </div>
+
+  <div class="pad">
+    <!-- Meeting point -->
+    <section class="sec" aria-label="Meeting point">
+      <div class="sec-head"><span class="lab" data-pt="Ponto de encontro">Meeting point</span><span class="lab muted">01</span></div>
+      <p class="meet-big">Rua Dom Frei Caetano Brandão 58<br>4700-031 Braga</p>
+      <ul class="rows" style="margin-top:28px">
+        <li><span class="lab" data-pt="Data">Date</span><div><h3 data-pt="Sábado, 14 de novembro · 10:30">Saturday, 14 November · 10:30</h3></div><span></span></li>
+        <li><span class="lab" data-pt="Traz">Bring</span><div><h3 data-pt="Telemóvel carregado, Strava instalado, roupa para a chuva.">Charged phone, Strava installed, kit for the rain.</h3></div><span></span></li>
+      </ul>
+      <p class="lab muted sub-title" data-pt="Programa">Schedule</p>
+      <ul class="rows sched">
+        <li><span class="t">10:30</span><div><h3 data-pt="Check-in e sorteio das crews">Check-in &amp; crew draft</h3><p class="muted">10:30 – 10:45</p></div></li>
+        <li><span class="t">10:45</span><div><h3 data-pt="Briefing e perguntas">Briefing &amp; Q&amp;A</h3><p class="muted">10:45 – 11:00</p></div></li>
+        <li class="on"><span class="t">11:00</span><div><h3 data-pt="Partida">Race on</h3></div></li>
+        <li><span class="t">11:45</span><div><h3 data-pt="Pequeno-almoço e prémios">Breakfast &amp; prizes</h3></div></li>
+      </ul>
+      <div class="cta">
+        <a class="btn" href="https://www.google.com/maps/place/data=!4m2!3m1!1s0xd24ffc6a652a8e5:0x6533a50941c685f0" target="_blank" rel="noopener" data-pt="Abrir no mapa">Open in Maps</a>
+      </div>
+    </section>
+
+    <!-- Sealed -->
+    <section class="sec" id="seal" aria-label="Sealed rules">
+      <div class="sec-head"><span class="lab" data-pt="As regras [seladas]">The rules [sealed]</span><span class="lab muted">02</span></div>
+      <p class="lede" data-pt="As regras abrem com um código. Dizemos-to no próprio dia, no check-in. Não antes.">The rules open with a code. We say it on the day, at <span class='nw'>check-in</span>. Not before.</p>
+      <form class="form" id="sealForm" autocomplete="off">
+        <input class="field" id="code" placeholder="Code" data-pt-ph="Código" aria-label="Code" autocapitalize="characters" spellcheck="false">
+        <button class="btn btn--red" type="submit" data-pt="Abrir">Unlock</button>
+      </form>
+      <div class="msg" id="err" role="status"></div>
+    </section>
+
+    <div id="unlocked" class="hidden">
+      <section class="sec" aria-label="Rules">
+        <div class="sec-head"><span class="lab" data-pt="As regras">The rules</span><span class="lab muted">02</span></div>
+
+        <p class="lab muted sub-title first" data-pt="Antes da partida">Before the start</p>
+        <ul class="rows">
+          <li><span class="lab">01</span><div><h3 data-pt="Check-in">Check-in</h3><p data-pt="Das 10:30 às 10:45, no ponto de encontro. Aí são sorteadas as crews e dizemos o código que abre estas regras. Às 10:45 há briefing e perguntas.">From 10:30 to 10:45, at the meeting point. Crews are drafted there and we say the code that opens these rules. Briefing and Q&amp;A at 10:45.</p></div><span></span></li>
+          <li><span class="lab">02</span><div><h3 data-pt="Crews">Crews</h3><p data-pt="25 corredores, 5 crews de 5. As crews são feitas no check-in. Não escolhes a tua.">25 runners, 5 crews of 5. Crews are made at check-in. You don’t choose yours.</p></div><span></span></li>
+          <li><span class="lab">03</span><div><h3 data-pt="Um telemóvel por corredor">One phone per runner</h3><p data-pt="Cada corredor grava a sua própria atividade no Strava, no seu telemóvel, que leva consigo do início ao fim.">Every runner records their own activity on Strava, on their own phone, carried by them from start to finish.</p></div><span></span></li>
+          <li><span class="lab">04</span><div><h3 data-pt="A partida">The start</h3><p data-pt="Às 11:00 todas as crews partem juntas do ponto de encontro, ao sinal. Carrega em Gravar no Strava ao sinal, não antes.">At 11:00 all crews start together from the meeting point, on the signal. Press Record on Strava at the signal, not before.</p></div><span></span></li>
+        </ul>
+
+        <p class="lab muted sub-title" data-pt="A corrida">The run</p>
+        <ul class="rows">
+          <li><span class="lab">05</span><div><h3 data-pt="Corre para onde quiseres">Run anywhere</h3><p data-pt="Não há percurso. Qualquer rua, praça ou caminho público de Braga. A crew decide o caminho em conjunto.">There is no course. Any public street, square or path in Braga. Your crew decides the route together.</p></div><span></span></li>
+          <li><span class="lab">06</span><div><h3 data-pt="Sempre juntos">Stay together</h3><p data-pt="A crew parte junta e chega junta. Ninguém corre sozinho. A diferença entre o teu corredor mais rápido e o mais lento custa pontos.">Your crew leaves together and finishes together. Nobody runs alone. The gap between your fastest and slowest runner costs points.</p></div><span></span></li>
+          <li><span class="lab">07</span><div><h3 data-pt="Nunca duas vezes">Never twice</h3><p data-pt="A crew não pode correr o mesmo troço de rua duas vezes. Um troço é a rua entre dois cruzamentos. Atravessar o teu próprio percurso num cruzamento é permitido. Os últimos 200 m de regresso à meta não contam.">Your crew can’t run the same stretch of street twice. A stretch is the street between two junctions. Crossing your own route at a junction is allowed. The last 200 m back into the finish don’t count.</p></div><span></span></li>
+          <li><span class="lab">08</span><div><h3 data-pt="Mínimo 5,00 km">5.00 km minimum</h3><p data-pt="Cada corredor grava pelo menos 5,00 km. Podes correr mais, mas o tempo continua a contar.">Every runner records at least 5.00 km. You can run more, but the clock keeps running.</p></div><span></span></li>
+          <li><span class="lab">09</span><div><h3 data-pt="Segurança primeiro">Safety first</h3><p data-pt="Respeita os semáforos e o trânsito. Conta o tempo em movimento do Strava, por isso parar num vermelho não te custa nada.">Respect traffic lights and traffic. We count Strava’s moving time, so stopping at a red light costs you nothing.</p></div><span></span></li>
+          <li><span class="lab">10</span><div><h3 data-pt="A meta">The finish</h3><p data-pt="A meta é o ponto de encontro. Pára o Strava quando chegares.">The finish is the meeting point. Stop Strava when you arrive.</p></div><span></span></li>
+        </ul>
+
+        <p class="lab muted sub-title" data-pt="Depois da corrida">After the run</p>
+        <ul class="rows">
+          <li><span class="lab">11</span><div><h3 data-pt="A tua entrada">Your entry</h3><p data-pt="Guarda a atividade com o nome da tua crew e publica-a no clube BAMOBORA no Strava antes de saíres. Sem publicação, sem tempo.">Save the activity with your crew’s name and post it to the BAMOBORA club on Strava before you leave. No post, no time.</p></div><span></span></li>
+          <li><span class="lab">12</span><div><h3 data-pt="Resultados">Results</h3><p data-pt="O júri verifica cada mapa, calcula os pontos e anuncia a classificação ao pequeno-almoço, às 11:45. A decisão do júri é final.">The jury checks every map, calculates the points and announces the ranking at breakfast, 11:45. The jury’s decision is final.</p></div><span></span></li>
+        </ul>
+      </section>
+
+      <section class="sec" aria-label="Points">
+        <div class="sec-head"><span class="lab" data-pt="Pontos">Points</span><span class="lab muted">03</span></div>
+        <ul class="rows">
+          <li><span class="lab">A</span><div><h3 data-pt="Velocidade">Speed</h3><p data-pt="A média do tempo em movimento dos 5 corredores da crew. A crew mais rápida leva 60. As outras levam 60 × (melhor média ÷ a vossa média).">The average Strava moving time of your 5 runners. The fastest crew takes 60. The others take 60 × (best average ÷ your average).</p></div><span class="val">60</span></li>
+          <li><span class="lab">B</span><div><h3 data-pt="Consistência">Consistency</h3><p data-pt="A diferença entre o corredor mais rápido e o mais lento da crew. A menor diferença leva 25. As outras levam 25 × (menor diferença ÷ a vossa diferença).">The gap between the fastest and slowest runner in your crew. The smallest gap takes 25. The others take 25 × (smallest gap ÷ your gap).</p></div><span class="val">25</span></li>
+          <li><span class="lab">C</span><div><h3 data-pt="Exploração">Exploration</h3><p data-pt="As freguesias de Braga por onde a crew passou, segundo o mapa oficial. Uma freguesia conta se o percurso entrar nela. A crew com mais leva 15. As outras levam 15 × (as vossas ÷ o máximo).">The parishes (freguesias) of Braga your crew ran through, by the official map. A parish counts if your route enters it. The crew with the most takes 15. The others take 15 × (yours ÷ the most).</p></div><span class="val">15</span></li>
+        </ul>
+        <div class="tie"><span class="lab">Total</span><span class="lab">100</span></div>
+
+        <p class="lab muted sub-title" data-pt="Penalizações">Penalties</p>
+        <ul class="rows">
+          <li><span class="lab">01</span><div><h3 data-pt="Menos de 5,00 km">Under 5.00 km</h3><p data-pt="O tempo desse corredor passa a ser o tempo mais lento do dia, mais dois minutos.">That runner’s time becomes the slowest time of the day, plus two minutes.</p></div><span class="val">+2:00</span></li>
+          <li><span class="lab">02</span><div><h3 data-pt="Mesmo sítio duas vezes">Same place twice</h3><p data-pt="Por cada troço repetido, verificado no mapa.">For every repeated stretch, checked on the map.</p></div><span class="val">−5</span></li>
+          <li><span class="lab">03</span><div><h3 data-pt="Sem atividade no Strava">No Strava activity</h3><p data-pt="Por corredor. Também conta como menos de 5,00 km.">Per runner. Also counts as under 5.00 km.</p></div><span class="val">−15</span></li>
+          <li><span class="lab">04</span><div><h3 data-pt="Desclassificação">Disqualified</h3><p data-pt="Usar qualquer veículo (bicicleta, trotinete, carro, autocarro), levar o telemóvel de outra pessoa ou entrar em propriedade privada. O júri pode desclassificar a crew inteira.">Using any vehicle (bike, scooter, car, bus), carrying someone else’s phone, or entering private property. The jury can disqualify the whole crew.</p></div><span class="val">DQ</span></li>
+        </ul>
+        <div class="tie"><span class="lab" data-pt="Desempate">Tiebreak</span><span class="lab" data-pt="Corredor individual mais rápido">Fastest single runner</span></div>
+      </section>
+
+      <section class="sec" aria-label="Strava">
+        <div class="sec-head"><span class="lab">Strava</span><span class="lab muted">04</span></div>
+        <p class="lede" data-pt="A app é só a testemunha. Telemóvel no bolso, ecrã desligado. Corre.">The app is only the witness. Phone in the pocket, screen off. Run.</p>
+        <ul class="rows">
+          <li><span class="lab">01</span><div><h3 data-pt="Antes do dia">Before race day</h3><p data-pt="Instala o Strava e cria conta. Não na linha de partida.">Install Strava and make an account. Not at the start line.</p></div><span></span></li>
+          <li><span class="lab">02</span><div><h3 data-pt="Entra no clube">Join the club</h3><p data-pt="Entra no clube BAMOBORA no Strava.">Join the BAMOBORA club on Strava.</p></div><span></span></li>
+          <li><span class="lab">03</span><div><h3 data-pt="Na partida">At the start</h3><p data-pt="Gravar, depois Corrida. Bloqueia o telemóvel.">Record, then Run. Lock the phone.</p></div><span></span></li>
+          <li><span class="lab">04</span><div><h3 data-pt="Na meta">At the finish</h3><p data-pt="Pára, guarda com o nome da crew e publica no clube.">Stop, save it with your crew’s name and post it to the club.</p></div><span></span></li>
+        </ul>
+        <div class="cta">
+          <a class="btn btn--red" id="clubLink" href="#" target="_blank" rel="noopener" data-pt="Entrar no clube">Join the club</a>
+          <a class="btn" href="https://www.strava.com/" target="_blank" rel="noopener" data-pt="Abrir o Strava">Open Strava</a>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <span class="lab muted">Running into things.</span>
+      <a class="lab ulink" href="#jury" data-pt="Júri">Jury</a>
+    </footer>
+  </div>
+</main>
+<!-- ============ JURY VIEW ============ -->
+<main id="juryView" class="hidden">
+  <div class="head pad">
+    <span class="lab muted">Off Record · Jury desk</span>
+    <a class="lab ulink" href="#" id="back">Back</a>
+  </div>
+  <div class="intro pad"><p><b>Jury desk.</b> Five crews of five. Enter each runner’s Strava moving time and distance, then the crew’s parishes and repeated stretches. The ranking updates as you type.</p></div>
+  <div class="pad" id="juryGate">
+    <section class="sec">
+      <div class="sec-head"><span class="lab">Jury only</span><span class="lab muted">Code</span></div>
+      <form class="form" id="juryForm" autocomplete="off">
+        <input class="field" id="juryCode" type="password" placeholder="Jury code" aria-label="Jury code" autocapitalize="characters" spellcheck="false">
+        <button class="btn btn--red" type="submit">Enter</button>
+      </form>
+      <div class="msg" id="juryErr" role="status"></div>
+    </section>
+  </div>
+  <div class="pad hidden" id="juryDesk">
+    <section class="sec" style="padding-bottom:24px">
+      <div class="sec-head"><span class="lab">Crews</span><span class="lab muted">Saved on this device</span></div>
+      <div id="crews"></div>
+      <div class="row-btns">
+        <button class="btn btn--sm" id="addCrew">Add crew</button>
+        <button class="btn btn--sm" id="loadEx">Load example</button>
+        <button class="btn btn--sm" id="clearAll">Reset</button>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-head"><span class="lab">Ranking</span><button class="lab ulink" id="copy" style="background:none;border:0;border-bottom:1px solid currentColor">Copy results</button></div>
+      <div id="board"></div>
+      <p class="note" id="copyNote"></p>
+    </section>
+  </div>
+</main>
+
+<div class="modal hidden" id="modal" role="dialog" aria-modal="true">
+  <div class="box">
+    <p class="lab">Reset?</p>
+    <p>Every time on this device is deleted and you start again with five empty crews.</p>
+    <div class="row-btns"><button class="btn btn--sm btn--red" id="mYes">Reset</button><button class="btn btn--sm" id="mNo">Cancel</button></div>
+  </div>
+</div>
+
+<script>
+/* ===== EDIT BEFORE THE NIGHT ===== */
+const CONFIG = {
+  // Codes are stored as SHA-256 of the uppercase word, so they can't be read in the page source.
+  rulesHash: "70847af69e59b1d80e6b18dd38700142445fdf706606b4454f8de37e6f2253ed", // rules code (placeholder: CREW)
+  juryHash:  "2acea44385b0b6dd23452b54059e4c807c05e0cfb34bb2ecf6c6f361bc87d576", // jury code (placeholder: JURI)
+  stravaClub: "https://www.strava.com/clubs/1929476"        // replace with the BAMOBORA club link
+};
+/* ================================= */
+
+const store = {
+  get(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } },
+  set(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+};
+const $ = s => document.querySelector(s);
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function pad(n){ return String(n).padStart(2,'0'); }
+
+/* ---------- Language ---------- */
+const T = {
+  en: { wrong: "Wrong code. Ask your crew." },
+  pt: { wrong: "Código errado. Pergunta à tua crew." }
+};
+let LANG = store.get('offrecord-lang') || 'en';
+document.querySelectorAll('[data-pt]').forEach(el => { el.dataset.en = el.innerHTML; });
+document.querySelectorAll('[data-pt-ph]').forEach(el => { el.dataset.enPh = el.placeholder; });
+function setLang(l){
+  LANG = l; store.set('offrecord-lang', l);
+  document.documentElement.lang = l === 'pt' ? 'pt-PT' : 'en';
+  document.documentElement.classList.toggle('pt', l === 'pt');
+  document.querySelectorAll('[data-pt]').forEach(el => { el.innerHTML = l === 'pt' ? el.dataset.pt : el.dataset.en; });
+  document.querySelectorAll('[data-pt-ph]').forEach(el => { el.placeholder = l === 'pt' ? el.dataset.ptPh : el.dataset.enPh; });
+  document.querySelectorAll('[data-lang]').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === l));
+  if ($('#err').textContent) $('#err').textContent = T[l].wrong;
+}
+document.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+
+/* ---------- Public view ---------- */
+$('#clubLink').href = CONFIG.stravaClub;
+function unlock(){
+  $('#seal').classList.add('hidden');
+  $('#unlocked').classList.remove('hidden');
+  store.set('offrecord-open', true);
+}
+if (store.get('offrecord-open')) unlock();
+async function sha(v){
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(v.trim().toUpperCase()));
+  return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2,'0')).join('');
+}
+$('#sealForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const v = $('#code').value;
+  if (v.trim() && await sha(v) === CONFIG.rulesHash) { $('#err').textContent=''; unlock(); $('#unlocked').scrollIntoView({behavior:'smooth'}); }
+  else { $('#err').textContent = T[LANG].wrong; }
+});
+
+/* ---------- Routing ---------- */
+function route(){
+  const jury = location.hash === '#jury';
+  document.documentElement.classList.toggle('night', !jury);
+  $('#public').classList.toggle('hidden', jury);
+  $('#juryView').classList.toggle('hidden', !jury);
+  window.scrollTo(0,0);
+  if (jury) juryState();
+}
+function juryState(){
+  let ok = false; try { ok = sessionStorage.getItem('offrecord-jury') === '1'; } catch(e){}
+  $('#juryGate').classList.toggle('hidden', ok);
+  $('#juryDesk').classList.toggle('hidden', !ok);
+  if (ok) renderCrews();
+}
+window.addEventListener('hashchange', route);
+function goHome(e){ e.preventDefault(); history.pushState('', '', location.pathname + location.search); route(); }
+$('#back').addEventListener('click', goHome);
+$('#home').addEventListener('click', goHome);
+
+/* ---------- Jury desk ---------- */
+let uid = Date.now();
+const newRunner = () => ({id: ++uid, name:'', time:'', km:'', missing:false});
+const blankCrew = n => ({id: ++uid, name: 'Crew ' + pad(n), hoods:'', repeats:'', runners:[1,2,3,4,5].map(newRunner)});
+const fiveCrews = () => [1,2,3,4,5].map(blankCrew);
+let crews = store.get('offrecord-crews') || fiveCrews();
+function save(){ store.set('offrecord-crews', crews); }
+
+function parseTime(s){
+  s = String(s||'').trim(); if (!s) return null;
+  const p = s.split(':').map(Number);
+  if (p.some(isNaN)) return null;
+  if (p.length === 2) return p[0]*60 + p[1];
+  if (p.length === 3) return p[0]*3600 + p[1]*60 + p[2];
+  return null;
+}
+function fmt(sec){
+  if (!isFinite(sec)) return '–';
+  sec = Math.round(sec);
+  const h = Math.floor(sec/3600), m = Math.floor(sec%3600/60), s = sec%60;
+  return (h ? h+':'+pad(m) : m) + ':' + pad(s);
+}
+function num(v){ const n = parseFloat(String(v).replace(',','.')); return isNaN(n) ? 0 : n; }
+
+function compute(){
+  const all = [];
+  const active = crews.filter(c => !c.dq);
+  active.forEach(c => c.runners.forEach(r => {
+    const t = parseTime(r.time), km = num(r.km);
+    r._t = t; r._valid = !r.missing && t !== null && t > 0 && km >= 5;
+    if (r._valid) all.push(t);
+  }));
+  const penaltyTime = (all.length ? Math.max(...all) : 0) + 120;
+  const rows = active.filter(c => c.runners.length).map(c => {
+    const eff = c.runners.map(r => r._valid ? r._t : penaltyTime);
+    const avg = eff.reduce((a,b)=>a+b,0)/eff.length;
+    const gap = Math.max(...eff) - Math.min(...eff);
+    const missing = c.runners.filter(r => r.missing).length;
+    const short = c.runners.filter(r => !r._valid && !r.missing).length;
+    const validTimes = c.runners.filter(r => r._valid).map(r => r._t);
+    return {c, avg, gap, missing, short, hoods: num(c.hoods), repeats: num(c.repeats),
+            best: validTimes.length ? Math.min(...validTimes) : Infinity};
+  });
+  if (!rows.length) return [];
+  const bestAvg = Math.min(...rows.map(r => r.avg));
+  const minGap = Math.min(...rows.map(r => r.gap));
+  const maxH = Math.max(...rows.map(r => r.hoods));
+  rows.forEach(r => {
+    r.speed = r.avg > 0 ? 60 * bestAvg / r.avg : 0;
+    r.cons = 25 * (minGap + 1) / (r.gap + 1);
+    r.expl = maxH > 0 ? 15 * r.hoods / maxH : 0;
+    r.pen = 5 * r.repeats + 15 * r.missing;
+    r.total = r.speed + r.cons + r.expl - r.pen;
+  });
+  rows.sort((a,b) => (b.total - a.total) || (a.best - b.best));
+  return rows;
+}
+
+function renderBoard(){
+  const rows = compute();
+  const dq = crews.filter(c => c.dq);
+  const el = $('#board');
+  if (!rows.length && !dq.length){ el.innerHTML = '<p class="note">Add a crew to see the ranking.</p>'; return; }
+  el.innerHTML = '<table><thead><tr><th>Nº</th><th>Crew</th><th class="hide-s">Speed</th><th class="hide-s">Cons.</th><th class="hide-s">Expl.</th><th class="hide-s">Pen.</th><th>Total</th></tr></thead><tbody>' +
+    rows.map((r,i) => '<tr><td class="rk">'+pad(i+1)+'</td><td class="cn">'+escapeHtml(r.c.name||'Crew')+
+      '<span class="detail">avg '+fmt(r.avg)+' · gap '+fmt(r.gap)+' · '+r.hoods+' parishes'+(r.short? ' · '+r.short+' under 5K':'')+(r.missing? ' · '+r.missing+' no activity':'')+'</span></td>'+
+      '<td class="hide-s">'+r.speed.toFixed(1)+'</td><td class="hide-s">'+r.cons.toFixed(1)+'</td><td class="hide-s">'+r.expl.toFixed(1)+'</td><td class="hide-s">'+(r.pen? '−'+r.pen : '0')+'</td>'+
+      '<td class="tt">'+r.total.toFixed(1)+'</td></tr>').join('') +
+    dq.map(c => '<tr><td class="rk">DQ</td><td class="cn">'+escapeHtml(c.name)+'<span class="detail">Disqualified</span></td><td class="hide-s"></td><td class="hide-s"></td><td class="hide-s"></td><td class="hide-s"></td><td class="tt">–</td></tr>').join('') +
+    '</tbody></table>';
+}
+
+function renderCrews(){
+  $('#crews').innerHTML = crews.map(c => `
+    <div class="crew" data-crew="${c.id}">
+      <div class="crew-top">
+        <input class="crew-name" data-f="name" value="${escapeHtml(c.name)}" aria-label="Crew name">
+        <button class="x" data-act="delCrew" aria-label="Remove crew">×</button>
+      </div>
+      <div class="grid-h lab"><span>Runner</span><span>Moving time</span><span>Km</span><span>None</span><span></span></div>
+      ${c.runners.map(r => `
+        <div class="runner" data-runner="${r.id}">
+          <input class="in" data-rf="name" value="${escapeHtml(r.name)}" placeholder="Name" aria-label="Runner name">
+          <input class="in" data-rf="time" value="${escapeHtml(r.time)}" placeholder="24:35" inputmode="numeric" aria-label="Moving time">
+          <input class="in" data-rf="km" value="${escapeHtml(r.km)}" placeholder="5.02" inputmode="decimal" aria-label="Distance in km">
+          <input type="checkbox" class="chk" data-rf="missing" ${r.missing?'checked':''} aria-label="No Strava activity">
+          <button class="x" data-act="delRunner" aria-label="Remove runner">×</button>
+        </div>`).join('')}
+      <div class="crew-extra">
+        <label><span class="lab">Parishes</span><input class="in" data-f="hoods" value="${escapeHtml(c.hoods)}" inputmode="numeric" placeholder="0"></label>
+        <label><span class="lab">Repeated stretches</span><input class="in" data-f="repeats" value="${escapeHtml(c.repeats)}" inputmode="numeric" placeholder="0"></label>
+      </div>
+      <div class="row-btns">
+        ${c.runners.length < 5 ? '<button class="lab ulink plain" data-act="addRunner">Add runner</button>' : ''}
+        <label class="lab dq"><input type="checkbox" class="chk" data-f="dq" ${c.dq?'checked':''}> Disqualified</label>
+      </div>
+    </div>`).join('');
+  markBad();
+  renderBoard();
+}
+function markBad(){
+  document.querySelectorAll('[data-rf="time"]').forEach(i => i.classList.toggle('bad', i.value.trim() !== '' && parseTime(i.value) === null));
+  document.querySelectorAll('[data-rf="km"]').forEach(i => i.classList.toggle('bad', i.value.trim() !== '' && num(i.value) < 5));
+}
+const findCrew = el => crews.find(c => c.id == el.closest('[data-crew]').dataset.crew);
+const findRunner = (c, el) => c.runners.find(r => r.id == el.closest('[data-runner]').dataset.runner);
+
+$('#crews').addEventListener('input', e => {
+  const t = e.target, c = findCrew(t);
+  if (t.dataset.f) c[t.dataset.f] = t.type === 'checkbox' ? t.checked : t.value;
+  if (t.dataset.rf){ const r = findRunner(c, t); r[t.dataset.rf] = t.type === 'checkbox' ? t.checked : t.value; }
+  save(); markBad(); renderBoard();
+});
+$('#crews').addEventListener('click', e => {
+  const b = e.target.closest('[data-act]'); if (!b) return;
+  const c = findCrew(b);
+  if (b.dataset.act === 'delCrew') crews = crews.filter(x => x !== c);
+  if (b.dataset.act === 'addRunner' && c.runners.length < 5) c.runners.push(newRunner());
+  if (b.dataset.act === 'delRunner') c.runners = c.runners.filter(r => r !== findRunner(c, b));
+  save(); renderCrews();
+});
+$('#addCrew').addEventListener('click', () => { crews.push(blankCrew(crews.length+1)); save(); renderCrews(); });
+$('#loadEx').addEventListener('click', () => {
+  const mk = (name, hoods, repeats, rs) => ({id:++uid, name, hoods:String(hoods), repeats:String(repeats),
+    runners: rs.map(([n,t,k,m]) => ({id:++uid, name:n, time:t||'', km:k||'', missing:!!m}))});
+  crews = [
+    mk('Crew 01', 3, 0, [['Rui','24:40','5.04'],['Inês','27:10','5.01'],['Tó','25:05','5.10'],['Ana','26:30','5.06'],['Gil','24:55','5.02']]),
+    mk('Crew 02', 2, 1, [['Sara','25:30','5.02'],['João','26:00','5.03'],['Bea','25:45','5.00'],['Leo','26:20','5.05'],['Mia','25:50','5.01']]),
+    mk('Crew 03', 4, 2, [['Duarte','23:50','5.20'],['Rita','25:15','4.70'],['Zé','','',1],['Vera','24:30','5.08'],['Hugo','26:40','5.03']]),
+    mk('Crew 04', 3, 0, [['Pedro','27:30','5.02'],['Joana','28:10','5.05'],['Luís','27:45','5.01'],['Marta','28:30','5.04'],['Nuno','27:20','5.00']]),
+    mk('Crew 05', 2, 0, [['Tiago','22:40','5.03'],['Clara','30:10','5.02'],['Rafa','23:05','5.06'],['Sofia','29:45','5.01'],['André','24:10','5.10']])
+  ];
+  save(); renderCrews();
+});
+$('#clearAll').addEventListener('click', () => $('#modal').classList.remove('hidden'));
+$('#mNo').addEventListener('click', () => $('#modal').classList.add('hidden'));
+$('#mYes').addEventListener('click', () => { crews = fiveCrews(); save(); renderCrews(); $('#modal').classList.add('hidden'); });
+$('#copy').addEventListener('click', async () => {
+  const rows = compute();
+  const txt = 'OFF RECORD · Nº 001 · BRAGA 14.11\n' + rows.map((r,i) => `${i+1}. ${r.c.name}  ${r.total.toFixed(1)} pts  (speed ${r.speed.toFixed(1)} · consistency ${r.cons.toFixed(1)} · exploration ${r.expl.toFixed(1)}${r.pen? ' · penalties −'+r.pen:''})`).join('\n');
+  try { await navigator.clipboard.writeText(txt); $('#copyNote').textContent = 'Copied. Paste it in the group.'; }
+  catch(e){ $('#copyNote').textContent = 'Copy was blocked here. Select the table and copy it by hand.'; }
+});
+
+$('#juryForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  if (await sha($('#juryCode').value) === CONFIG.juryHash){
+    try { sessionStorage.setItem('offrecord-jury','1'); } catch(err){}
+    $('#juryErr').textContent=''; $('#juryCode').value=''; juryState();
+  } else { $('#juryErr').textContent = 'Wrong code.'; }
+});
+setLang(LANG);
+route();
+</script>
+
+</body>
+</html>
