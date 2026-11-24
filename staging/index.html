@@ -692,10 +692,11 @@ body:has(.hdr.over) .stick-buy{opacity:0;pointer-events:none}
     <a href="#prints" class="opt">Prints</a>
     <a href="#events" class="opt">Yard Takeovers</a>
     <a href="#training-division" class="opt">Training Division</a>
-    <button type="button" class="mbtn" id="mbtn" aria-expanded="false" aria-controls="mpanel" data-pt="Menu">Menu</button>
-    <div class="hdr__end"><span class="langs" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="pt" aria-pressed="false">PT</button></span><a href="#collection" aria-label="Bag" data-pt-aria-label="Cesto"><span data-pt="Cesto">Bag</span><span class="bagcount" id="bag">0</span></a></div>
+    <button type="button" class="mbtn" id="mbtn" aria-expanded="false" aria-controls="mpanel" aria-label="Menu" data-pt-aria-label="Menu"><i></i><i></i><i></i></button>
+    <div class="hdr__end"><button type="button" class="srch-btn" id="srchbtn" aria-controls="srch" data-pt="Pesquisar">Search</button><span class="langs" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="pt" aria-pressed="false">PT</button></span><a href="#collection" class="bag-l" aria-label="Bag" data-pt-aria-label="Cesto"><svg class="bag-ic" viewBox="0 0 24 28" aria-hidden="true"><path d="M3.5 8.5h17l-1.2 17.5H4.7z" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M8 8.5V6.5a4 4 0 0 1 8 0v2" fill="none" stroke="currentColor" stroke-width="1.3"/></svg><span class="bagcount" id="bag">0</span></a></div>
   </nav>
   <div class="mega" id="mega" hidden><div class="mega__in pad"><ul class="mega__lead"><li><a href="#collection/new" data-pt="Novidades">New arrivals</a></li><li><a href="#collection" data-pt="Coleção #001">Collection #001</a></li><li><a href="#collection/t38">38°41′N</a></li><li><a href="#collection/bora">BORA</a></li><li><a href="#collection" data-pt="Ver tudo">Shop all</a></li></ul><div><h4 data-pt="Vestuário">Apparel</h4><ul><li><a href="#collection/tees" data-pt="T-shirts">Tees</a></li><li><a href="#collection/perf" data-pt="T-shirts de performance">Performance tees</a></li><li><a href="#collection/shorts" data-pt="Calções">Shorts</a></li><li><a href="#collection/apparel" data-pt="Tudo">All</a></li></ul></div><div><h4 data-pt="Acessórios">Accessories</h4><ul><li><a href="#collection/socks" data-pt="Meias">Socks</a></li><li><a href="#collection/accessories" data-pt="Tudo">All</a></li></ul></div><div><h4 data-pt="Mais">More</h4><ul><li><a href="#prints">Prints</a></li><li><a href="#training-division">Training Division</a></li><li><a href="#events">Yard Takeovers</a></li></ul></div><a class="mega__img" href="#collection/new"><img src="../img/run-duo-white-wall.jpg" alt="" loading="lazy"><span data-pt="Novidades">New<br>arrivals</span></a></div></div>
+  <div class="srch" id="srch" hidden><input id="srchin" type="search" placeholder="Search the collection" data-pt-placeholder="Pesquisar na coleção" aria-label="Search the collection" autocomplete="off"></div>
   <nav class="mpanel" id="mpanel" aria-label="Menu" hidden>
     <a href="#home" data-pt="Início">Home</a>
     <a href="#collection" data-pt="Coleção">Collection</a>
@@ -710,6 +711,12 @@ body:has(.hdr.over) .stick-buy{opacity:0;pointer-events:none}
 <!-- HOME -->
 <div class="view" data-view="home">
 
+  <section class="sx-hero" id="top" aria-label="Opening">
+    <figure class="sx-film"><video src="img/hero-film-colour.mp4" poster="img/hero-film-colour.jpg" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="auto" aria-label="A BAMOBORA run in black and white: the pack on the calçada, high fives, the café after" data-pt-aria-label="Uma corrida BAMOBORA a preto e branco: o grupo na calçada, high fives, o café a seguir"></video></figure>
+    <span class="lab l" data-pt="BAMOBORA® · Coleção #001">BAMOBORA® · Collection #001</span>
+    <a class="lab r ulink" href="#collection" data-pt="Ver a coleção">Shop the collection</a>
+  </section>
+
   <section class="sx-txt pad" id="manifesto">
     <p class="big" data-pt="Somos a BAMOBORA. Uma marca portuguesa de activewear e um coletivo de inadaptados a dar corda à criatividade. Não somos atletas. Continuamos a competir. Correr nunca é o objetivo. É o meio através do qual vivemos a criatividade, as cidades e uns aos outros. Aparecer fala mais alto do que chegar em primeiro. Depois, desafiamo-nos: uma distância nova, um ritmo mais rápido, um percurso mais duro. Um jogo contra nós próprios, nunca um ranking. Misturamos performance com tradição. Tecido técnico em ruas com séculos. Uma bica depois da corrida, cadeiras de plástico ao sol, o dono do café que nos trata pelo nome. O luxo não é caro. É ter tempo. Levamos o movimento para onde ele não pertence. Para museus, mercados e bibliotecas, para as passerelles. Cada evento é uma intervenção cultural: nunca igual duas vezes, anunciado uma só vez. Com raízes em Portugal. Criados para o mundo.">We are BAMOBORA. A Portuguese activewear brand, and a collective of misfits grinding creativity. Not athletes. Still racing. Running is never the objective. It is the medium through which we experience creativity, cities and each other. Showing up is louder than finishing first. Then we challenge ourselves: a new distance, a faster pace, a harder route. A game against ourselves, never a ranking. We mix performance with tradition. Technical fabric on centuries-old streets. A bica after the run, plastic chairs in the sun, the café owner who knows us by name. Luxury isn't expensive. It's taking the time. We take movement where it doesn't belong. Into museums, markets and libraries, onto runways. Every event is a cultural intervention: never the same twice, announced once. Rooted in Portugal. Crafted for the world.</p>
   </section>
@@ -717,12 +724,6 @@ body:has(.hdr.over) .stick-buy{opacity:0;pointer-events:none}
   <section class="picks" aria-label="Collection #001" data-pt-aria-label="Coleção #001">
     <div class="picks__grid" id="picks"></div>
     <div class="picks__all pad"><a class="lab ulink" href="#collection" data-pt="Ver a coleção">Shop the collection</a></div>
-  </section>
-
-  <section class="sx-hero" id="top" aria-label="Opening">
-    <figure class="sx-film"><video src="img/hero-film-colour.mp4" poster="img/hero-film-colour.jpg" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="auto" aria-label="A BAMOBORA run in black and white: the pack on the calçada, high fives, the café after" data-pt-aria-label="Uma corrida BAMOBORA a preto e branco: o grupo na calçada, high fives, o café a seguir"></video></figure>
-    <span class="lab l" data-pt="BAMOBORA® · Coleção #001">BAMOBORA® · Collection #001</span>
-    <a class="lab r ulink" href="#collection" data-pt="Ver a coleção">Shop the collection</a>
   </section>
 
   <section class="sx-duo" aria-label="Life around the run" data-pt-aria-label="A vida à volta da corrida">
@@ -1051,7 +1052,7 @@ body:has(.hdr.over) .stick-buy{opacity:0;pointer-events:none}
   })();
   renderPicks();
   (function(){ var b=document.getElementById("mbtn"), m=document.getElementById("mpanel"); if(!b||!m) return;
-    function set(o){ m.hidden=!o; b.setAttribute("aria-expanded",String(o)); document.documentElement.classList.toggle("m-open",o); b.textContent=o?(LANG==="pt"?"Fechar":"Close"):(LANG==="pt"?"Menu":"Menu"); }
+    function set(o){ m.hidden=!o; b.setAttribute("aria-expanded",String(o)); document.documentElement.classList.toggle("m-open",o); b.classList.toggle("is-open",o); }
     b.addEventListener("click",function(){ set(m.hidden); });
     m.addEventListener("click",function(e){ if(e.target.closest("a")) set(false); });
     document.addEventListener("keydown",function(e){ if(e.key==="Escape"&&!m.hidden) set(false); });
@@ -1107,6 +1108,15 @@ body:has(.hdr.over) .stick-buy{opacity:0;pointer-events:none}
   ["touchstart","click","scroll","keydown"].forEach(function(ev){ window.addEventListener(ev,go,{once:true,passive:true}); });
 })();
 </script>
+<script>
+(function(){var b=document.getElementById("srchbtn"),bar=document.getElementById("srch"),i=document.getElementById("srchin");if(!b)return;
+ function apply(){var q=i.value.trim().toLowerCase();document.querySelectorAll("#shopgrid .sc").forEach(function(c){c.style.display=(!q||c.textContent.toLowerCase().indexOf(q)>-1)?"":"none";});}
+ b.addEventListener("click",function(){bar.hidden=!bar.hidden;if(!bar.hidden)i.focus();});
+ i.addEventListener("input",function(){if((location.hash||"").indexOf("#collection")!==0){location.hash="#collection";setTimeout(apply,80);}else apply();});
+ i.addEventListener("keydown",function(e){if(e.key==="Escape"){bar.hidden=true;b.focus();}});
+ window.addEventListener("hashchange",function(){setTimeout(apply,80);});
+})();
+</script>
 
 <style>
 /* STAGING: Koumori direction. Nata page, tiles with a small gap and soft corners, true colour, quiet type, red only as a full tile. */
@@ -1118,7 +1128,6 @@ html[data-page="events"] .hdr .lg-n,html[data-page="events"] .ftr .lg-n{display:
 html[data-page="events"] .hp-intro{color:var(--ink)!important}
 .hp__blank{background:var(--panel)!important}
 html.on-home .hdr,html.on-home .hdr.over{background:var(--ground)!important;color:var(--ink)!important;border-bottom:0!important}
-html.on-home .hdr .lg-a{display:block!important}html.on-home .hdr .lg-n{display:none!important}
 .sx-hero::after{display:none!important}
 .kx-logo{padding:clamp(20px,3vw,40px) var(--g) clamp(28px,4vw,56px);overflow:hidden}
 .kx-logo__row{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--ink);padding:14px clamp(10px,1.4vw,20px) 0;margin:0 calc(var(--g) * -0)}
@@ -1127,6 +1136,39 @@ html.on-home .hdr .lg-a{display:block!important}html.on-home .hdr .lg-n{display:
 .kx-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);margin:0}
 html.on-home .sx-hero{margin:var(--g) var(--g) 0;border-radius:var(--rad);overflow:hidden;height:min(86svh,920px)!important;min-height:420px}
 html.on-home .sx-hero .lab{color:var(--paper)}
+/* header: menu left, logo centred, search and bag right */
+.hdr{display:grid!important;grid-template-columns:1fr auto 1fr!important;align-items:center;height:76px;padding-block:0!important;background:var(--ground)!important;color:var(--ink)!important;border-bottom:1px solid var(--ink)!important}
+.hdr>a:first-child{grid-column:2;grid-row:1;justify-self:center;display:block}
+.hdr>a:first-child img{width:clamp(150px,13vw,200px)!important;height:auto}
+.hdr .lg-a{display:block!important}.hdr .lg-n,.hdr .lg-t{display:none!important}
+.hdr nav.spread{display:contents!important}
+.hdr nav.spread>a{display:none!important}
+.mega{display:none!important}
+.mbtn{display:flex!important;grid-column:1;grid-row:1;justify-self:start;flex-direction:column;justify-content:center;gap:7px;width:40px;height:40px;padding:0!important;background:none;border:0;cursor:pointer;color:var(--ink)}
+.mbtn i{display:block;width:40px;height:1.5px;background:currentColor;transition:transform .25s ease,opacity .25s ease}
+.mbtn.is-open i:nth-child(1){transform:translateY(8.5px) rotate(45deg)}.mbtn.is-open i:nth-child(2){opacity:0}.mbtn.is-open i:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}
+.hdr__end{grid-column:3;grid-row:1;justify-self:end;display:flex!important;align-items:center;gap:clamp(16px,2vw,28px)}
+.srch-btn{background:none;border:0;padding:0;cursor:pointer;color:var(--ink);font-family:var(--text);font-weight:400;font-size:clamp(17px,1.4vw,21px);letter-spacing:0;text-transform:none}
+.srch-btn:hover{opacity:.6}
+.langs button{font-size:11px!important}
+.bag-l{position:relative;display:block;width:24px;height:28px;color:var(--ink)}
+.bag-ic{width:24px;height:28px;display:block}
+.bag-l .bagcount{position:absolute;right:-9px;bottom:-5px;min-width:19px;height:19px;padding:0 4px;margin:0;border:0!important;border-radius:10px;background:var(--tijolo);color:var(--paper);font-family:var(--text);font-size:11px;line-height:19px;text-align:center;box-sizing:border-box}
+.srch{position:fixed;left:0;right:0;top:77px;z-index:47;background:var(--ground);border-bottom:1px solid var(--line);padding:14px max(16px,4vw)}
+.srch[hidden]{display:none}
+.srch input{width:100%;border:0;border-bottom:1px solid var(--ink);background:transparent;color:var(--ink);font-family:var(--text);font-size:clamp(20px,2vw,28px);padding:8px 0;outline:none}
+.mpanel{top:77px!important;padding-left:var(--gx,46px)!important;padding-right:var(--gx,46px)!important}
+html.on-home .sx-hero{margin:calc(77px + var(--g)) var(--g) 0!important;height:calc(100svh - 77px - var(--g) * 2)!important;max-height:980px}
+#manifesto{padding-block:clamp(70px,9vw,150px) clamp(60px,8vw,120px)!important}
+@media (max-width:760px){
+ .hdr{height:60px}
+ .hdr>a:first-child img{width:132px!important}
+ .mbtn{width:30px}.mbtn i{width:30px}
+ .langs{display:none!important}
+ .srch-btn{font-size:16px}
+ .srch,.mpanel{top:61px!important}
+ html.on-home .sx-hero{margin-top:calc(61px + var(--g))!important;height:72svh!important}
+}
 img,video{filter:none!important}
 #manifesto{padding-block:calc(64px + clamp(70px,9vw,150px)) clamp(60px,8vw,120px)!important}
 #manifesto p.big{color:var(--ink)!important}
