@@ -1113,7 +1113,12 @@ body:has(.hdr.over) .stick-buy{opacity:0;pointer-events:none}
 <style>
 /* STAGING: Koumori direction. Nata page, tiles with a small gap and soft corners, true colour, quiet type, red only as a full tile. */
 :root{--g:6px;--rad:6px}
-html.on-home{--ground:#fffbf0;--ink:#353535;--muted:#7a756b;--line:#d9d3c6;--panel:#f1ede3;color-scheme:light}
+html,html.on-home,html.on-coll,html.on-coll:not(.pt),html[data-page="events"],html.pt{--ground:#fffbf0!important;--ink:#353535!important;--muted:#7a756b!important;--line:#d9d3c6!important;--panel:#f1ede3!important;color-scheme:light}
+body{background:#fffbf0!important}
+html[data-page="events"] .hdr .lg-a,html[data-page="events"] .ftr .lg-a{display:block!important}
+html[data-page="events"] .hdr .lg-n,html[data-page="events"] .ftr .lg-n{display:none!important}
+html[data-page="events"] .hp-intro{color:var(--ink)!important}
+.hp__blank{background:var(--panel)!important}
 html.on-home .hdr,html.on-home .hdr.over{background:var(--ground)!important;color:var(--ink)!important;border-bottom:0!important}
 html.on-home .hdr .lg-a{display:block!important}html.on-home .hdr .lg-n{display:none!important}
 .sx-hero::after{display:none!important}
@@ -1135,10 +1140,8 @@ img,video{filter:none!important}
 .sx-duo{gap:var(--g)!important;padding:var(--g) var(--g) 0!important}
 .sx-duo figure,.sx-full{border-radius:var(--rad);overflow:hidden}
 .sx-full{margin:var(--g)!important}
-html.on-home .sx-join{margin:0 var(--g) var(--g);border-radius:var(--rad);background:var(--tijolo);color:var(--paper);padding-block:clamp(60px,8vw,120px)!important}
-html.on-home .sx-join .lab,html.on-home .sx-join h2.big,html.on-home .sx-join .msg{color:var(--paper)!important}
-html.on-home .sx-join input,html.on-home .sx-join button{color:var(--paper)!important;border-color:var(--paper)!important;background:transparent!important}
-html.on-home .sx-join input::placeholder{color:rgba(255,251,240,.7)!important}
+html.on-home .sx-join{padding-block:clamp(70px,9vw,140px)!important}
+html.on-home .sx-join .lab{color:var(--muted)!important}
 html.on-home .stick-buy{background:var(--asfalto)!important;color:var(--paper)!important;border-radius:var(--rad)}
 .shop-grid,.more .grid{gap:var(--g)!important}
 @media (max-width:640px){:root{--g:4px;--rad:5px}.kx-logo{min-height:auto;padding-top:130px;padding-bottom:64px}.kx-logo__row{gap:10px 18px}}
