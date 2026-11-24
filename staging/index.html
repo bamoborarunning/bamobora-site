@@ -710,23 +710,25 @@ body:has(.hdr.over) .stick-buy{opacity:0;pointer-events:none}
 <!-- HOME -->
 <div class="view" data-view="home">
 
-  <section class="kx-head pad" aria-label="BAMOBORA®"><h1 data-pt="Running into things.">Running into things.</h1><span class="lab">BAMOBORA® · Collection #001 · Rooted in Portugal</span></section>
-
-  <section class="sx-hero" id="top" aria-label="Opening">
-    <figure class="sx-film"><video src="img/hero-film-colour.mp4" poster="img/hero-film-colour.jpg" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="auto" aria-label="A BAMOBORA run in black and white: the pack on the calçada, high fives, the café after" data-pt-aria-label="Uma corrida BAMOBORA a preto e branco: o grupo na calçada, high fives, o café a seguir"></video></figure>
-    <span class="lab l" data-pt="BAMOBORA® · Coleção #001">BAMOBORA® · Collection #001</span>
-    <a class="lab r ulink" href="#manifesto" data-pt="Ler o manifesto">Read the manifesto</a>
+  <section class="kx-logo" aria-label="BAMOBORA">
+    <h1 class="kx-sr">BAMOBORA</h1>
+    <img src="../img/bamobora-wordmark-asfalto.svg" alt="">
+    <div class="kx-logo__row"><span class="lab" data-pt="Activewear portuguesa">Portuguese activewear</span><span class="lab" data-pt="Coleção #001">Collection #001</span><span class="lab" data-pt="Com raízes em Portugal">Rooted in Portugal</span></div>
   </section>
 
   <section class="sx-txt pad" id="manifesto">
     <p class="big" data-pt="Somos a BAMOBORA. Uma marca portuguesa de activewear e um coletivo de inadaptados a dar corda à criatividade. Não somos atletas. Continuamos a competir. Correr nunca é o objetivo. É o meio através do qual vivemos a criatividade, as cidades e uns aos outros. Aparecer fala mais alto do que chegar em primeiro. Depois, desafiamo-nos: uma distância nova, um ritmo mais rápido, um percurso mais duro. Um jogo contra nós próprios, nunca um ranking. Misturamos performance com tradição. Tecido técnico em ruas com séculos. Uma bica depois da corrida, cadeiras de plástico ao sol, o dono do café que nos trata pelo nome. O luxo não é caro. É ter tempo. Levamos o movimento para onde ele não pertence. Para museus, mercados e bibliotecas, para as passerelles. Cada evento é uma intervenção cultural: nunca igual duas vezes, anunciado uma só vez. Com raízes em Portugal. Criados para o mundo.">We are BAMOBORA. A Portuguese activewear brand, and a collective of misfits grinding creativity. Not athletes. Still racing. Running is never the objective. It is the medium through which we experience creativity, cities and each other. Showing up is louder than finishing first. Then we challenge ourselves: a new distance, a faster pace, a harder route. A game against ourselves, never a ranking. We mix performance with tradition. Technical fabric on centuries-old streets. A bica after the run, plastic chairs in the sun, the café owner who knows us by name. Luxury isn't expensive. It's taking the time. We take movement where it doesn't belong. Into museums, markets and libraries, onto runways. Every event is a cultural intervention: never the same twice, announced once. Rooted in Portugal. Crafted for the world.</p>
   </section>
 
-  <section class="kx-mark" aria-label="BAMOBORA®"><img src="../img/bamobora-wordmark-nata.svg" alt=""></section>
-
   <section class="picks" aria-label="Collection #001" data-pt-aria-label="Coleção #001">
     <div class="picks__grid" id="picks"></div>
     <div class="picks__all pad"><a class="lab ulink" href="#collection" data-pt="Ver a coleção">Shop the collection</a></div>
+  </section>
+
+  <section class="sx-hero" id="top" aria-label="Opening">
+    <figure class="sx-film"><video src="img/hero-film-colour.mp4" poster="img/hero-film-colour.jpg" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="auto" aria-label="A BAMOBORA run in black and white: the pack on the calçada, high fives, the café after" data-pt-aria-label="Uma corrida BAMOBORA a preto e branco: o grupo na calçada, high fives, o café a seguir"></video></figure>
+    <span class="lab l" data-pt="BAMOBORA® · Coleção #001">BAMOBORA® · Collection #001</span>
+    <a class="lab r ulink" href="#collection" data-pt="Ver a coleção">Shop the collection</a>
   </section>
 
   <section class="sx-duo" aria-label="Life around the run" data-pt-aria-label="A vida à volta da corrida">
@@ -1109,26 +1111,28 @@ body:has(.hdr.over) .stick-buy{opacity:0;pointer-events:none}
 </script>
 
 <style>
-/* STAGING: Koumori direction. Nata page, everything in tiles with a small gap and soft corners, photos in true colour, quiet type, red only as a full tile. */
+/* STAGING: Koumori direction. Nata page, tiles with a small gap and soft corners, true colour, quiet type, red only as a full tile. */
 :root{--g:6px;--rad:6px}
 html.on-home{--ground:#fffbf0;--ink:#353535;--muted:#7a756b;--line:#d9d3c6;--panel:#f1ede3;color-scheme:light}
 html.on-home .hdr,html.on-home .hdr.over{background:var(--ground)!important;color:var(--ink)!important;border-bottom:0!important}
 html.on-home .hdr .lg-a{display:block!important}html.on-home .hdr .lg-n{display:none!important}
-html.on-home .hdr::after,.sx-hero::after{display:none!important}
-.kx-head{padding-top:calc(64px + clamp(48px,7vw,110px))!important;padding-bottom:calc(var(--g) * 2)!important;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
-.kx-head h1{margin:0;font-family:var(--text);font-weight:400;font-size:clamp(58px,9.5vw,164px);line-height:.9;letter-spacing:-.035em;color:var(--ink)}
-.kx-head .lab{color:var(--muted);padding-bottom:.8em}
-html.on-home .sx-hero{margin:0 var(--g);border-radius:var(--rad);overflow:hidden;height:min(86svh,920px)!important;min-height:420px}
+.sx-hero::after{display:none!important}
+.kx-logo{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:clamp(22px,3vw,44px);padding:calc(64px + 3vw) var(--g) clamp(40px,6vw,80px);text-align:center;box-sizing:border-box}
+.kx-logo img{width:min(94vw,1600px);height:auto;display:block;animation:kxin 1.2s cubic-bezier(.2,.7,.2,1) both}
+.kx-logo__row{display:flex;gap:clamp(18px,4vw,64px);flex-wrap:wrap;justify-content:center;animation:kxin 1.2s .25s cubic-bezier(.2,.7,.2,1) both}
+.kx-logo__row .lab{color:var(--muted)}
+@keyframes kxin{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.kx-logo img,.kx-logo__row{animation:none}}
+.kx-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);margin:0}
+html.on-home .sx-hero{margin:var(--g) var(--g) 0;border-radius:var(--rad);overflow:hidden;height:min(86svh,920px)!important;min-height:420px}
 html.on-home .sx-hero .lab{color:var(--paper)}
 img,video{filter:none!important}
-#manifesto{padding-block:clamp(60px,8vw,130px)!important}
+#manifesto{padding-block:clamp(10px,2vw,30px) clamp(60px,8vw,120px)!important}
 #manifesto p.big{color:var(--ink)!important}
-.kx-mark{margin:0 var(--g);border-radius:var(--rad);background:#e4e1da;aspect-ratio:16/7;display:grid;place-items:center;overflow:hidden}
-.kx-mark img{width:74%;height:auto}
-.picks{padding:var(--g) 0 clamp(50px,6vw,90px)!important}
+.picks{padding:0 0 clamp(40px,5vw,70px)!important}
 .picks__grid{gap:var(--g)!important;padding:0 var(--g)!important}
 .pk__img,.sc,.car,.pd__fimg,.fc__box,.shot,.hp img,.hp__blank,.tp{border-radius:var(--rad);overflow:hidden}
-.sx-duo{gap:var(--g)!important;padding:0 var(--g)!important}
+.sx-duo{gap:var(--g)!important;padding:var(--g) var(--g) 0!important}
 .sx-duo figure,.sx-full{border-radius:var(--rad);overflow:hidden}
 .sx-full{margin:var(--g)!important}
 html.on-home .sx-join{margin:0 var(--g) var(--g);border-radius:var(--rad);background:var(--tijolo);color:var(--paper);padding-block:clamp(60px,8vw,120px)!important}
@@ -1137,7 +1141,7 @@ html.on-home .sx-join input,html.on-home .sx-join button{color:var(--paper)!impo
 html.on-home .sx-join input::placeholder{color:rgba(255,251,240,.7)!important}
 html.on-home .stick-buy{background:var(--asfalto)!important;color:var(--paper)!important;border-radius:var(--rad)}
 .shop-grid,.more .grid{gap:var(--g)!important}
-@media (max-width:640px){:root{--g:4px;--rad:5px}.kx-head h1{font-size:15vw}.kx-mark{aspect-ratio:4/3}}
+@media (max-width:640px){:root{--g:4px;--rad:5px}.kx-logo{min-height:auto;padding-top:130px;padding-bottom:64px}.kx-logo__row{gap:10px 18px}}
 </style>
 </body>
 </html>
