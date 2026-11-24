@@ -1,0 +1,1107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>BAMOBORA®</title>
+<meta name="description" content="Portuguese activewear. Rooted in Portugal. Crafted for the world.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BAMOBORA®">
+<meta property="og:description" content="Portuguese activewear. Rooted in Portugal. Crafted for the world.">
+<meta property="og:image" content="../img/hero-film.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<style>
+@font-face{font-family:"BMB Ultra";src:url("../fonts/OTNeueMontreal-BoldUltraSqueezed.otf") format("opentype");font-weight:700;font-display:swap}
+@font-face{font-family:"BMB Ultra";src:url("../fonts/OTNeueMontreal-MediumUltraSqueezed.otf") format("opentype");font-weight:500;font-display:swap}
+@font-face{font-family:"BMB Ultra";src:url("../fonts/OTNeueMontreal-ThinUltraSqueezed.otf") format("opentype");font-weight:100;font-display:swap}
+@font-face{font-family:"BMB Extra";src:url("../fonts/OTNeueMontreal-BoldExtraSqueezed.otf") format("opentype");font-weight:700;font-display:swap}
+@font-face{font-family:"BMB Extra";src:url("../fonts/OTNeueMontreal-MediumExtraSqueezed.otf") format("opentype");font-weight:500;font-display:swap}
+@font-face{font-family:"BMB Semi";src:url("../fonts/OTNeueMontreal-BookSemiSqueezed.otf") format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:"BMB Semi";src:url("../fonts/OTNeueMontreal-MediumSemiSqueezed.otf") format("opentype");font-weight:500;font-display:swap}
+
+/* Layout: underground store after dark. Charcoal ground, Nata ink, products shot on Nata paper, B&W grain photos; Tijolo only on the buy action. */
+:root{
+  --ground:#fffbf0; --panel:#efe8d6; --line:#d9d1bd;
+  --ink:#353535; --muted:#5c5c5c; --tijolo:#a63737; --paper:#fffbf0; --asfalto:#353535;
+  --display:"BMB Ultra","Arial Narrow","Roboto Condensed",sans-serif;
+  --photo:"BMB Extra","Arial Narrow","Roboto Condensed",sans-serif;
+  --text:"BMB Semi","Helvetica Neue",Arial,sans-serif;
+  --gx:clamp(16px,3.2vw,48px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--text);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ground)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font:inherit}
+.pad{padding-left:max(var(--gx),env(safe-area-inset-left,0px));padding-right:max(var(--gx),env(safe-area-inset-right,0px))}
+.tag{font-family:var(--photo);font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;line-height:1.15;white-space:pre}
+.muted{color:var(--muted)}
+:focus-visible{outline:2px solid #337baf;outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.view[hidden]{display:none!important}
+[id]{scroll-margin-top:calc(80px + env(safe-area-inset-top,0px))}
+
+/* header */
+.hdr{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding-block:18px;background:var(--ground);border-bottom:1px solid var(--line)}
+.hdr.solid{background:var(--ground);border-bottom:1px solid var(--line)}
+.hdr img{width:118px}
+.hdr nav{display:flex;gap:clamp(16px,2.6vw,36px);align-items:center}
+.hdr nav a{font-family:var(--photo);font-weight:500;font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+.hdr nav a:hover{color:var(--muted)}
+.bagcount{display:inline-block;min-width:1.6em;text-align:center;border:1px solid currentColor;padding:2px 4px;margin-left:6px;font-variant-numeric:tabular-nums}
+@media (max-width:520px){.hdr nav .opt{display:none}}
+
+/* photos */
+.ph{position:relative;overflow:hidden;background:var(--panel)}
+.ph>img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.22) brightness(.88)}
+.ph::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:overlay;opacity:.55;background-size:180px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
+.shot{background:var(--paper);overflow:hidden;aspect-ratio:4/5}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+
+/* hero */
+.hero{height:min(100svh,980px);min-height:560px;position:relative}
+.hero .ph{position:absolute;inset:0}
+.hero__in{position:absolute;inset:auto 0 0 0;z-index:2;padding-block:0 clamp(28px,4vw,48px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end}
+.hero h1{margin:0;font-family:var(--photo);font-weight:700;text-transform:uppercase;font-size:clamp(56px,9.4vw,150px);line-height:.78;letter-spacing:-.005em;max-width:9.5em}
+.hero__meta{display:grid;gap:18px;justify-items:end;text-align:right}
+@media (max-width:700px){.hero{height:auto;aspect-ratio:3/4.4;min-height:0}.hero__in{grid-template-columns:1fr}.hero__meta{justify-items:start;text-align:left}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;font-family:var(--photo);font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase;line-height:1;padding:16px 22px;border:1px solid var(--ink);color:var(--ink);background:transparent;cursor:pointer}
+.btn:hover{background:var(--ink);color:var(--ground)}
+.btn--red{background:var(--tijolo);border-color:var(--tijolo)}
+.btn--red:hover{background:var(--ink);color:var(--tijolo);border-color:var(--ink)}
+.btn--block{width:100%;padding:20px}
+
+/* statement */
+.state{padding-block:clamp(120px,16vw,240px);display:grid;gap:28px;justify-items:center;text-align:center}
+.state p.big{margin:0;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(64px,11vw,190px);line-height:.78;text-wrap:balance}
+.state p.small{margin:0;max-width:38ch;color:var(--muted)}
+
+/* shop grid */
+.shop{padding-block:0 clamp(96px,12vw,180px)}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-top:1px solid var(--line);padding-top:14px;margin-bottom:clamp(24px,3vw,40px)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,24px);row-gap:clamp(36px,4vw,56px)}
+@media (max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.card{display:flex;flex-direction:column;gap:14px;min-width:0}
+.card .shot{position:relative}
+.card .shot .tag{position:absolute;left:12px;top:12px;color:var(--asfalto);z-index:1}
+.card:hover .shot img{transform:scale(1.04)}
+.card__meta{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.card__name{margin:0;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(26px,2.3vw,36px);line-height:.85}
+.card__sub{margin-top:-8px}
+.price{font-family:var(--photo);font-weight:500;font-size:14px;letter-spacing:.1em;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* feature */
+.feat{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(28px,5vw,88px);align-items:center;padding-block:clamp(96px,12vw,180px);border-top:1px solid var(--line)}
+@media (max-width:900px){.feat{grid-template-columns:1fr}}
+.feat h2{margin:16px 0 22px;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(54px,7vw,120px);line-height:.78}
+.feat p{margin:0 0 28px;max-width:44ch;color:var(--muted)}
+
+/* strip */
+.strip{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:clamp(8px,1vw,14px);align-items:end}
+.strip .ph:nth-child(1){aspect-ratio:3/4}
+.strip figure:nth-child(1) .ph,.strip figure:nth-child(3) .ph{aspect-ratio:3/4}
+.strip figure:nth-child(2) .ph{aspect-ratio:4/5}
+@media (max-width:700px){.strip{grid-template-columns:1fr 1fr}.strip figure:nth-child(2){grid-column:1/-1;order:-1}}
+.cap{display:flex;justify-content:space-between;margin-top:10px}
+
+/* world + list + footer */
+.world{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,5vw,88px);padding-block:clamp(96px,12vw,180px)}
+@media (max-width:760px){.world{grid-template-columns:1fr}}
+.world h3{margin:14px 0 16px;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(44px,5vw,80px);line-height:.8}
+.world p{margin:0;max-width:42ch;color:var(--muted)}
+.list{border-top:1px solid var(--line);padding-block:clamp(80px,10vw,150px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(28px,5vw,88px);align-items:end}
+@media (max-width:760px){.list{grid-template-columns:1fr}}
+.list h2{margin:0;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(54px,7vw,120px);line-height:.78}
+.mail{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:18px 0 26px}
+.mail code{font-family:var(--photo);font-weight:500;font-size:18px;letter-spacing:.08em;user-select:all;border-bottom:1px solid var(--muted);padding-bottom:3px}
+.copybtn{font-family:var(--photo);font-weight:500;font-size:11px;letter-spacing:.18em;text-transform:uppercase;background:none;border:1px solid var(--line);color:var(--ink);padding:7px 10px;cursor:pointer}
+.ftr{border-top:1px solid var(--line);padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.ftr img{width:110px}
+
+/* product page (gallery left, sticky buy panel right) */
+.pdp{padding-top:calc(86px + env(safe-area-inset-top,0px));padding-bottom:clamp(64px,8vw,120px)}
+.crumb{display:flex;gap:10px;margin-bottom:20px}
+.crumb a:hover{color:var(--ink)}
+.pdp__grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(24px,4vw,72px);align-items:start}
+@media (max-width:900px){.pdp__grid{grid-template-columns:1fr}}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.gallery>*{min-width:0}
+.gallery .wide{grid-column:1/-1}
+.gallery .ph{aspect-ratio:4/5}
+.gallery .wide.ph{aspect-ratio:3/2}
+@media (max-width:900px){.gallery{grid-auto-flow:column;grid-auto-columns:86%;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory}.gallery>*{scroll-snap-align:start}.gallery .wide{grid-column:auto}.gallery .wide.ph{aspect-ratio:4/5}}
+.buy{position:sticky;top:calc(84px + env(safe-area-inset-top,0px));display:flex;flex-direction:column;gap:22px}
+@media (max-width:900px){.buy{position:static}}
+.buy h1{margin:0;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(52px,5.4vw,92px);line-height:.8}
+.buy__price{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:16px}
+.buy__price .price{font-size:18px}
+.opt-label{display:flex;justify-content:space-between;margin-bottom:10px}
+.swatches{display:flex;gap:10px}
+.swatch{display:flex;align-items:center;gap:10px;border:1px solid var(--line);padding:6px 12px 6px 6px}
+.swatch i{width:28px;height:28px;display:block;border:1px solid var(--line)}
+.swatch[aria-current="true"]{border-color:var(--ink)}
+.sizes{display:flex;gap:8px;flex-wrap:wrap}
+.sizes button{font-family:var(--photo);font-weight:500;font-size:13px;letter-spacing:.1em;min-width:52px;padding:13px 10px;background:transparent;color:var(--ink);border:1px solid var(--line);cursor:pointer}
+.sizes button[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--ground)}
+.note{margin:0;color:var(--muted);font-size:14px}
+.acc{border-top:1px solid var(--line)}
+.acc details{border-bottom:1px solid var(--line)}
+.acc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;padding:16px 0;font-family:var(--photo);font-weight:500;font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:"+";font-size:16px;line-height:1}
+.acc details[open] summary::after{content:"–"}
+.acc .body{padding:0 0 20px;color:var(--muted);max-width:52ch}
+.acc .body p{margin:0}.acc .body p+p{margin-top:.9em}
+.acc dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 20px}
+.acc dt{font-family:var(--photo);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.acc dd{margin:0}
+.more{border-top:1px solid var(--line);padding-top:clamp(56px,7vw,100px);margin-top:clamp(56px,7vw,100px)}
+.more .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.more .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;z-index:70;background:var(--ink);color:var(--ground);padding:14px 18px;font-family:var(--photo);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;transition:opacity .2s,transform .2s;pointer-events:none;max-width:calc(100% - 32px);text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+/* Minimal: Nata ground, full-bleed photographs, tiny spaced captions, numbered chapters, few words, lots of air. */
+.cap{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;justify-content:space-between;gap:16px;padding:0 clamp(16px,3.4vw,64px) clamp(16px,2.4vw,36px);color:var(--paper)}
+.cap span,.k{font-family:var(--photo);font-weight:500;font-size:clamp(11px,.9vw,14px);letter-spacing:.16em;text-transform:uppercase;line-height:1.2}
+.full{position:relative;width:100%;height:min(100svh,1040px);min-height:520px;overflow:hidden;background:#232323}
+.full>img{width:100%;height:100%;object-fit:cover;display:block}
+.full.bw>img{filter:grayscale(1) contrast(1.15) brightness(.9)}
+.full.hero>img{object-position:50% 26%;filter:brightness(.8)}
+@media (max-width:700px){.full{height:auto;aspect-ratio:4/5;min-height:0}}
+.center{display:grid;justify-items:center;text-align:center;gap:18px;padding-block:clamp(110px,13vw,200px)}
+.lock{display:flex;align-items:center;gap:16px}
+.lock img{width:clamp(140px,13vw,190px)}
+.lock i{width:1.5px;height:clamp(34px,3.4vw,46px);background:var(--ink)}
+.lock b{font-family:var(--display);font-weight:700;font-size:clamp(40px,3.8vw,56px);line-height:.8}
+.h{margin:0;font-family:var(--photo);font-weight:700;text-transform:uppercase;font-size:clamp(22px,2vw,30px);line-height:1;letter-spacing:-.005em}
+.form{width:min(100%,520px);display:flex;align-items:flex-end;gap:16px;border-bottom:1.5px solid var(--ink)}
+.form input{flex:1;min-width:0;background:transparent;border:0;color:var(--ink);font-family:var(--photo);font-weight:500;font-size:15px;letter-spacing:.14em;text-transform:uppercase;padding:10px 0}
+.form input::placeholder{color:var(--muted)}
+.form input:focus{outline:none}
+.form button{background:none;border:0;color:var(--ink);font-family:var(--photo);font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase;padding:10px 0;cursor:pointer}
+.msg{margin:0;min-height:1.3em;font-size:13px;color:var(--muted)}
+.intro{margin:6px 0 0;max-width:40ch;color:var(--muted);font-size:15px}
+.chap{display:grid;justify-items:center;text-align:center;gap:14px;padding-block:clamp(110px,13vw,200px) clamp(56px,7vw,100px)}
+.chap .n{font-family:var(--photo);font-weight:500;font-size:13px;letter-spacing:.2em;color:var(--muted)}
+.chap h2{margin:0;font-family:var(--photo);font-weight:700;text-transform:uppercase;font-size:clamp(34px,3.6vw,56px);line-height:.92;letter-spacing:-.005em;text-wrap:balance;max-width:16em}
+.chap .tl{font-family:var(--photo);font-weight:700;text-transform:uppercase;font-size:clamp(15px,1.2vw,18px);letter-spacing:.04em}
+.chap p{margin:4px 0 0;max-width:46ch;color:var(--muted);font-size:15px}
+.pair{display:grid;grid-template-columns:1fr 1fr;position:relative;background:var(--paper)}
+.pair .shot{aspect-ratio:4/5}
+.pair .cap{color:var(--ink)}
+.specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--line)}
+.specs div{padding:22px 0 24px;text-align:center;min-width:0}
+.specs div+div{border-left:1px solid var(--line)}
+.specs dt{margin-bottom:8px}
+.specs dd{margin:0;font-family:var(--photo);font-weight:700;text-transform:uppercase;font-size:clamp(15px,1.3vw,19px);letter-spacing:.04em}
+.feats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,1vw,16px);padding-block:clamp(64px,8vw,120px)}
+.ft{display:grid;gap:14px;min-width:0;text-align:center;align-content:start}
+.ft .shot{aspect-ratio:4/5}
+.ft .k{color:var(--muted)}
+.ft b{font-family:var(--photo);font-weight:700;text-transform:uppercase;font-size:clamp(14px,1.15vw,17px);letter-spacing:.04em}
+@media (max-width:760px){.feats{grid-template-columns:1fr;gap:48px}.specs{grid-template-columns:1fr}.specs div+div{border-left:0;border-top:1px solid var(--line)}}
+.links{display:flex;gap:28px;justify-content:center;padding-block:0 clamp(40px,5vw,72px)}
+.links a{font-family:var(--photo);font-weight:500;font-size:13px;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:4px}
+.archive{display:grid;max-width:880px;margin:0 auto;padding-block:clamp(48px,6vw,90px) clamp(110px,13vw,200px)}
+.archive div{display:grid;grid-template-columns:1fr auto;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.archive div:first-child{border-top:1px solid var(--line)}
+.archive b{font-family:var(--photo);font-weight:700;text-transform:uppercase;font-size:15px;letter-spacing:.04em}
+.archive span{color:var(--muted)}
+/* Manifesto-first: statements carry the page, photographs breathe between them, product sits quietly at the end. */
+.st{display:grid;justify-items:center;text-align:center;gap:18px;padding-block:clamp(120px,15vw,230px)}
+.st .n{font-family:var(--photo);font-weight:500;font-size:13px;letter-spacing:.2em;color:var(--muted)}
+.st h2{margin:0;font-family:var(--photo);font-weight:700;text-transform:uppercase;font-size:clamp(40px,5.2vw,84px);line-height:.9;letter-spacing:-.01em;text-wrap:balance;max-width:14em}
+.st p{margin:6px 0 0;max-width:44ch;color:var(--muted);font-size:clamp(15px,1.15vw,18px);line-height:1.55}
+.st--open h2{font-size:clamp(52px,7.4vw,124px);line-height:.86}
+.do{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.4vw,22px);padding-bottom:clamp(110px,13vw,200px)}
+.do a{display:grid;gap:16px;min-width:0}
+.do .full{height:auto;aspect-ratio:4/5;min-height:0}
+.do .k{color:var(--muted)}
+.do b{font-family:var(--photo);font-weight:700;text-transform:uppercase;font-size:clamp(20px,1.8vw,28px);line-height:1}
+.do p{margin:0;color:var(--muted);max-width:40ch;font-size:15px}
+@media (max-width:760px){.do{grid-template-columns:1fr;gap:56px}}
+.objs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(8px,1vw,16px);padding-bottom:clamp(40px,5vw,72px)}
+.objs a{display:grid;gap:10px;min-width:0;text-align:center}
+.objs .shot{aspect-ratio:4/5}
+.objs b{font-family:var(--photo);font-weight:700;text-transform:uppercase;font-size:14px;letter-spacing:.04em}
+.objs .k{color:var(--muted);margin-top:-4px}
+@media (max-width:760px){.objs{grid-template-columns:1fr 1fr;row-gap:32px}}
+.open{display:grid;justify-items:center;text-align:center;gap:22px;padding-block:clamp(120px,14vw,220px) clamp(40px,5vw,72px)}
+.open h1{margin:0;font-family:var(--photo);font-weight:700;text-transform:uppercase;font-size:clamp(44px,5.4vw,92px);line-height:.9;letter-spacing:-.01em;max-width:11em;text-wrap:balance}
+.open p{margin:0;max-width:40ch;color:var(--muted);font-size:clamp(16px,1.2vw,18px)}
+.pair.photos .ph{aspect-ratio:4/5}
+.pair.photos .ph>img{filter:none}
+.pair.photos .ph::after{display:none}
+.pair.photos .cap{color:var(--paper)}
+.bwp>img{filter:grayscale(1) contrast(1.15) brightness(.9)!important}
+.full>img{filter:none}
+.full.bw>img{filter:grayscale(1) contrast(1.15) brightness(.9)}
+.do{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,120px);padding-block:clamp(120px,14vw,220px) clamp(80px,10vw,150px);border-top:1px solid var(--line);margin-top:clamp(80px,10vw,150px)}
+.do__col{display:grid;gap:14px;align-content:start}
+.do h3{margin:0;font-family:var(--photo);font-weight:700;text-transform:uppercase;font-size:clamp(28px,2.6vw,42px);line-height:.92}
+.do p{margin:0;max-width:40ch;color:var(--muted);font-size:15px}
+.archive.mini{padding:12px 0 0;max-width:none;margin:0}
+.archive.mini div{padding:12px 0}
+.archive.mini b{font-size:13px}
+.archive.mini span{font-size:14px}
+@media (max-width:760px){.do{grid-template-columns:1fr}}
+.wear{padding-block:clamp(110px,13vw,200px) 0}
+.wear__head{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:14px;margin-bottom:28px}
+.wear__row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(8px,1vw,16px)}
+.wo{display:grid;gap:12px;text-align:center;align-content:start}
+.wo .shot{aspect-ratio:4/5}
+.wo:hover .shot img{transform:scale(1.04)}
+@media (max-width:760px){.wear__row{grid-template-columns:1fr 1fr;row-gap:28px}}
+.idea{display:grid;place-items:center;text-align:center;min-height:min(78svh,760px);padding-block:clamp(80px,10vw,160px)}
+.idea h1{margin:0;font-family:var(--photo);font-weight:700;text-transform:uppercase;font-size:clamp(52px,8.4vw,150px);line-height:.86;letter-spacing:-.012em;max-width:9.5em;text-wrap:balance}
+.mf{display:grid;justify-items:center;gap:clamp(28px,3vw,44px);padding-block:clamp(40px,5vw,80px) clamp(120px,14vw,220px);border-top:1px solid var(--line)}
+.mf>.k:first-child{margin-top:clamp(28px,3vw,44px)}
+.mf__text{max-width:36rem}
+.mf__text p{margin:0 0 1.15em;font-size:clamp(19px,1.55vw,24px);line-height:1.45;color:var(--ink)}
+.mf__text p:last-child{margin-bottom:0;font-family:var(--photo);font-weight:700;text-transform:uppercase;font-size:clamp(18px,1.4vw,22px);letter-spacing:.02em}
+/* Satisfy edition: Nata page, photographs edge to edge and touching, large plain sentences in Asfalto, small spaced labels, square corners, one red. */
+@font-face{font-family:"BMB Squeezed";src:url("../fonts/OTNeueMontreal-BoldSqueezed.otf") format("opentype");font-weight:700;font-display:swap}
+:root{--big:"BMB Squeezed","Arial Narrow",Helvetica,sans-serif;--mute2:#8a8478}
+.lab{font-family:var(--photo);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;line-height:1.3}
+.ulink{border-bottom:1px solid currentColor;padding-bottom:3px}
+.ulink:hover{color:var(--tijolo)}
+/* header: transparent over the opening photographs, Nata once you scroll */
+.hdr{background:var(--ground);border-bottom:0;transition:background-color .35s ease,color .35s ease}
+.hdr .lg-n{display:none}
+.hdr.over{background:transparent;color:var(--paper)}
+.hdr.over .lg-a{display:none}.hdr.over .lg-n{display:block}
+.hdr nav.spread{flex:1;display:grid;grid-template-columns:repeat(4,1fr) auto;justify-items:center;margin-left:clamp(20px,6vw,120px)}
+.hdr nav.spread a{font-size:13px;letter-spacing:.14em}
+.hdr nav.spread a:hover{color:inherit;opacity:.6}
+.hdr nav.spread a:last-child{justify-self:end}
+@media (max-width:640px){.hdr nav.spread{grid-template-columns:auto auto;gap:18px;justify-items:end}.hdr nav.spread .opt{display:none}}
+/* photographs */
+.sx-hero,.sx-duo{display:grid;grid-template-columns:58fr 42fr}
+.sx-duo{grid-template-columns:42fr 58fr}
+.sx-hero figure,.sx-duo figure,.sx-full{margin:0;position:relative;overflow:hidden;background:#2b2b2b;min-width:0}
+.sx-hero img,.sx-duo img,.sx-full img{width:100%;height:100%;object-fit:cover;display:block}
+/* black and white everywhere, except the photos on the front of the product cards */
+.sx-hero img,.sx-duo img,.sx-full img,.rail img{filter:grayscale(1) contrast(1.12)}
+.sx-hero{height:100svh;min-height:560px;max-height:1120px;position:relative}
+.sx-hero figure:first-child img{object-position:50% 26%}
+.sx-hero .lab,.sx-full .lab{position:absolute;z-index:2;bottom:clamp(16px,2vw,30px);color:var(--paper)}
+.sx-hero .l{left:max(var(--gx),env(safe-area-inset-left,0px))}
+.sx-hero .r{right:max(var(--gx),env(safe-area-inset-right,0px))}
+.sx-hero::after{content:"";position:absolute;inset:0 0 auto;height:140px;background:linear-gradient(rgba(30,30,30,.32),transparent);pointer-events:none}
+.sx-duo figure{height:min(92svh,940px)}
+.sx-full{height:min(100svh,1040px)}
+.sx-full .lab{left:max(var(--gx),env(safe-area-inset-left,0px))}
+@media (max-width:760px){
+  .sx-hero{grid-template-columns:1fr;height:auto;min-height:0;max-height:none}
+  .sx-hero figure{aspect-ratio:4/5}.sx-hero figure+figure{display:none}
+  .sx-hero .r{display:none}
+  .sx-duo{grid-template-columns:1fr 1fr}.sx-duo figure{height:auto;aspect-ratio:3/4}
+  .sx-full{height:auto;aspect-ratio:4/5}
+}
+/* words */
+.sx-idea{padding-block:clamp(110px,14vw,230px) clamp(70px,9vw,140px)}
+.sx-idea h1{margin:0;font-family:var(--big);font-weight:700;text-transform:uppercase;font-size:clamp(62px,13.2vw,250px);line-height:.84;letter-spacing:-.02em;color:var(--ink)}
+.sx-idea h1 em{font-style:normal;color:var(--tijolo)}
+.sx-txt{padding-block:clamp(90px,11vw,180px)}
+.sx-txt>.lab{display:block;margin-bottom:clamp(22px,2.6vw,40px);color:var(--muted)}
+.sx-txt p.big,.sx-txt h2.big{margin:0;font-family:var(--text);font-weight:400;font-size:clamp(25px,2.85vw,52px);line-height:1.1;letter-spacing:-.012em;color:var(--ink);text-wrap:pretty}
+.sx-txt p.big+p.big{margin-top:.55em}
+/* justified, like the brand's printed wood-type blocks; hyphenation keeps the word spacing even */
+.sx-txt p.big,.sx-txt h2.big{text-align:justify;text-align-last:left;-webkit-hyphens:auto;hyphens:auto;text-wrap:wrap}
+.sx-links{display:flex;gap:clamp(18px,3vw,40px);flex-wrap:wrap;align-items:baseline;margin-top:clamp(30px,3.4vw,52px)}
+.sx-links span{color:var(--muted)}
+.sx-txt--tight{padding-bottom:clamp(36px,4vw,60px)}
+/* opening film: one black and white video, edge to edge */
+.sx-hero{display:block}
+.sx-film{position:absolute!important;inset:0}
+.sx-film video::-webkit-media-controls,.sx-film video::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}
+.sx-film video{pointer-events:none;width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block;background:#2b2b2b}
+@media (max-width:760px){.sx-hero{height:88svh;min-height:520px;max-height:none}.sx-hero .sx-film{aspect-ratio:auto}}
+/* rolling line of cities */
+.sx-roll{overflow:hidden;padding-block:clamp(48px,6vw,96px)}
+.sx-roll__t{display:flex;width:max-content;align-items:center;gap:clamp(22px,2.6vw,44px);padding-right:clamp(22px,2.6vw,44px);animation:sx-roll 38s linear infinite;font-family:var(--big);font-weight:700;text-transform:uppercase;font-size:clamp(64px,10vw,180px);line-height:.9;letter-spacing:-.02em;color:var(--tijolo);white-space:nowrap}
+.sx-roll__t i{font-style:normal;font-size:.5em}
+.sx-roll:hover .sx-roll__t{animation-play-state:paused}
+@keyframes sx-roll{to{transform:translateX(-50%)}}
+/* people: photographs touch, words underneath */
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(250px,25vw,420px);gap:0;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{margin:0;scroll-snap-align:start;min-width:0}
+.rail img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;background:#2b2b2b}
+.rail figcaption{padding:16px clamp(14px,1.4vw,22px) 0;display:grid;gap:8px}
+.rail figcaption q{font-family:var(--text);font-weight:400;font-size:clamp(16px,1.15vw,19px);line-height:1.25;quotes:"\201C" "\201D"}
+.rail figcaption .lab{color:var(--muted);font-size:11px}
+/* collection: flip cards, edge to edge, photo on the front, the piece on the back */
+.sx-shophead{display:flex;justify-content:space-between;gap:16px;padding-bottom:16px}
+.sx-shophead .lab:last-child{color:var(--muted)}
+.pcards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+@media (max-width:1000px){.pcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.fc{min-width:0}
+.fc__box{perspective:1800px;aspect-ratio:4/5}
+.fc__in{position:relative;height:100%;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.2,.75,.2,1)}
+@media (hover:hover){.fc:hover .fc__in{transform:rotateY(180deg)}}
+.fc:focus-within .fc__in,.fc.flip .fc__in{transform:rotateY(180deg)}
+.fc__f,.fc__b{position:absolute;inset:0;overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.fc__f{background:#2b2b2b;cursor:pointer}
+.fc__f img,.fc__b img{width:100%;height:100%;object-fit:cover;display:block}
+.fc__f::after{content:"";position:absolute;inset:auto 0 0;height:38%;background:linear-gradient(transparent,rgba(30,30,30,.45));pointer-events:none}
+.fc__f .lab{position:absolute;z-index:2;color:var(--paper)}
+.fc__f .n{left:clamp(12px,1.3vw,20px);bottom:clamp(12px,1.3vw,20px)}
+.fc__f .t{right:clamp(12px,1.3vw,20px);top:clamp(12px,1.3vw,20px);font-size:15px;letter-spacing:0;transition:transform .6s ease}
+.fc:hover .fc__f .t{transform:rotate(180deg)}
+.fc__b{transform:rotateY(180deg);background:var(--paper);color:var(--ink);display:block}
+.fc__b .lab{position:absolute;z-index:2}
+.fc__b .s{left:clamp(12px,1.3vw,20px);top:clamp(12px,1.3vw,20px);color:var(--muted);font-size:11px;line-height:1.45}
+.fc__b .go{right:clamp(12px,1.3vw,20px);bottom:clamp(12px,1.3vw,20px)}
+.fc__meta{display:flex;justify-content:space-between;gap:12px;padding:14px clamp(12px,1.3vw,20px) 0}
+.fc__meta span:last-child{color:var(--muted)}
+@media (max-width:520px){.fc__meta{flex-direction:column;gap:4px}}
+@media (prefers-reduced-motion:reduce){.fc__in,.fc__f .t{transition:none}}
+/* join */
+.sx-join .form{margin-top:clamp(30px,3.4vw,52px);width:min(100%,640px)}
+.sx-join .msg{margin-top:12px}
+.ftr .tag{white-space:normal}
+.stick-buy{position:fixed;z-index:45;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--asfalto);color:var(--paper);padding:14px 18px}
+.stick-buy:hover{background:var(--tijolo)}
+.stick-buy[hidden]{display:none}
+.stick-buy{transition:opacity .3s ease}
+.btn--red{color:var(--paper)}
+/* Two grounds: English on light grey #F0F0F0, Portuguese on BAMOBORA black. Tijolo stays the original red in both. */
+:root{--ground:#f0f0f0;--panel:#e4e4e4;--line:#cfcfcf;--ink:#353535;--muted:#5c5c5c;color-scheme:light}
+html.pt{--ground:#353535;--panel:#2e2e2e;--line:#5c5953;--ink:#fffbf0;--muted:#b8b1a2;color-scheme:dark}
+html.pt :focus-visible{outline-color:#8bbbe0}
+html.pt .hdr .lg-a{display:none}html.pt .hdr .lg-n{display:block}
+/* shop page: red intro, then a seamless grid of pieces; move across a card to see each photo */
+.shop-pg{padding-top:calc(78px + env(safe-area-inset-top,0px));padding-bottom:clamp(40px,5vw,80px)}
+.shop-intro{padding-block:clamp(36px,5vw,80px) clamp(28px,3.4vw,52px);color:var(--tijolo);font-family:var(--text);font-weight:400;font-size:clamp(25px,2.85vw,52px);line-height:1.1;letter-spacing:-.012em;text-align:justify;text-align-last:left;-webkit-hyphens:auto;hyphens:auto}
+.shop-intro p{margin:0}
+html:not(.pt) #manifesto p.big{color:var(--paper)}
+#manifesto{padding-block:clamp(22px,2.4vw,40px)}
+/* home page on true black */
+html.on-home{--ground:#000000;--ink:#fffbf0;--muted:#a8a296;--line:#3a3a3a;--panel:#111111;color-scheme:dark}
+html.on-home .hdr .lg-a{display:none}html.on-home .hdr .lg-n{display:block}
+html.on-home .stick-buy{background:var(--paper);color:var(--asfalto)}
+html.on-home .stick-buy:hover{background:var(--tijolo);color:var(--paper)}
+html.on-home .form input::placeholder{color:#8a857b}
+html.on-home .ulink:hover{color:inherit;opacity:.65}
+html.on-home .toast{background:var(--paper);color:var(--asfalto)}
+
+.shop-intro b{font-family:var(--big);font-weight:700}
+html.pt .shop-intro{color:var(--ink)}
+html.pt .shop-intro b{color:var(--tijolo)}
+.more .shot{aspect-ratio:1414/2000;background:#f0f0f0}
+/* collection page (English): off-white everywhere except the product cards, header in Tijolo */
+.hdr .lg-t{display:none}
+html.on-coll:not(.pt){--ground:#f0f0f0}
+html.on-coll:not(.pt) .shop-grid{background:var(--ground)}
+html.on-coll:not(.pt) .hdr{color:var(--tijolo);border-bottom-color:var(--tijolo)!important}
+html.on-coll:not(.pt) .hdr .lg-a,html.on-coll:not(.pt) .hdr .lg-n{display:none}
+html.on-coll:not(.pt) .hdr .lg-t{display:block}
+html.on-coll:not(.pt) .hdr .bagcount{border-color:var(--tijolo)}
+html.on-coll .hdr nav a[href="#collection"],html.on-prints .hdr nav a[href="#prints"],html[data-page="events"] .hdr nav a[href="#events"],html[data-page="training-division"] .hdr nav a[href="#training-division"]{border-bottom:1px solid currentColor;padding-bottom:2px}
+/* Yard Takeovers: a dark archive. Asfalto ground, black and white photos, a numbered caption under each. */
+html[data-page="events"]{--ground:#000000;--ink:#fffbf0;--muted:#a8a296;--line:#4a4a4a;color-scheme:dark}
+html[data-page="events"] .hdr .lg-a{display:none}html[data-page="events"] .hdr .lg-n{display:block}
+html[data-page="events"] .ftr .lg-a{display:none}
+.hp-pg{padding-top:calc(78px + env(safe-area-inset-top,0px));padding-bottom:clamp(60px,8vw,120px)}
+html[data-page="events"] .hp-intro{color:var(--ink);padding-top:clamp(18px,2vw,30px)}
+html[data-page="events"] .hp-intro b{color:var(--tijolo)}
+.hp-head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;padding-block:clamp(28px,3.4vw,52px) clamp(26px,3vw,44px)}
+.hp-head .lab{color:var(--muted)}
+.hp-head p{margin:0;font-family:var(--text);font-size:clamp(16px,1.2vw,19px);color:var(--ink)}
+.hp-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:clamp(16px,1.9vw,36px);row-gap:clamp(36px,3.6vw,60px)}
+@media (max-width:1000px){.hp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.hp-grid{grid-template-columns:1fr}}
+.hp{margin:0;min-width:0}
+.hp img,.hp__blank{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#111}
+.hp img{filter:grayscale(1) contrast(1.12)}
+.hp__blank{display:grid;place-items:center;border:1px solid var(--line)}
+.hp figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:14px;font-family:var(--text);font-weight:500;font-size:clamp(15px,1.15vw,18px);line-height:1.25;color:var(--ink)}
+.hp figcaption .lab{color:var(--muted);font-size:11px;white-space:nowrap}
+.hp-foot{padding-top:clamp(50px,6vw,90px)}
+/* home: a few pieces after the manifesto, Satisfy-style */
+.picks{padding-block:clamp(30px,4vw,64px) clamp(60px,7vw,110px)}
+.picks__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+@media (max-width:900px){.picks__grid{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:44px}}
+.pk{min-width:0;text-align:center}
+.pk__img{display:block;aspect-ratio:1414/2000;background:#f0f0f0;overflow:hidden}
+.pk__img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.pk__img:hover img{transform:scale(1.03)}
+.pk h3{margin:18px 0 6px;font-family:var(--photo);font-weight:700;font-size:clamp(19px,1.6vw,26px);line-height:1.05;letter-spacing:.005em}
+.pk__price{margin:0;font-family:var(--photo);font-weight:500;font-size:14px;letter-spacing:.14em;color:var(--muted)}
+.pk__dots{display:flex;justify-content:center;gap:8px;margin-top:12px}
+.pk__dots button{width:18px;height:18px;border-radius:50%;padding:0;cursor:pointer;background:var(--c);border:1px solid var(--line);box-shadow:0 0 0 2px var(--ground)}
+.pk__dots button[aria-pressed="true"]{box-shadow:0 0 0 2px var(--ground),0 0 0 3px var(--ink)}
+.picks__all{text-align:center;padding-top:clamp(36px,4vw,60px)}
+/* coming soon: a small label at the top of the visual */
+.soon-stamp{position:absolute;z-index:3;left:50%;top:clamp(12px,1.3vw,18px);transform:translateX(-50%);font-family:var(--photo);font-weight:500;font-size:11px;line-height:1.3;letter-spacing:.16em;text-transform:uppercase;color:#353535;white-space:nowrap;pointer-events:none}
+.pk__img,.shot{position:relative}
+.btn[disabled]{opacity:.55;cursor:not-allowed}
+
+/* product page: Satisfy structure in BAMOBORA type */
+.pd{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(300px,1fr);grid-template-areas:"media buy" "story buy";column-gap:clamp(30px,5vw,96px);align-items:start}
+.pd__media{grid-area:media;min-width:0}.pd__story{grid-area:story;min-width:0}
+.pd__buy{grid-area:buy;position:sticky;top:calc(84px + env(safe-area-inset-top,0px));display:flex;flex-direction:column;gap:22px;min-width:0}
+@media (max-width:900px){.pd{grid-template-columns:1fr;grid-template-areas:"media" "buy" "story"}.pd__buy{position:static;margin-top:28px}}
+.car{position:relative;aspect-ratio:6/5;background:#f0f0f0;overflow:hidden}
+.car img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .3s ease}
+.car img.full{object-fit:cover}
+.car img.on{opacity:1}
+.car__btn{position:absolute;top:50%;transform:translateY(-50%);z-index:3;background:none;border:0;color:#353535;font-family:var(--text);font-weight:400;font-size:64px;line-height:1;padding:10px 16px;cursor:pointer;opacity:.8}
+.car__btn:hover{opacity:1}
+.car__prev{left:4px}.car__next{right:4px}
+.car__bars{display:flex;justify-content:center;gap:6px;margin-top:14px}
+.car__bars i{width:64px;height:2px;background:var(--line)}
+.car__bars i.on{background:var(--ink)}
+.pd__buy h1{margin:0;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(52px,5vw,88px);line-height:.82}
+.pd__price{display:grid;gap:4px}
+.pd__price b{font-family:var(--photo);font-weight:700;font-size:24px;letter-spacing:.04em}
+.pd__price span{font-family:var(--text);font-size:14px;color:var(--muted)}
+.pd__pills{display:flex;flex-wrap:wrap;gap:8px}
+.pd__pills span{border:1px solid var(--ink);padding:9px 14px;font-family:var(--photo);font-weight:500;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.pd__lab{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:12px}
+.pd__lab b{font-family:var(--photo);font-weight:700;font-size:18px;text-transform:uppercase;letter-spacing:.02em}
+.pd__lab span{font-family:var(--photo);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.pd__sg{background:none;border:0;padding:0;cursor:pointer;color:var(--ink);font-family:var(--photo);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid currentColor}
+.pd__sgb{margin:0 0 12px;font-size:14px;color:var(--muted)}
+.pd__dots{display:flex;gap:12px}
+.pd__dot{width:34px;height:34px;border-radius:50%;background:var(--c);border:1px solid var(--line);box-shadow:0 0 0 3px var(--ground)}
+.pd__dot[aria-current="true"]{box-shadow:0 0 0 3px var(--ground),0 0 0 4px var(--ink)}
+.pd__buy .sizes button{min-width:64px;padding:20px 10px}
+.temp{position:relative;height:8px;background:var(--panel)}
+.temp i{position:absolute;top:0;bottom:0;background:linear-gradient(90deg,transparent,var(--ink) 30%,var(--ink) 70%,transparent)}
+.temp__s{display:flex;justify-content:space-between;margin-top:8px;font-family:var(--photo);font-weight:500;font-size:11px;letter-spacing:.08em;color:var(--muted)}
+.wx{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.wx div{display:grid;gap:8px;justify-items:center}
+.wx i{display:block;width:100%;height:8px;background:var(--panel)}
+.wx .on i{background:var(--ink)}
+.wx span{font-family:var(--photo);font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.pd__big{margin:clamp(50px,6vw,100px) 0 clamp(26px,3vw,44px);font-family:var(--text);font-weight:400;font-size:clamp(26px,2.6vw,46px);line-height:1.1;letter-spacing:-.012em;color:var(--ink);text-wrap:pretty}
+.pd__fimg{aspect-ratio:4/3;background:#f0f0f0;overflow:hidden}
+.pd__fimg img{width:100%;height:100%;object-fit:cover;display:block}
+.pd__acc{margin-top:clamp(50px,6vw,90px);border-top:1px solid var(--line)}
+.pd__acc details{border-bottom:1px solid var(--line)}
+.pd__acc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:24px 0;font-family:var(--photo);font-weight:700;font-size:clamp(22px,1.9vw,30px);text-transform:uppercase;letter-spacing:.01em}
+.pd__acc summary::-webkit-details-marker{display:none}
+.pd__acc summary::after{content:"+";font-family:var(--text);font-weight:400;font-size:28px}
+.pd__acc details[open] summary::after{content:"–"}
+.pd__acc .body{padding:0 clamp(0px,3vw,40px) 28px;font-family:var(--text);font-size:17px;line-height:1.5;color:var(--muted)}
+.pd__acc .body p{margin:0}.pd__acc .body p+p{margin-top:.8em}
+.pd__acc ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.pd__acc ul:not(.care) li::before{content:"·  "}
+.care{margin-top:16px!important;gap:14px!important}
+.care li{display:flex;align-items:center;gap:18px;color:var(--ink)}
+.care svg{width:32px;height:24px;flex:none}
+.pd__moreh{margin:0 0 28px;font-family:var(--photo);font-weight:700;font-size:clamp(24px,2.2vw,34px);text-transform:uppercase}
+.more .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+@media (max-width:900px){.more .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* ---------- mobile ---------- */
+.mbtn{display:none;background:none;border:0;padding:6px 0;cursor:pointer;color:inherit;font-family:var(--photo);font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.mpanel{position:fixed;left:0;right:0;top:64px;bottom:0;z-index:48;background:var(--ground);color:var(--ink);display:flex;flex-direction:column;gap:6px;padding:28px max(16px,env(safe-area-inset-left,0px)) calc(28px + env(safe-area-inset-bottom,0px));overflow-y:auto}
+.mpanel[hidden]{display:none}
+.hdr .mpanel{align-items:flex-start;justify-content:flex-start;text-align:left}
+.hdr .mpanel a{margin:0;padding:0;opacity:1;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(46px,14vw,72px);line-height:.92;letter-spacing:-.01em}
+.hdr .mpanel a.mpanel__s{margin-top:auto;font-family:var(--photo);font-weight:500;font-size:13px;letter-spacing:.16em;border-bottom:1px solid currentColor;align-self:flex-start;padding-bottom:3px}
+html.m-open{overflow:hidden}
+html.m-open .hdr{background:var(--ground)!important;color:var(--ink)!important}
+@media (max-width:760px){
+  .mbtn{display:block}
+  .hdr nav.spread{grid-template-columns:auto auto!important;gap:22px!important;justify-content:end;justify-items:end}
+  .hdr nav.spread>a{display:none!important}
+  .mega{display:none!important}
+}
+@media (max-width:640px){
+  /* readable text: no justified gaps on narrow screens */
+  .sx-txt p.big,.sx-txt h2.big,.shop-intro{text-align:left!important;-webkit-hyphens:manual!important;hyphens:manual!important}
+  .sx-txt p.big,.sx-txt h2.big,.shop-intro{font-size:22px!important;line-height:1.16!important}
+  .pd__big{font-size:24px;margin-top:44px}
+  /* collection cards: name on one line, price under, coming-soon label at the bottom */
+  .sc__meta{flex-direction:column;gap:2px;font-size:10px;letter-spacing:.1em}
+  .sc .soon-stamp{top:auto;bottom:34px;font-size:10px}
+  .shop-grid{gap:4px;padding:4px}
+  .card__meta{flex-direction:column;gap:6px}
+  .card__name{font-size:24px}
+  .more .grid{gap:4px}
+  /* product page */
+  .car{aspect-ratio:4/5}
+  .car img:not(.full){transform:scale(1.45)}
+  .car__btn{font-size:44px;padding:6px 8px}
+  .car__bars i{width:40px}
+  .pd__buy h1{font-size:60px}
+  .pd__buy .sizes{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+  .pd__buy .sizes button{min-width:0;padding:16px 4px}
+  .pd__pills span{padding:8px 10px;font-size:11px}
+  .pd__acc summary{font-size:20px;padding:20px 0}
+  .pd__acc .body{padding:0 0 22px;font-size:16px}
+  .wx span,.temp__s{font-size:10px}
+  /* picks and footer spacing */
+  .pk h3{font-size:20px}
+  .picks{padding-block:24px 56px}
+  .ftr{padding-block:56px calc(40px + env(safe-area-inset-bottom,0px))!important;gap:26px 20px!important}
+  .sx-join{padding-bottom:40px}
+  .stick-buy{padding:12px 14px}
+  /* training division */
+  .td-cities{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .td-cities button{min-width:0;padding:18px 6px;font-size:13px}
+  .td-cities small{font-size:9px}
+  /* yard takeovers */
+  .hp-grid{row-gap:30px}
+}
+/* collection mega menu */
+.mega{position:fixed;left:0;right:0;z-index:49;background:var(--ground);color:var(--ink);border-bottom:1px solid var(--line)}
+.mega[hidden]{display:none}
+.mega__in{display:grid;grid-template-columns:auto repeat(3,minmax(0,auto)) 1fr;gap:clamp(30px,5vw,96px);padding-block:clamp(28px,3vw,44px) clamp(34px,3.6vw,52px);align-items:start}
+.mega ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.mega__lead{gap:12px}
+.mega__lead a{font-family:var(--photo);font-weight:700;font-size:17px;letter-spacing:.03em;text-transform:uppercase}
+.mega h4{margin:0 0 16px;font-family:var(--photo);font-weight:700;font-size:17px;letter-spacing:.03em;text-transform:uppercase}
+.mega ul:not(.mega__lead) a{font-family:var(--photo);font-weight:500;font-size:16px;letter-spacing:.04em;text-transform:uppercase}
+.mega a:hover{opacity:.55}
+.mega__img{justify-self:end;position:relative;width:clamp(170px,15vw,240px);aspect-ratio:1/1;overflow:hidden;background:#2b2b2b}
+.mega__img img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1)}
+.mega__img span{position:absolute;inset:auto 0 0;padding:14px;text-align:center;font-family:var(--photo);font-weight:700;font-size:clamp(26px,2.2vw,36px);line-height:.9;text-transform:uppercase;color:var(--paper)}
+.mega__img:hover{opacity:1}
+.hdr.menu-open{background:var(--ground)!important;color:var(--ink)}
+.hdr.menu-open .lg-n{display:none}.hdr.menu-open .lg-a{display:block}
+html.pt .hdr.menu-open .lg-a,html.on-home .hdr.menu-open .lg-a,html[data-page="events"] .hdr.menu-open .lg-a{display:none}
+html.pt .hdr.menu-open .lg-n,html.on-home .hdr.menu-open .lg-n,html[data-page="events"] .hdr.menu-open .lg-n{display:block}
+html.on-coll:not(.pt) .hdr.menu-open{color:var(--tijolo)}
+html.on-coll:not(.pt) .hdr.menu-open .lg-a,html.on-coll:not(.pt) .hdr.menu-open .lg-n{display:none}
+@media (max-width:900px){.mega{display:none!important}}
+.shop-filter{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:14px}
+.shop-filter .lab:first-child{color:var(--muted)}
+/* Training Division: one card per city, poster on top, details and RSVP below */
+.td-cities{display:flex;flex-wrap:wrap;gap:10px;padding-block:clamp(10px,1.4vw,20px) clamp(30px,3.4vw,52px)}
+.td-cities button{min-width:clamp(96px,8vw,124px);padding:clamp(22px,2.4vw,34px) 18px;background:transparent;color:var(--ink);border:1px solid var(--line);cursor:pointer;font-family:var(--photo);font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase}
+.td-cities button:hover{border-color:var(--ink)}
+.td-cities button{display:flex;flex-direction:column;align-items:center;gap:6px}
+.td-cities small{font-family:var(--text);font-weight:400;font-size:10px;letter-spacing:.1em;opacity:.6}
+.tdc--soon .tp__txt{justify-content:space-between}
+.tdc--soon .tp__txt .ov{font-size:1.25em}
+.td-cities button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--ground)}
+.td-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,1.6vw,28px);padding-block:clamp(10px,1.5vw,20px) clamp(70px,9vw,140px)}
+@media (max-width:1100px){.td-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.td-grid{grid-template-columns:1fr}}
+.tdc{min-width:0;display:flex;flex-direction:column}
+.tp{position:relative;aspect-ratio:1414/2000;background:#e2dfd9;overflow:hidden;container-type:inline-size;color:var(--asfalto)}
+.tp__bg{position:absolute;inset:-4% -6%;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none}
+.tp__bg span{font-family:var(--big);font-weight:700;font-size:var(--fs);line-height:.82;letter-spacing:-.02em;color:#f6f4ee;white-space:nowrap;text-align:center}
+.tp__bg span.o{color:transparent;-webkit-text-stroke:1px #f6f4ee}
+.tp__txt{position:absolute;inset:11% 9%;display:flex;flex-direction:column;justify-content:space-between;font-family:var(--text);font-weight:400;font-size:4.6cqw;line-height:1.15;text-transform:uppercase;letter-spacing:.02em}
+.tp__txt .r{display:flex;gap:.6em;align-items:center}
+.tp__txt .sp{justify-content:space-between}
+.tp__txt .c{justify-content:center}
+.tp__txt b{font-family:var(--big);font-weight:700;font-size:1.15em;letter-spacing:0}
+.tp__txt .ov{border:1px solid currentColor;border-radius:50%;padding:.15em .55em;transform:rotate(-4deg)}
+.tdc h3{margin:16px 0 6px;font-family:var(--photo);font-weight:700;text-transform:uppercase;font-size:clamp(17px,1.3vw,21px);line-height:1;letter-spacing:.01em}
+.tdc__when,.tdc__where{margin:0;font-family:var(--text);font-size:clamp(14px,1vw,16px);line-height:1.4;color:var(--muted)}
+.tdc__row{display:flex;align-items:center;gap:10px;margin-top:14px;padding-block:12px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tdc__row button{background:none;border:0;padding:0;cursor:pointer;color:var(--ink);font-family:var(--photo);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.tdc__row span{margin-left:auto;color:var(--muted)}
+.tdc__row button:hover{opacity:.6}
+.tdc__info{margin:12px 0 0;font-family:var(--text);font-size:14px;line-height:1.45;color:var(--muted)}
+.tdc__rsvp{display:block;margin-top:14px;padding:14px 10px;text-align:center;background:var(--asfalto);color:var(--paper);font-family:var(--photo);font-weight:500;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+.tdc__rsvp:hover{background:var(--tijolo)}
+/* Luma-driven card: the event's Luma cover is the poster */
+.tp--luma{aspect-ratio:1/1;background:#1e1e1e}
+.tp--luma img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.tp--wait{aspect-ratio:1/1;background:var(--panel);animation:tdpulse 1.4s ease-in-out infinite}
+@keyframes tdpulse{50%{opacity:.55}}
+.tdc__info{white-space:normal}
+html.pt .tdc__rsvp{background:var(--paper);color:var(--asfalto)}
+html.pt .tdc__rsvp:hover{background:var(--tijolo);color:var(--paper)}
+/* info pages */
+.info-pg{padding-top:calc(78px + env(safe-area-inset-top,0px))}
+.info-k{display:block;padding-top:clamp(36px,5vw,80px);color:var(--muted)}
+.info-pg .shop-intro{padding-top:clamp(18px,2vw,30px)}
+.info-steps{list-style:none;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,48px);padding-block:clamp(20px,3vw,40px) clamp(70px,9vw,140px)}
+.info-steps li{border-top:1px solid var(--ink);padding-top:14px;display:grid;gap:10px;align-content:start}
+.info-steps .lab{color:var(--muted)}
+.info-steps h3{margin:0;font-family:var(--photo);font-weight:700;text-transform:uppercase;font-size:clamp(18px,1.5vw,24px);line-height:1;letter-spacing:.01em}
+.info-steps p{margin:0;font-family:var(--text);font-weight:400;font-size:clamp(15px,1.1vw,17px);line-height:1.4;color:var(--muted);max-width:30ch}
+@media (max-width:860px){.info-steps{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.info-steps{grid-template-columns:1fr}}
+.info-img{margin:0}
+.info-cta{padding-block:clamp(36px,4vw,60px) clamp(70px,9vw,140px)}
+.prints-pg{padding-top:calc(78px + env(safe-area-inset-top,0px));min-height:70svh}
+.shop-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;padding:6px;background:var(--paper)}
+@media (max-width:1000px){.shop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.sc{position:relative;display:block;aspect-ratio:1414/2000;background:#f0f0f0;overflow:hidden;color:var(--asfalto)}
+.sc__imgs img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .25s ease}
+.sc__imgs img.on{opacity:1}
+.sc__meta{position:absolute;z-index:2;left:clamp(12px,1.3vw,20px);right:clamp(12px,1.3vw,20px);top:clamp(12px,1.3vw,18px);display:flex;justify-content:space-between;gap:10px;font-size:11px}
+.sc__dots{position:absolute;z-index:2;left:50%;bottom:clamp(14px,1.8vw,26px);transform:translateX(-50%);display:flex;gap:3px;width:52%}
+.sc__dots i{flex:1;height:2px;background:rgba(53,53,53,.14)}
+.sc__dots i.on{background:rgba(53,53,53,.45)}
+/* footer: three quiet columns of links, copyright bottom right */
+.ftr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;align-items:end;gap:28px clamp(20px,3vw,48px);border-top:0;padding-block:clamp(70px,8vw,120px) calc(clamp(60px,7vw,110px) + env(safe-area-inset-bottom,0px))}
+.ftr ul{list-style:none;margin:0;padding:0;align-self:start}
+.ftr li{margin:0}
+.ftr a,.ftr button,.ftr__c,.ftr__lang span{font-family:var(--photo);font-weight:700;font-size:clamp(16px,1.15vw,19px);line-height:1.22;letter-spacing:.03em;text-transform:uppercase;color:var(--ink)}
+.ftr a:hover,.ftr button:hover{opacity:.55}
+.ftr button{background:none;border:0;padding:0;cursor:pointer}
+.ftr__lang{display:flex;gap:6px}
+.ftr__lang button[aria-pressed="false"]{opacity:.45}
+.ftr__c{margin:0;justify-self:end;white-space:nowrap}
+@media (max-width:760px){.ftr{grid-template-columns:1fr 1fr}.ftr__c{grid-column:1/-1;justify-self:start}}
+.hdr__end{justify-self:end;display:flex;align-items:center;gap:clamp(14px,2vw,28px)}
+.langs{display:flex;gap:8px}
+.langs button{background:none;border:0;padding:4px 0;color:inherit;font-family:var(--photo);font-weight:500;font-size:13px;letter-spacing:.14em;cursor:pointer;opacity:.45}
+.langs button[aria-pressed="true"]{opacity:1;border-bottom:1px solid currentColor}
+.langs button:hover{opacity:1}
+.sx-idea h1 em{color:var(--tijolo)}
+.sx-roll__t{color:var(--tijolo)}
+html.pt .sx-roll{background:var(--tijolo)}
+html.pt .sx-roll__t{color:var(--paper)}
+/* slim rolling line in the collection: same movement, squeezed type, a thin strip */
+.sx-roll--slim{padding-block:clamp(14px,1.6vw,22px);margin-bottom:clamp(28px,3vw,48px);background:var(--tijolo)}
+.sx-roll--slim .sx-roll__t{color:var(--paper)}
+.sx-roll--slim .sx-roll__t{font-family:var(--display);font-size:clamp(30px,3.4vw,56px);line-height:1;letter-spacing:0;gap:clamp(16px,1.8vw,30px);padding-right:clamp(16px,1.8vw,30px);animation-duration:30s}
+html.pt .ulink:hover{color:inherit;opacity:.65}
+.fc__b{color:var(--asfalto)}
+.fc__b .s{color:#6b665c}
+html.pt .stick-buy{background:var(--paper);color:var(--asfalto)}
+html.pt .stick-buy:hover{background:var(--tijolo);color:var(--paper)}
+html.pt .form input::placeholder{color:#9e9788}
+html.pt .toast{background:var(--paper);color:var(--asfalto)}
+@media (max-width:640px){.hdr nav.spread .hdr__end{gap:14px}}
+
+body:has(.hdr.over) .stick-buy{opacity:0;pointer-events:none}
+@media (max-width:760px){.fc__f .n{display:none}}
+</style>
+
+<header class="hdr pad over" id="hdr">
+  <a href="#home" aria-label="BAMOBORA® home" data-pt-aria-label="BAMOBORA® início"><img class="lg-a" src="../img/bamobora-wordmark-asfalto.svg" alt="BAMOBORA®"><img class="lg-n" src="../img/bamobora-wordmark-nata.svg" alt=""><img class="lg-t" src="../img/bamobora-wordmark-tijolo.svg" alt=""></a>
+  <nav aria-label="Main" class="spread">
+    <a href="#collection" data-pt="Coleção" id="navcoll" aria-haspopup="true" aria-expanded="false" aria-controls="mega">Collection</a>
+    <a href="#prints" class="opt">Prints</a>
+    <a href="#events" class="opt">Yard Takeovers</a>
+    <a href="#training-division" class="opt">Training Division</a>
+    <button type="button" class="mbtn" id="mbtn" aria-expanded="false" aria-controls="mpanel" data-pt="Menu">Menu</button>
+    <div class="hdr__end"><span class="langs" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="pt" aria-pressed="false">PT</button></span><a href="#collection" aria-label="Bag" data-pt-aria-label="Cesto"><span data-pt="Cesto">Bag</span><span class="bagcount" id="bag">0</span></a></div>
+  </nav>
+  <div class="mega" id="mega" hidden><div class="mega__in pad"><ul class="mega__lead"><li><a href="#collection/new" data-pt="Novidades">New arrivals</a></li><li><a href="#collection" data-pt="Coleção #001">Collection #001</a></li><li><a href="#collection/t38">38°41′N</a></li><li><a href="#collection/bora">BORA</a></li><li><a href="#collection" data-pt="Ver tudo">Shop all</a></li></ul><div><h4 data-pt="Vestuário">Apparel</h4><ul><li><a href="#collection/tees" data-pt="T-shirts">Tees</a></li><li><a href="#collection/perf" data-pt="T-shirts de performance">Performance tees</a></li><li><a href="#collection/shorts" data-pt="Calções">Shorts</a></li><li><a href="#collection/apparel" data-pt="Tudo">All</a></li></ul></div><div><h4 data-pt="Acessórios">Accessories</h4><ul><li><a href="#collection/socks" data-pt="Meias">Socks</a></li><li><a href="#collection/accessories" data-pt="Tudo">All</a></li></ul></div><div><h4 data-pt="Mais">More</h4><ul><li><a href="#prints">Prints</a></li><li><a href="#training-division">Training Division</a></li><li><a href="#events">Yard Takeovers</a></li></ul></div><a class="mega__img" href="#collection/new"><img src="../img/run-duo-white-wall.jpg" alt="" loading="lazy"><span data-pt="Novidades">New<br>arrivals</span></a></div></div>
+  <nav class="mpanel" id="mpanel" aria-label="Menu" hidden>
+    <a href="#home" data-pt="Início">Home</a>
+    <a href="#collection" data-pt="Coleção">Collection</a>
+    <a href="#prints">Prints</a>
+    <a href="#events">Yard Takeovers</a>
+    <a href="#training-division">Training Division</a>
+    <a href="#signup" class="mpanel__s" data-pt="Junta-te ao coletivo">Join the collective</a>
+  </nav>
+</header>
+
+<main>
+<!-- HOME -->
+<div class="view" data-view="home">
+
+  <section class="sx-hero" id="top" aria-label="Opening">
+    <figure class="sx-film"><video src="../img/hero-film.mp4" poster="../img/hero-film.jpg" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="auto" aria-label="A BAMOBORA run in black and white: the pack on the calçada, high fives, the café after" data-pt-aria-label="Uma corrida BAMOBORA a preto e branco: o grupo na calçada, high fives, o café a seguir"></video></figure>
+    <span class="lab l" data-pt="BAMOBORA® · Coleção #001">BAMOBORA® · Collection #001</span>
+    <a class="lab r ulink" href="#manifesto" data-pt="Ler o manifesto">Read the manifesto</a>
+  </section>
+
+  <section class="sx-txt pad" id="manifesto">
+    <p class="big" data-pt="Somos a BAMOBORA. Uma marca portuguesa de activewear e um coletivo de inadaptados a dar corda à criatividade. Não somos atletas. Continuamos a competir. Correr nunca é o objetivo. É o meio através do qual vivemos a criatividade, as cidades e uns aos outros. Aparecer fala mais alto do que chegar em primeiro. Depois, desafiamo-nos: uma distância nova, um ritmo mais rápido, um percurso mais duro. Um jogo contra nós próprios, nunca um ranking. Misturamos performance com tradição. Tecido técnico em ruas com séculos. Uma bica depois da corrida, cadeiras de plástico ao sol, o dono do café que nos trata pelo nome. O luxo não é caro. É ter tempo. Levamos o movimento para onde ele não pertence. Para museus, mercados e bibliotecas, para as passerelles. Cada evento é uma intervenção cultural: nunca igual duas vezes, anunciado uma só vez. Com raízes em Portugal. Criados para o mundo.">We are BAMOBORA. A Portuguese activewear brand, and a collective of misfits grinding creativity. Not athletes. Still racing. Running is never the objective. It is the medium through which we experience creativity, cities and each other. Showing up is louder than finishing first. Then we challenge ourselves: a new distance, a faster pace, a harder route. A game against ourselves, never a ranking. We mix performance with tradition. Technical fabric on centuries-old streets. A bica after the run, plastic chairs in the sun, the café owner who knows us by name. Luxury isn't expensive. It's taking the time. We take movement where it doesn't belong. Into museums, markets and libraries, onto runways. Every event is a cultural intervention: never the same twice, announced once. Rooted in Portugal. Crafted for the world.</p>
+  </section>
+
+  <section class="picks" aria-label="Collection #001" data-pt-aria-label="Coleção #001">
+    <div class="picks__grid" id="picks"></div>
+    <div class="picks__all pad"><a class="lab ulink" href="#collection" data-pt="Ver a coleção">Shop the collection</a></div>
+  </section>
+
+  <section class="sx-duo" aria-label="Life around the run" data-pt-aria-label="A vida à volta da corrida">
+    <figure><img src="../img/city-cafe-cobblestone.jpg" alt="Café terrace on a cobbled street" data-pt-alt="Esplanada de café numa rua de calçada" loading="lazy" style="object-position:50% 72%"></figure>
+    <figure><img src="../img/run-backs-riverside.jpg" alt="Runners on a riverside path, seen from behind" data-pt-alt="Corredores junto ao rio, vistos de trás" loading="lazy"></figure>
+  </section>
+
+  <section class="sx-full" id="training" aria-label="Training Division">
+    <img src="../img/run-group-graffiti-wall.jpg" alt="Runners passing a graffiti wall" data-pt-alt="Corredores a passar por um muro com graffiti" loading="lazy">
+    <span class="lab" data-pt="BAMOBORA Training Division · corridas em grupo, café depois">BAMOBORA Training Division · hosted runs, café after</span>
+  </section>
+
+  <section class="sx-txt sx-join pad" id="signup">
+    <span class="lab" data-pt="Junta-te ao coletivo">Join the collective</span>
+    <h2 class="big" data-pt="Lançamentos, datas de corridas, Official Events. Anunciados uma só vez.">Drops, run dates, Official Events. Announced once.</h2>
+    <form class="form" data-signup novalidate><label for="email1" class="sr" data-pt="O teu email">Your email</label><input id="email1" type="email" placeholder="Your email" data-pt-placeholder="O teu email" autocomplete="email"><button type="submit" data-pt="Juntar">Join</button></form>
+    <p class="msg" aria-live="polite"></p>
+  </section>
+</div>
+<a class="lab stick-buy" href="#collection" id="stickbuy" data-pt="Coleção #001">Collection #001</a>
+
+<!-- HAPPENINGS PAGE -->
+<div class="view" data-view="events" hidden>
+  <section class="hp-pg">
+    <div class="pad"><span class="lab info-k">Yard Takeovers</span></div>
+    <div class="shop-intro pad hp-intro" data-pt="&lt;p&gt;Os &lt;b&gt;Yard Takeovers&lt;/b&gt; são só por convite. Uma noite ou um dia, um lugar, nunca iguais duas vezes. Parte corrida, parte passerelle, parte festa: os momentos em que podes levar contigo uma peça de arte e cultura, e o mundo BAMOBORA ganha vida.&lt;/p&gt;"><p><b>Yard Takeovers</b> are by invitation only. One night or day, one place, never the same twice. Part run, part runway, part party: the moments where you can grab a piece of art and culture, and the BAMOBORA world comes to life.</p></div>
+    <div class="hp-grid pad">
+      <figure class="hp"><img src="../img/run-pov-sun-shadow.jpg" alt="BB000: The Pilot." loading="lazy"><figcaption><span data-pt="BB000: O Piloto.">BB000: The Pilot.</span><span class="lab">Braga</span></figcaption></figure>
+      <figure class="hp"><img src="../img/run-group-blue-sky.jpg" alt="BB001: BAMOBORA × Decathlon" loading="lazy"><figcaption><span data-pt="BB001: BAMOBORA × Decathlon">BB001: BAMOBORA × Decathlon</span><span class="lab">Braga</span></figcaption></figure>
+      <figure class="hp"><img src="../img/run-motion-blur-film.jpg" alt="BB002: Smash Night. Inner Circle." loading="lazy"><figcaption><span data-pt="BB002: Smash Night. Inner Circle.">BB002: Smash Night. Inner Circle.</span><span class="lab">Braga</span></figcaption></figure>
+      <figure class="hp"><img src="../img/run-duo-white-wall.jpg" alt="BB003: Six Months." loading="lazy"><figcaption><span data-pt="BB003: Seis Meses.">BB003: Six Months.</span><span class="lab">31.07</span></figcaption></figure>
+      <figure class="hp"><img src="../img/run-group-graffiti-wall.jpg" alt="BB004: Night Relay Run × NOCCO" loading="lazy"><figcaption><span data-pt="BB004: Night Relay Run × NOCCO">BB004: Night Relay Run × NOCCO</span><span class="lab">Braga</span></figcaption></figure>
+      <figure class="hp"><img src="../img/run-hair-cobblestone.jpg" alt="BB005: The Festival." loading="lazy"><figcaption><span data-pt="BB005: O Festival.">BB005: The Festival.</span><span class="lab">19.09</span></figcaption></figure>
+      <figure class="hp"><img src="../img/entrada-museu.jpg" alt="BB006: The Louvre." loading="lazy"><figcaption><span data-pt="BB006: O Louvre.">BB006: The Louvre.</span><span class="lab">Paris</span></figcaption></figure>
+      <figure class="hp hp--next"><div class="hp__blank"><span class="lab" data-pt="Anunciado uma vez">Announced once</span></div><figcaption><span data-pt="BB007: Brevemente.">BB007: Soon.</span><span class="lab" data-pt="Só por convite">By invitation</span></figcaption></figure>
+    </div>
+    <div class="hp-foot pad"><a class="lab ulink" href="#training-division" data-pt="Como ser convidado: corre com a Training Division">How to get invited: run with the Training Division</a></div>
+  </section>
+</div>
+
+<!-- TRAINING DIVISION PAGE -->
+<div class="view" data-view="training" hidden>
+  <section class="info-pg">
+    <div class="pad"><span class="lab info-k">Training Division</span></div>
+    <div class="shop-intro pad" data-pt="&lt;p&gt;Todas as semanas. Corridas com host, divididas em grupos por ritmo, dos estreantes para cima, cada um com o seu pacer. Numa semana de sorte, o teu host pode ser um recordista do Guinness, um campeão nacional ou um atleta olímpico. Os criativos não seguem regras. É onde conheces o coletivo. Faz parte da nossa próxima corrida:&lt;/p&gt;"><p>Every week. Hosted runs, split into pace groups from first-timers up, each with its own pacer. On a lucky week, your host can be a Guinness World Record holder, a national champion or an Olympian. Creatives don’t play by the rules. It’s where you meet the collective. Be part of our next race:</p></div>
+    <div class="td-cities pad" id="tdcities" role="group" aria-label="City" data-pt-aria-label="Cidade"></div>
+    <div class="td-grid pad" id="tdgrid" aria-live="polite"></div>
+  </section>
+</div>
+
+<!-- PRINTS PAGE -->
+<div class="view" data-view="prints" hidden>
+  <section class="prints-pg">
+    <div class="shop-intro pad" data-pt="&lt;p&gt;&lt;b&gt;Prints.&lt;/b&gt; Cultura de corrida, serigrafada à mão. Brevemente.&lt;/p&gt;"><p><b>Prints.</b> Running culture, screen-printed by hand. Coming soon.</p></div>
+    <div class="pad"><a class="lab ulink" href="#signup" data-pt="Saber primeiro">Hear first</a></div>
+  </section>
+</div>
+
+<!-- SHOP PAGE -->
+<div class="view" data-view="shop" hidden>
+  <section class="shop-pg">
+    <div class="shop-intro pad" data-pt="&lt;p&gt;A &lt;b&gt;BAMOBORA®&lt;/b&gt; nasceu em 2026, algures entre Lisboa e Braga. Começou como uma corrida. Tornou-se uma forma de ver as coisas.&lt;/p&gt;&lt;p&gt;Somos um coletivo de inadaptados, dos fora de forma e dos inquietos. Gente que corre, pinta, fotografa, desenha, passa discos e faz coisas que ninguém pediu. Não corremos para ser rápidos. Corremos ao encontro das coisas. Uma galeria, uma festa, a cidade às 6 da manhã, uma versão de nós que ainda não conhecíamos.&lt;/p&gt;&lt;p&gt;Agora trazemos a performance para o jogo. Não para ganhar. Para nos desafiarmos, e para ver o que acontece quando o desporto e a cultura deixam de ser duas coisas separadas.&lt;/p&gt;"><p><b>BAMOBORA®</b> was born in 2026, somewhere between Lisbon and Braga. It started as a run. It became a way of seeing things.</p><p>We are a collective of misfits, the unfit and the restless. People who run, paint, shoot, design, play records and make things nobody asked for. We don’t run to be fast. We run into things. A gallery, a party, the city at 6am, a version of ourselves we hadn’t met yet.</p><p>Now we bring performance into the game. Not to win. To challenge ourselves, and to see what happens when sport and culture stop being two separate things.</p></div>
+    <div class="shop-filter pad" id="shopfilter"></div>
+    <div class="shop-grid" id="shopgrid"></div>
+  </section>
+</div>
+
+<!-- PRODUCT PAGE (filled by script) -->
+<div class="view" data-view="product" hidden>
+  <section class="pdp pad" id="pdp"></section>
+</div>
+
+</main>
+
+<footer class="ftr pad">
+  <ul>
+    <li><a href="#manifesto">Manifesto</a></li>
+    <li><a href="#events">Yard Takeovers</a></li>
+    <li><a href="#training-division">Training Division</a></li>
+    <li><a href="#collection" data-pt="Coleção">Collection</a></li>
+    <li><a href="#prints">Prints</a></li>
+  </ul>
+  <ul>
+    <li><a href="mailto:geral@bamobora.com" data-pt="Contacto">Contact us</a></li>
+    <li><a href="#" class="todo">Instagram</a></li>
+    <li><a href="#tee-nata" data-pt="Envios e devoluções">Shipping &amp; returns</a></li>
+    <li><a href="#" class="todo" data-pt="Guia de tamanhos">Size guide</a></li>
+  </ul>
+  <ul>
+    <li class="ftr__lang"><button type="button" data-lang="en" aria-pressed="true">English</button><span aria-hidden="true">/</span><button type="button" data-lang="pt" aria-pressed="false">Português</button></li>
+    <li><a href="#" class="todo" data-pt="Privacidade e cookies">Privacy and cookies</a></li>
+    <li><a href="#" class="todo" data-pt="Termos e condições">Terms and conditions</a></li>
+  </ul>
+  <p class="ftr__c">BAMOBORA® © Copyright 2026</p>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var TEE_SIZES=["XS","S","M","L","XL"], SOCK_SIZES=["35–38","39–42","43–46"];
+  var P={
+    "tee-nata":{name:"Tee #001", variant:"Nata", group:"tee", swatch:"#f3f0e8", sub:"Nata · Edition of 30", img:"../img/tee-nata.jpg", d1:"../img/tee-nata-d1.jpg", d2:"../img/tee-nata-d2.jpg", life:"../img/run-hair-cobblestone.jpg", sizes:TEE_SIZES, defaultSize:"M",
+      alt:"Tee #001 in Nata, off-white with a small grey wordmark on the chest",
+      story:["The first one. Off-white, heavy, and almost silent: a grey wordmark you have to come close to read.","Nata is the colour of the paper we print on and the milk in a galão at 10am, after the run. It's the tee you wear from the 07:30 start to the café, and then to everything else.","Thirty were made, each one numbered on the inside label. When they're gone, this colour of #001 is gone."],
+      material:[["Fabric","100% cotton"],["Weight","230 gsm, heavyweight"],["Fit","Relaxed, boxy, unisex"],["Print","Tonal grey wordmark, chest"],["Label","Numbered, curated by local artists"],["Edition","30 pieces"]],
+      care:["Wash at 30°C, inside out, with similar colours.","Don't tumble dry. Dry flat to keep the shape.","Iron inside out, never over the print."]},
+    "tee-asfalto":{name:"Tee #001", variant:"Asfalto", group:"tee", swatch:"#161616", sub:"Asfalto · Edition of 30", img:"../img/tee-asfalto.jpg", d1:"../img/tee-asfalto-d1.jpg", d2:"../img/tee-asfalto-d2.jpg", life:"../img/run-duo-white-wall.jpg", sizes:TEE_SIZES, defaultSize:"M",
+      alt:"Tee #001 in Asfalto, black with a small cream wordmark on the chest",
+      story:["Same tee, after dark. Asfalto is the road under the long runs and the ink we write the manifesto with.","Black heavyweight cotton with a small cream wordmark that catches the streetlight. For night runs, long dinners and the walk home.","Thirty were made, each one numbered on the inside label. No restock."],
+      material:[["Fabric","100% cotton"],["Weight","230 gsm, heavyweight"],["Fit","Relaxed, boxy, unisex"],["Print","Cream wordmark, chest"],["Label","Numbered, curated by local artists"],["Edition","30 pieces"]],
+      care:["Wash at 30°C, inside out, with dark colours.","Don't tumble dry. Dry flat to keep the shape.","Iron inside out, never over the print."]},
+    "sock-sorriso":{name:"Sorriso", variant:"White", group:"sock", swatch:"#ffffff", sub:"Performance sock · White", img:"../img/sock-sorriso.jpg", d1:"../img/sock-sorriso-d1.jpg", d2:"../img/sock-sorriso-d2.jpg", life:"../img/run-pov-sun-shadow.jpg", sizes:SOCK_SIZES, defaultSize:"39–42",
+      alt:"Sorriso sock, white with a red melting smile",
+      story:["A smile that melts. Lisbon in August, the asphalt at 40 degrees, and the group still showing up at 07:30.","White performance knit, red jacquard smile, our BB on the cuff and Made in Portugal under your foot. Built for the long ones, worn for the café after.","Sorriso is Portuguese for smile. Keep one on at kilometre 18."],
+      material:[["Composition","67% polyamide, 29% polyester, 4% elastane"],["Knit","Performance, breathable"],["Height","Crew"],["Details","Jacquard smile, BB cuff mark, sole lettering"],["Origin","Made in Portugal"]],
+      care:["Wash at 30°C, inside out.","No fabric softener: it blocks the fibres that move sweat.","Don't tumble dry."]},
+    "sock-cereja":{name:"Cereja", variant:"Yellow", group:"sock", swatch:"#f6f0b6", sub:"Performance sock · Yellow", img:"../img/sock-cereja.jpg", d1:"../img/sock-cereja-d1.jpg", d2:"../img/sock-cereja-d2.jpg", life:"../img/run-group-graffiti-wall.jpg", sizes:SOCK_SIZES, defaultSize:"39–42",
+      alt:"Cereja sock, pale yellow with two red cherries",
+      story:["June in the north means cherries on every market stall, sold by the kilo in paper cones.","Pale yellow performance knit with two red cherries, our BB on the cuff and Made in Portugal under your foot. The summer on the outside, the technical part on the inside.","Cereja is Portuguese for cherry. The reward after the run."],
+      material:[["Composition","67% polyamide, 29% polyester, 4% elastane"],["Knit","Performance, breathable"],["Height","Crew"],["Details","Jacquard cherries, BB cuff mark, sole lettering"],["Origin","Made in Portugal"]],
+      care:["Wash at 30°C, inside out.","No fabric softener: it blocks the fibres that move sweat.","Don't tumble dry."]}
+  };
+  var PT={"tee-nata": {"variant_pt": "Nata", "sub_pt": "Nata · Edição de 30", "alt_pt": "Tee #001 em Nata, branco-sujo com um pequeno logótipo cinzento no peito", "story_pt": ["A primeira. Branco-sujo, pesada e quase silenciosa: um logótipo cinzento que só se lê de perto.", "Nata é a cor do papel onde imprimimos e do leite no galão das 10h, depois da corrida. É a t-shirt que vestes da partida às 07:30 até ao café, e depois para tudo o resto.", "Foram feitas trinta, cada uma numerada na etiqueta interior. Quando acabarem, esta cor da #001 acabou."], "material_pt": [["Tecido", "100% algodão"], ["Gramagem", "230 g/m², heavyweight"], ["Corte", "Largo, boxy, unissexo"], ["Estampado", "Logótipo cinzento tom sobre tom, peito"], ["Etiqueta", "Numerada, com curadoria de artistas locais"], ["Edição", "30 peças"]], "care_pt": ["Lavar a 30°C, do avesso, com cores semelhantes.", "Não usar máquina de secar. Secar na horizontal para manter a forma.", "Passar a ferro do avesso, nunca sobre o estampado."]}, "tee-asfalto": {"variant_pt": "Asfalto", "sub_pt": "Asfalto · Edição de 30", "alt_pt": "Tee #001 em Asfalto, preta com um pequeno logótipo creme no peito", "story_pt": ["A mesma t-shirt, depois de anoitecer. Asfalto é a estrada debaixo das corridas longas e a tinta com que escrevemos o manifesto.", "Algodão heavyweight preto com um pequeno logótipo creme que apanha a luz dos candeeiros. Para corridas noturnas, jantares longos e o caminho para casa.", "Foram feitas trinta, cada uma numerada na etiqueta interior. Sem reposição."], "material_pt": [["Tecido", "100% algodão"], ["Gramagem", "230 g/m², heavyweight"], ["Corte", "Largo, boxy, unissexo"], ["Estampado", "Logótipo creme, peito"], ["Etiqueta", "Numerada, com curadoria de artistas locais"], ["Edição", "30 peças"]], "care_pt": ["Lavar a 30°C, do avesso, com cores escuras.", "Não usar máquina de secar. Secar na horizontal para manter a forma.", "Passar a ferro do avesso, nunca sobre o estampado."]}, "sock-sorriso": {"variant_pt": "Branco", "sub_pt": "Meia de performance · Branco", "alt_pt": "Meia Sorriso, branca com um sorriso vermelho a derreter", "story_pt": ["Um sorriso que derrete. Lisboa em agosto, o asfalto a 40 graus e o grupo a aparecer às 07:30 na mesma.", "Malha de performance branca, sorriso vermelho em jacquard, o nosso BB no punho e Made in Portugal debaixo do pé. Feita para as longas, usada no café a seguir.", "Mantém o sorriso até ao quilómetro 18."], "material_pt": [["Composição", "67% poliamida, 29% poliéster, 4% elastano"], ["Malha", "Performance, respirável"], ["Altura", "Média (crew)"], ["Detalhes", "Sorriso em jacquard, BB no punho, letras na sola"], ["Origem", "Feita em Portugal"]], "care_pt": ["Lavar a 30°C, do avesso.", "Sem amaciador: bloqueia as fibras que afastam o suor.", "Não usar máquina de secar."]}, "sock-cereja": {"variant_pt": "Amarelo", "sub_pt": "Meia de performance · Amarelo", "alt_pt": "Meia Cereja, amarelo-clara com duas cerejas vermelhas", "story_pt": ["Junho no norte é cerejas em todas as bancas do mercado, vendidas ao quilo em cartuchos de papel.", "Malha de performance amarelo-clara com duas cerejas vermelhas, o nosso BB no punho e Made in Portugal debaixo do pé. O verão por fora, a parte técnica por dentro.", "A recompensa depois da corrida."], "material_pt": [["Composição", "67% poliamida, 29% poliéster, 4% elastano"], ["Malha", "Performance, respirável"], ["Altura", "Média (crew)"], ["Detalhes", "Cerejas em jacquard, BB no punho, letras na sola"], ["Origem", "Feita em Portugal"]], "care_pt": ["Lavar a 30°C, do avesso.", "Sem amaciador: bloqueia as fibras que afastam o suor.", "Não usar máquina de secar."]}};
+  Object.keys(PT).forEach(function(k){var x=PT[k];for(var f in x)P[k][f]=x[f];});
+  ["tee-nata","tee-asfalto","sock-sorriso","sock-cereja"].forEach(function(k){var p=P[k]; p.card=p.img.replace(".jpg","-card.jpg"); p.extra=[p.d1,p.d2,p.img.replace(".jpg","-detail-a.jpg")];});
+  P["tee-nata"].img=P["tee-nata"].card="../img/tee-nata-v2.jpg"; P["tee-asfalto"].img=P["tee-asfalto"].card="../img/tee-asfalto-v2.jpg";
+  var NEW={"bora-nata": {"name": "BORA Tee", "variant": "Nata", "variant_pt": "Nata", "group": "bora", "swatch": "#f6f6e6", "sub": "Nata · Collection #001", "sub_pt": "Nata · Coleção #001", "img": "../img/bora-nata.jpg", "card": "../img/bora-nata.jpg", "defaultSize": "M", "alt": "BORA Tee in Nata, back print: BORA in Asfalto over a blue halftone ring", "alt_pt": "BORA Tee em Nata, estampado nas costas: BORA em Asfalto sobre um anel azul em meio-tom", "story": ["BORA. Portuguese expression meaning moving forward.", "If you are reading this, keep pushing your limits. Always."], "story_pt": ["BORA. Expressão portuguesa que quer dizer seguir em frente.", "Se estás a ler isto, continua a puxar pelos teus limites. Sempre."]}, "t38-asfalto": {"name": "38°41′N Tee", "variant": "Asfalto", "variant_pt": "Asfalto", "group": "t38", "swatch": "#161616", "sub": "Asfalto · Collection #001", "sub_pt": "Asfalto · Coleção #001", "img": "../img/t38-asfalto.jpg", "card": "../img/t38-asfalto.jpg", "defaultSize": "M", "alt": "38°41′N Tee in Asfalto, back print: the coordinates over a red horse", "alt_pt": "38°41′N Tee em Asfalto, estampado nas costas: as coordenadas sobre um cavalo vermelho", "story": ["Art, culture and fashion live deep inside the heart of the unadapted individuals.", "Run with identity. Rooted in Portugal."], "story_pt": ["Arte, cultura e moda vivem bem dentro do coração dos inadaptados.", "Corre com identidade. Com raízes em Portugal."]}, "t38-nata": {"name": "38°41′N Tee", "variant": "Nata", "variant_pt": "Nata", "group": "t38", "swatch": "#f6f6e6", "sub": "Nata · Collection #001", "sub_pt": "Nata · Coleção #001", "img": "../img/t38-nata.jpg", "card": "../img/t38-nata.jpg", "defaultSize": "M", "alt": "38°41′N Tee in Nata, back print: red coordinates over a grey horse", "alt_pt": "38°41′N Tee em Nata, estampado nas costas: coordenadas vermelhas sobre um cavalo cinzento", "story": ["Art, culture and fashion live deep inside the heart of the unadapted individuals.", "Run with identity. Rooted in Portugal."], "story_pt": ["Arte, cultura e moda vivem bem dentro do coração dos inadaptados.", "Corre com identidade. Com raízes em Portugal."]}, "perf-white": {"name": "Performance Tee", "variant": "White", "variant_pt": "Branco", "group": "perf", "swatch": "#ffffff", "sub": "White · Collection #001", "sub_pt": "Branco · Coleção #001", "img": "../img/perf-white.jpg", "card": "../img/perf-white.jpg", "defaultSize": "M", "alt": "Performance Tee in white with a small red BAMOBORA tab at the hem", "alt_pt": "Performance Tee branca com uma pequena etiqueta BAMOBORA vermelha na bainha"}, "short-brown": {"name": "Ribbed Short", "variant": "Brown", "variant_pt": "Castanho", "group": "short", "swatch": "#7a6d63", "sub": "Brown · Collection #001", "sub_pt": "Castanho · Coleção #001", "img": "../img/short-brown.jpg", "card": "../img/short-brown.jpg", "defaultSize": "M", "alt": "Ribbed Short in brown with a black drawcord and BAMOBORA tab", "alt_pt": "Ribbed Short castanho com cordão preto e etiqueta BAMOBORA"}, "short-grey": {"name": "Ribbed Short", "variant": "Grey", "variant_pt": "Cinzento", "group": "short", "swatch": "#6e6e6e", "sub": "Grey · Collection #001", "sub_pt": "Cinzento · Coleção #001", "img": "../img/short-grey.jpg", "card": "../img/short-grey.jpg", "defaultSize": "M", "alt": "Ribbed Short in grey with a black drawcord and BAMOBORA tab", "alt_pt": "Ribbed Short cinzento com cordão preto e etiqueta BAMOBORA"}, "short-black": {"name": "Ribbed Short", "variant": "Black", "variant_pt": "Preto", "group": "short", "swatch": "#1c1c1c", "sub": "Black · Collection #001", "sub_pt": "Preto · Coleção #001", "img": "../img/short-black.jpg", "card": "../img/short-black.jpg", "defaultSize": "M", "alt": "Ribbed Short in black with a red BAMOBORA tab", "alt_pt": "Ribbed Short preto com etiqueta BAMOBORA vermelha"}};
+  Object.keys(NEW).forEach(function(k){var x=NEW[k]; x.soon=1; x.sizes=TEE_SIZES; x.extra=[1,2,3].map(function(i){return "../img/"+k+"-c"+i+".jpg";}); x.d1=x.extra[0]; x.d2=x.extra[1]; P[k]=x;});
+  var SHOP_ORDER=["bora-nata","tee-nata","t38-asfalto","short-brown","tee-asfalto","t38-nata","short-grey","sock-sorriso","perf-white","short-black","sock-cereja"];
+  var LANG="en"; try{ if(localStorage.getItem("bmb-lang")==="pt") LANG="pt"; }catch(e){}
+  var UI={en:{coll:"Collection #001",ed:" · Edition of 30",mip:" · Made in Portugal",colour:"Colour",design:"Design",size:"Size",fit:"Relaxed fit. Take your usual size.",eu:"EU sizes",add:"Add to bag · €XX",noteT:"Numbered piece. Ships from Portugal.",noteS:"Ships from Portugal.",story:"Story",mat:"Material & fit",care:"Care",ship:"Shipping & returns",ship1:"Ships from Portugal. Delivery times and costs are shown at checkout.",ship2:"Returns within 14 days, unworn and with the label on.",kit:"Complete the kit",shop:"Collection",soonst:"Coming soon",soonb:"Coming soon",det1:"Detail of ",det2:"Second detail of ",life:"Training Division run, black and white",crumb:"Breadcrumb",added:" added · checkout opens at the drop",bad:"Enter an email address, like name@example.com.",ok:"Sign-ups open with the live store. Until then, write to geral@bamobora.com."},
+           pt:{coll:"Coleção #001",ed:" · Edição de 30",mip:" · Feita em Portugal",colour:"Cor",design:"Design",size:"Tamanho",fit:"Corte largo. Escolhe o teu tamanho habitual.",eu:"Tamanhos EU",add:"Adicionar ao cesto · €XX",noteT:"Peça numerada. Enviada de Portugal.",noteS:"Enviada de Portugal.",story:"História",mat:"Material e corte",care:"Cuidados",ship:"Envios e devoluções",ship1:"Enviamos de Portugal. Prazos e custos de entrega aparecem no checkout.",ship2:"Devoluções até 14 dias, sem uso e com a etiqueta.",kit:"Completa o kit",shop:"Coleção",soonst:"Brevemente",soonb:"Brevemente",det1:"Detalhe de ",det2:"Segundo detalhe de ",life:"Corrida da Training Division, a preto e branco",crumb:"Navegação",added:" adicionado · o checkout abre no lançamento",bad:"Escreve um email válido, como nome@exemplo.com.",ok:"As inscrições abrem com a loja. Até lá, escreve para geral@bamobora.com."}};
+  function u(k){return UI[LANG][k];}
+  function L(p,f){return (LANG==="pt"&&p[f+"_pt"]!==undefined)?p[f+"_pt"]:p[f];}
+  var ORDER=["tee-nata","tee-asfalto","sock-sorriso","sock-cereja"];
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+  function card(id,i){var p=P[id];
+    return '<a class="card" href="#'+id+'"><div class="shot"><img src="'+(p.card||p.img)+'" alt="'+esc(L(p,"alt"))+'" loading="lazy">'+(p.soon?'<span class="soon-stamp">'+u("soonst")+'</span>':'')+'</div>'+
+      '<div class="card__meta"><h3 class="card__name">'+esc(p.name)+'</h3><span class="price">€XX</span></div><span class="tag muted card__sub">'+esc(L(p,"sub"))+'</span></a>';}
+  var allc=document.querySelector('[data-cards="all"]'); if(allc) allc.innerHTML=ORDER.map(card).join("");
+
+  var CRAFT={"en": "Every piece is finished by hand by a Portuguese craftsman. One detail you can feel, never quite the same twice.", "pt": "Cada peça é finalizada à mão por um artesão português. Um detalhe que se sente, nunca exatamente igual duas vezes."}, GC={"tee": {"pills": ["230 GSM", "100% cotton|100% algodão", "Numbered|Numerada", "Made in PT|Feita em PT"], "f2": ["A small logo, printed tone on tone. You read it from up close, or not at all.", "Um pequeno logótipo, estampado tom sobre tom. Lê-se de perto, ou não se lê."], "f3": ["Numbered on the inside label, one of thirty. Curated by local artists.", "Numerada na etiqueta interior, uma de trinta. Com curadoria de artistas locais."], "usage": ["Made for the 07:30 start and everything after: the run, the café, the rest of the day. Heavy enough to hold its shape, soft enough to forget you're wearing it.", "Feita para a partida das 07:30 e para tudo o que vem depois: a corrida, o café, o resto do dia. Pesada o suficiente para manter a forma, macia o suficiente para te esqueceres dela."], "feat": [["230 g/m² heavyweight cotton jersey.", "Jersey de algodão heavyweight, 230 g/m²."], ["Relaxed, boxy, unisex fit.", "Corte largo, boxy e unissexo."], ["Tone-on-tone chest logo.", "Logótipo tom sobre tom no peito."], ["One detail finished by hand by a Portuguese craftsman.", "Um detalhe finalizado à mão por um artesão português."], ["Numbered inside label. Edition of 30.", "Etiqueta interior numerada. Edição de 30."]], "comp": ["100% cotton / Made in Portugal", "100% algodão / Feita em Portugal"], "care": [["wash", "Machine wash cold (30° max), inside out", "Lavar na máquina a frio (máx. 30°), do avesso"], ["bleach", "Do not bleach", "Não usar lixívia"], ["tumble", "Do not tumble dry", "Não secar na máquina"], ["iron", "Iron low heat on the reverse side", "Passar a ferro a baixa temperatura, do avesso"], ["dry", "No dry-cleaning", "Não limpar a seco"]], "temp": [12, 30], "wx": [1, 0, 0, 0]}, "bora": {"pills": ["Back print|Estampado nas costas", "Hand-finished|Acabada à mão", "Made in PT|Feita em PT"], "f2": ["BORA. Portuguese for moving forward, printed big across the back.", "BORA. A palavra portuguesa para seguir em frente, em grande nas costas."], "f3": ["A halftone ring in Atlântico blue, our signal colour.", "Um anel em meio-tom azul Atlântico, a nossa cor de sinal."], "usage": ["For the runs that need a push and the days that need one more. Wear the message on your back so the person behind you reads it too.", "Para as corridas que precisam de um empurrão e os dias que precisam de mais um. A mensagem vai nas costas, para quem vem atrás também a ler."], "feat": [["Relaxed, boxy fit.", "Corte largo e boxy."], ["Back print: BORA with a halftone ring.", "Estampado nas costas: BORA com anel em meio-tom."], ["One detail finished by hand by a Portuguese craftsman.", "Um detalhe finalizado à mão por um artesão português."]], "comp": ["Composition to be confirmed / Made in Portugal", "Composição a confirmar / Feita em Portugal"], "care": [["wash", "Machine wash cold (30° max), inside out", "Lavar na máquina a frio (máx. 30°), do avesso"], ["bleach", "Do not bleach", "Não usar lixívia"], ["tumble", "Do not tumble dry", "Não secar na máquina"], ["iron", "Iron low heat on the reverse side", "Passar a ferro a baixa temperatura, do avesso"], ["dry", "No dry-cleaning", "Não limpar a seco"]], "temp": [12, 30], "wx": [1, 0, 0, 0]}, "t38": {"pills": ["Back print|Estampado nas costas", "Hand-finished|Acabada à mão", "Made in PT|Feita em PT"], "f2": ["Coordinates in distressed type over a running horse, printed across the back.", "Coordenadas em tipografia gasta sobre um cavalo a correr, estampadas nas costas."], "f3": ["Run with identity. Rooted in Portugal. Printed small, either side.", "Run with identity. Rooted in Portugal. Em pequeno, de cada lado."], "usage": ["A tee for the people who make things nobody asked for. Run in it, then wear it to the gallery.", "Uma t-shirt para quem faz coisas que ninguém pediu. Corre com ela, depois leva-a à galeria."], "feat": [["Relaxed, boxy fit.", "Corte largo e boxy."], ["Back print: 38°41′N with a running horse.", "Estampado nas costas: 38°41′N com um cavalo a correr."], ["One detail finished by hand by a Portuguese craftsman.", "Um detalhe finalizado à mão por um artesão português."]], "comp": ["Composition to be confirmed / Made in Portugal", "Composição a confirmar / Feita em Portugal"], "care": [["wash", "Machine wash cold (30° max), inside out", "Lavar na máquina a frio (máx. 30°), do avesso"], ["bleach", "Do not bleach", "Não usar lixívia"], ["tumble", "Do not tumble dry", "Não secar na máquina"], ["iron", "Iron low heat on the reverse side", "Passar a ferro a baixa temperatura, do avesso"], ["dry", "No dry-cleaning", "Não limpar a seco"]], "temp": [12, 30], "wx": [1, 0, 0, 0]}, "perf": {"pills": ["Performance", "Hand-finished|Acabada à mão", "Made in PT|Feita em PT"], "f2": ["A red BAMOBORA tab at the hem. The only colour on it.", "Uma etiqueta BAMOBORA vermelha na bainha. A única cor que tem."], "f3": ["A light knit for hot days and fast ones.", "Uma malha leve para dias quentes e dias rápidos."], "usage": ["Our training top for summer mileage, intervals and race day.", "O nosso top de treino para quilómetros de verão, séries e dia de prova."], "feat": [["Light performance knit.", "Malha de performance leve."], ["Red BAMOBORA hem tab.", "Etiqueta BAMOBORA vermelha na bainha."], ["One detail finished by hand by a Portuguese craftsman.", "Um detalhe finalizado à mão por um artesão português."]], "comp": ["Composition to be confirmed / Made in Portugal", "Composição a confirmar / Feita em Portugal"], "care": [["wash", "Machine wash cold (30° max), inside out", "Lavar na máquina a frio (máx. 30°), do avesso"], ["bleach", "Do not bleach", "Não usar lixívia"], ["tumble", "Do not tumble dry", "Não secar na máquina"], ["iron", "Iron low heat on the reverse side", "Passar a ferro a baixa temperatura, do avesso"], ["dry", "No dry-cleaning", "Não limpar a seco"]], "temp": [15, 30], "wx": [1, 0, 0, 0]}, "short": {"pills": ["Ribbed|Canelado", "Side pockets|Bolsos laterais", "Hand-finished|Acabado à mão"], "f2": ["A woven BAMOBORA tab and a branded drawcord.", "Uma etiqueta BAMOBORA tecida e um cordão com a marca."], "f3": ["Fine rib texture and side pockets, cut to move.", "Textura canelada fina e bolsos laterais, cortado para mexer."], "usage": ["From the long Sunday run to the coffee after. Pockets for keys, a gel and the price of a bica.", "Da corrida longa de domingo ao café a seguir. Bolsos para as chaves, um gel e o preço de uma bica."], "feat": [["Fine ribbed stretch fabric.", "Tecido elástico canelado fino."], ["Side pockets and branded drawcord.", "Bolsos laterais e cordão com a marca."], ["One detail finished by hand by a Portuguese craftsman.", "Um detalhe finalizado à mão por um artesão português."]], "comp": ["Composition to be confirmed / Made in Portugal", "Composição a confirmar / Feito em Portugal"], "care": [["wash", "Machine wash cold (30° max), inside out", "Lavar na máquina a frio (máx. 30°), do avesso"], ["bleach", "Do not bleach", "Não usar lixívia"], ["tumble", "Do not tumble dry", "Não secar na máquina"], ["iron", "Iron low heat on the reverse side", "Passar a ferro a baixa temperatura, do avesso"], ["dry", "No dry-cleaning", "Não limpar a seco"]], "temp": [8, 30], "wx": [1, 1, 0, 0]}, "sock": {"pills": ["67% PA", "Performance", "Made in PT|Feita em PT"], "f2": ["Artwork knitted in jacquard, not printed. BB on the cuff, letters under the foot.", "Arte tricotada em jacquard, não estampada. BB no punho, letras debaixo do pé."], "f3": ["A performance knit that breathes and holds its shape over long miles.", "Uma malha de performance que respira e mantém a forma nos quilómetros longos."], "usage": ["Built for the long ones, worn to the café after. Mid crew height.", "Feita para as longas, usada no café a seguir. Altura média."], "feat": [["Breathable performance knit.", "Malha de performance respirável."], ["Jacquard artwork, BB cuff, sole lettering.", "Arte em jacquard, BB no punho, letras na sola."], ["One detail finished by hand by a Portuguese craftsman.", "Um detalhe finalizado à mão por um artesão português."]], "comp": ["67% polyamide, 29% polyester, 4% elastane / Made in Portugal", "67% poliamida, 29% poliéster, 4% elastano / Feita em Portugal"], "care": [["wash", "Machine wash cold (30° max), inside out", "Lavar na máquina a frio (máx. 30°), do avesso"], ["bleach", "Do not bleach", "Não usar lixívia"], ["tumble", "Do not tumble dry", "Não secar na máquina"], ["soft", "No fabric softener", "Não usar amaciador"]], "temp": [-5, 30], "wx": [1, 1, 1, 0]}}, PDU={en:{"tax": "Taxes included", "sizeguide": "Size guide", "temp": "Temperature range", "wx": "Weather conditions", "hot": "Hot", "cold": "Cold", "rain": "Rain", "low": "Low light", "help": "Need help?", "helpb": "Write to geral@bamobora.com. We answer ourselves.", "usage": "Usage", "craft": "Craft", "feat": "Features", "comp": "Composition & care", "warr": "Warranty", "warrb": "Every piece is made to last. If something isn’t right with how it was made, write to geral@bamobora.com and we’ll make it right.", "moreS": "More colours and styles", "prev": "Previous image", "next": "Next image", "sgb": "Relaxed fit. Take your usual size. Between two sizes? Go down for a closer fit."},pt:{"tax": "Impostos incluídos", "sizeguide": "Guia de tamanhos", "temp": "Intervalo de temperatura", "wx": "Condições", "hot": "Calor", "cold": "Frio", "rain": "Chuva", "low": "Pouca luz", "help": "Precisas de ajuda?", "helpb": "Escreve para geral@bamobora.com. Somos nós que respondemos.", "usage": "Uso", "craft": "Artesanato", "feat": "Características", "comp": "Composição e cuidados", "warr": "Garantia", "warrb": "Cada peça é feita para durar. Se algo não estiver bem na forma como foi feita, escreve para geral@bamobora.com e resolvemos.", "moreS": "Mais cores e estilos", "prev": "Imagem anterior", "next": "Imagem seguinte", "sgb": "Corte largo. Escolhe o teu tamanho habitual. Entre dois tamanhos? Escolhe o mais pequeno para um corte mais justo."}};
+  function pu(k){return PDU[LANG][k];}
+  function tr(pair){ return LANG==="pt"?pair[1]:pair[0]; }
+  function pill(x){ var a=x.split("|"); return LANG==="pt"&&a[1]?a[1]:a[0]; }
+  var ICON={wash:'<svg viewBox="0 0 32 24"><path d="M2 5l3 15h22l3-15" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M2 5c3 3 6 3 7 0 2 3 5 3 7 0 2 3 5 3 7 0 2 3 4 3 7 0" fill="none" stroke="currentColor" stroke-width="1.2"/><text x="16" y="17.5" font-size="7" text-anchor="middle" fill="currentColor" font-family="sans-serif">30</text></svg>',
+    bleach:'<svg viewBox="0 0 32 24"><path d="M16 2L30 22H2z" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 8l16 14M24 8L8 22" stroke="currentColor" stroke-width="1.2"/></svg>',
+    tumble:'<svg viewBox="0 0 32 24"><rect x="5" y="1" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="16" cy="12" r="7.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5 1l22 22M27 1L5 23" stroke="currentColor" stroke-width="1.2"/></svg>',
+    iron:'<svg viewBox="0 0 32 24"><path d="M3 19h26c0-6-4-10-10-10H9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M3 19c0-4 2-7 6-8" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="17" cy="15" r="1.3" fill="currentColor"/></svg>',
+    dry:'<svg viewBox="0 0 32 24"><circle cx="16" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 4l16 16M24 4L8 20" stroke="currentColor" stroke-width="1.2"/></svg>',
+    soft:'<svg viewBox="0 0 32 24"><path d="M6 3h20v18H6z" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M11 9c3-3 7-3 10 0M11 14c3-3 7-3 10 0" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M4 1l24 22M28 1L4 23" stroke="currentColor" stroke-width="1.2"/></svg>'};
+  function pdp(id){ var p=P[id], g=GC[p.group]||GC.tee;
+    var ims=[p.img].concat(p.extra||[]).filter(Boolean);
+    var sibs=SHOP_ORDER.filter(function(k){return P[k].group===p.group});
+    var dots=sibs.map(function(k){return '<a class="pd__dot" href="#'+k+'" aria-current="'+(k===id)+'" aria-label="'+esc(L(P[k],"variant"))+'" style="--c:'+P[k].swatch+'"></a>'}).join("");
+    var sizes=p.sizes.map(function(s){return '<button type="button" aria-pressed="'+(s===p.defaultSize)+'">'+s+'</button>'}).join("");
+    var lo=Math.max(-10,g.temp[0]), hi=Math.min(30,g.temp[1]), l=(lo+10)/40*100, w=(hi-lo)/40*100;
+    var wx=["hot","cold","rain","low"].map(function(k,i){return '<div class="'+(g.wx[i]?"on":"")+'"><i></i><span>'+pu(k)+'</span></div>'}).join("");
+    var story=p.story?L(p,"story"):[tr(g.usage)];
+    var blocks=[[CRAFT[LANG],ims[1]],[tr(g.f2),ims[2]],[tr(g.f3),ims[3]]].filter(function(b){return b[1]});
+    var others=SHOP_ORDER.filter(function(k){return k!==id}).sort(function(a,b){return (P[b].group===p.group)-(P[a].group===p.group)}).slice(0,4).map(function(k){return card(k,SHOP_ORDER.indexOf(k))}).join("");
+    var stamp=p.soon?'<span class="soon-stamp">'+u("soonst")+'</span>':'';
+    return '<nav class="crumb tag muted" aria-label="'+u("crumb")+'"><a href="#collection">'+u("shop")+'</a><span>/</span><span>'+esc(p.name)+' · '+esc(L(p,"variant"))+'</span></nav>'+
+    '<div class="pd">'+
+      '<div class="pd__media"><div class="car" data-n="'+ims.length+'">'+stamp+
+        ims.map(function(src,i){return '<img src="'+src+'" alt="'+(i?esc(u("det1")+p.name):esc(L(p,"alt")))+'"'+(i?' class="full" loading="lazy"':' class="on"')+'>'}).join("")+
+        (ims.length>1?'<button type="button" class="car__btn car__prev" aria-label="'+pu("prev")+'">‹</button><button type="button" class="car__btn car__next" aria-label="'+pu("next")+'">›</button>':'')+
+        '</div>'+(ims.length>1?'<div class="car__bars" aria-hidden="true">'+ims.map(function(_,i){return '<i'+(i?'':' class="on"')+'></i>'}).join("")+'</div>':'')+'</div>'+
+      '<aside class="pd__buy">'+
+        '<span class="tag muted">'+u("coll")+'</span>'+
+        '<h1>'+esc(p.name)+'</h1>'+
+        '<div class="pd__price"><b>XX EUR</b><span>'+pu("tax")+'</span></div>'+
+        '<div class="pd__pills">'+g.pills.map(function(x){return '<span>'+esc(pill(x))+'</span>'}).join("")+'</div>'+
+        '<div class="pd__opt"><div class="pd__lab"><b>'+(p.group==="sock"?u("design"):u("colour"))+'</b><span>'+esc(L(p,"variant"))+'</span></div><div class="pd__dots">'+dots+'</div></div>'+
+        '<div class="pd__opt"><div class="pd__lab"><b>'+u("size")+'</b><button type="button" class="pd__sg">'+pu("sizeguide")+'</button></div><p class="pd__sgb" hidden>'+(p.group==="sock"?u("eu"):pu("sgb"))+'</p><div class="sizes" role="group" aria-label="'+u("size")+'">'+sizes+'</div></div>'+
+        (p.soon?'<button class="btn btn--block" type="button" disabled>'+u("soonb")+'</button>':'<button class="btn btn--red btn--block" type="button" data-add="'+id+'">'+u("add")+'</button>')+
+        '<div class="pd__opt"><div class="pd__lab"><b>'+pu("temp")+'</b><span>°C</span></div><div class="temp"><i style="left:'+l+'%;width:'+w+'%"></i></div><div class="temp__s"><span>-10°C</span><span>0°C</span><span>10°C</span><span>20°C</span><span>30°C</span></div></div>'+
+        '<div class="pd__opt"><div class="pd__lab"><b>'+pu("wx")+'</b></div><div class="wx">'+wx+'</div></div>'+
+        '<div class="acc">'+
+          '<details><summary>'+pu("help")+'</summary><div class="body"><p><a class="ulink" href="mailto:geral@bamobora.com">geral@bamobora.com</a></p><p>'+pu("helpb")+'</p></div></details>'+
+          '<details><summary>'+esc(u("ship"))+'</summary><div class="body"><p>'+u("ship1")+'</p><p>'+u("ship2")+'</p></div></details>'+
+        '</div>'+
+      '</aside>'+
+      '<div class="pd__story">'+
+        '<p class="pd__big">'+story.map(esc).join(" ")+'</p>'+
+        blocks.map(function(b){return '<section class="pd__feat"><p class="pd__big">'+esc(b[0])+'</p><div class="pd__fimg"><img src="'+b[1]+'" alt="" loading="lazy"></div></section>'}).join("")+
+        '<div class="pd__acc">'+
+          '<details open><summary>'+pu("usage")+'</summary><div class="body"><p>'+esc(tr(g.usage))+'</p></div></details>'+
+          '<details><summary>'+pu("craft")+'</summary><div class="body"><p>'+esc(CRAFT[LANG])+'</p></div></details>'+
+          '<details><summary>'+pu("feat")+'</summary><div class="body"><ul>'+g.feat.map(function(f){return '<li>'+esc(tr(f))+'</li>'}).join("")+'</ul></div></details>'+
+          '<details><summary>'+esc(pu("comp"))+'</summary><div class="body"><p>'+esc(tr(g.comp))+'</p><ul class="care">'+g.care.map(function(c){return '<li>'+ICON[c[0]]+'<span>'+esc(LANG==="pt"?c[2]:c[1])+'</span></li>'}).join("")+'</ul></div></details>'+
+          '<details><summary>'+pu("warr")+'</summary><div class="body"><p>'+pu("warrb")+'</p></div></details>'+
+        '</div>'+
+      '</div>'+
+    '</div>'+
+    '<div class="more"><h2 class="pd__moreh">'+pu("moreS")+'</h2><div class="grid">'+others+'</div></div>';
+  }
+  document.getElementById("pdp").addEventListener("click",function(e){
+    var sg=e.target.closest(".pd__sg"); if(sg){ var b=document.querySelector(".pd__sgb"); if(b) b.hidden=!b.hidden; return; }
+    var btn=e.target.closest(".car__btn"); if(!btn) return; var car=btn.closest(".car"), ims=car.querySelectorAll("img"), bars=document.querySelectorAll(".car__bars i"), n=ims.length, cur=0;
+    ims.forEach(function(im,i){ if(im.classList.contains("on")) cur=i; });
+    var nx=(cur+(btn.classList.contains("car__next")?1:-1)+n)%n; ims[cur].classList.remove("on"); ims[nx].classList.add("on"); if(bars[cur]) bars[cur].classList.remove("on"); if(bars[nx]) bars[nx].classList.add("on"); });
+
+  function setLang(l,save){ LANG=l; document.documentElement.lang=(l==="pt"?"pt-PT":"en"); document.documentElement.classList.remove("pt");
+    document.querySelectorAll("[data-pt]").forEach(function(el){ if(el.dataset.en===undefined) el.dataset.en=el.innerHTML; el.innerHTML=(l==="pt"?el.dataset.pt:el.dataset.en); });
+    ["aria-label","alt","placeholder"].forEach(function(a){ document.querySelectorAll("[data-pt-"+a+"]").forEach(function(el){ var k="en"+a.replace(/-/g,""); if(el.dataset[k]===undefined) el.dataset[k]=el.getAttribute(a)||""; el.setAttribute(a,l==="pt"?el.getAttribute("data-pt-"+a):el.dataset[k]); }); });
+    document.querySelectorAll("[data-lang]").forEach(function(b){ b.setAttribute("aria-pressed",String(b.getAttribute("data-lang")===l)); });
+    renderPicks(); var h=(location.hash||"").slice(1); if(P[h]) document.getElementById("pdp").innerHTML=pdp(h); if(h.split("/")[0]==="collection") renderShop(); if(h==="training-division") renderTraining();
+    document.querySelectorAll(".msg").forEach(function(m){m.textContent="";});
+    if(save){ try{ localStorage.setItem("bmb-lang",l); }catch(e){} } }
+  document.querySelectorAll("[data-lang]").forEach(function(b){ b.addEventListener("click",function(){ setLang(b.getAttribute("data-lang"),true); }); });
+  function shopCell(id){ var p=P[id], ims=[p.card||p.img].concat(p.extra||[]);
+    return '<a class="sc" href="#'+id+'">'+(p.soon?'<span class="soon-stamp">'+u("soonst")+'</span>':'')+
+      '<span class="sc__meta lab"><span>'+esc(p.name)+' · '+esc(L(p,"variant"))+'</span><span>€XX</span></span>'+
+      '<span class="sc__imgs">'+ims.map(function(src,i){return '<img src="'+src+'" alt="'+(i?esc(u("det1")+p.name):esc(L(p,"alt")))+'" loading="lazy"'+(i?'':' class="on"')+'>'}).join("")+'</span>'+
+      (ims.length>1?'<span class="sc__dots" aria-hidden="true">'+ims.map(function(_,i){return '<i'+(i?'':' class="on"')+'></i>'}).join("")+'</span>':'')+'</a>'; }
+  var FILTERS={"new":{en:"New arrivals",pt:"Novidades",ids:["bora-nata","t38-asfalto","t38-nata","perf-white","short-brown","short-grey","short-black"]},
+    t38:{en:"38°41′N",pt:"38°41′N",g:["t38"]},bora:{en:"BORA",pt:"BORA",g:["bora"]},tees:{en:"Tees",pt:"T-shirts",g:["tee","t38","bora"]},perf:{en:"Performance tees",pt:"T-shirts de performance",g:["perf"]},
+    shorts:{en:"Shorts",pt:"Calções",g:["short"]},apparel:{en:"Apparel",pt:"Vestuário",g:["tee","t38","bora","perf","short"]},socks:{en:"Socks",pt:"Meias",g:["sock"]},accessories:{en:"Accessories",pt:"Acessórios",g:["sock"]}};
+  var SHOPF="";
+  function renderShop(){ var g=document.getElementById("shopgrid"); if(!g) return; var f=FILTERS[SHOPF];
+    var ids=SHOP_ORDER.filter(function(k){ return !f || (f.ids?f.ids.indexOf(k)>-1:f.g.indexOf(P[k].group)>-1); });
+    var bar=document.getElementById("shopfilter");
+    if(bar) bar.innerHTML='<span class="lab">'+(f?esc(f[LANG]):(LANG==="pt"?"Todas as peças":"All pieces"))+' · '+ids.length+'</span>'+(f?'<a class="lab ulink" href="#collection">'+(LANG==="pt"?"Ver tudo":"Shop all")+'</a>':'');
+    g.innerHTML=ids.map(shopCell).join("");
+    g.querySelectorAll(".sc").forEach(function(c){ var ims=c.querySelectorAll(".sc__imgs img"), ds=c.querySelectorAll(".sc__dots i"), n=ims.length, cur=0, sx=null, swiped=false; if(n<2) return;
+      function show(k){ k=(k+n)%n; if(k===cur) return; ims[cur].classList.remove("on"); ds[cur].classList.remove("on"); cur=k; ims[k].classList.add("on"); ds[k].classList.add("on"); }
+      c.addEventListener("mousemove",function(e){ var r=c.getBoundingClientRect(); show(Math.min(n-1,Math.floor((e.clientX-r.left)/r.width*n))); });
+      c.addEventListener("mouseleave",function(){ show(0); });
+      c.addEventListener("touchstart",function(e){ sx=e.touches[0].clientX; swiped=false; },{passive:true});
+      c.addEventListener("touchend",function(e){ if(sx===null) return; var dx=e.changedTouches[0].clientX-sx; if(Math.abs(dx)>30){ swiped=true; show(cur+(dx<0?1:-1)); } sx=null; });
+      c.addEventListener("click",function(e){ if(swiped){ e.preventDefault(); swiped=false; } });
+    }); }
+  var CITIES=[{k:"braga",en:"Braga",pt:"Braga"},{k:"lisbon",en:"Lisbon",pt:"Lisboa"},{k:"madrid",en:"Madrid",pt:"Madrid",soon:1},{k:"amsterdam",en:"Amsterdam",pt:"Amesterdão",soon:1},{k:"paris",en:"Paris",pt:"Paris",soon:1}];
+  var SOON={en:{lab:"Coming soon",line:"The Training Division lands here soon.",cta:"Hear first"},pt:{lab:"Brevemente",line:"A Training Division chega aqui em breve.",cta:"Saber primeiro"}};
+  function tdSoon(c){ var t=SOON[LANG], name=c[LANG], up=name.toUpperCase(), fs=Math.min(44,250/up.length), bg=""; for(var i=0;i<5;i++) bg+='<span'+(i%2?' class="o"':'')+'>'+esc(up)+'</span>';
+    return '<article class="tdc tdc--soon"><div class="tp" style="--fs:'+fs.toFixed(1)+'cqw"><div class="tp__bg" aria-hidden="true">'+bg+'</div><div class="tp__txt"><div class="r sp"><span>BAMOBORA</span><span>'+esc(up)+'</span></div><div class="r c"><span class="ov">'+t.lab+'</span></div><div class="r sp"><span>Training</span><b>Division</b></div></div></div>'+
+      '<h3>Training Division · '+esc(name)+'</h3><p class="tdc__when">'+t.lab+'</p><p class="tdc__where">'+t.line+'</p><a class="tdc__rsvp" href="#signup">'+t.cta+'</a></article>'; }
+  var TD={en:{every:"Every",day:"Saturday",day1:"Saturday",km:"KM",paces:"Pace groups",meet:"Meet",at:"at",run:"Run",point:"Meeting point · TBA",coffee:"Coffee",after:"After",where:"Meeting point to be announced, ",details:"View details",share:"Share",rsvp:"RSVP",more:"5 km in pace groups, each with its own pacer, led by a host. Café after. Places are limited: RSVP to get the meeting point.",copied:"Link copied",none:"Next date soon",noneLine:"No run on the calendar here yet. Get the date first.",cta:"Hear first",loading:"Loading the next run",onluma:"RSVP on Luma, the meeting point arrives by email."},
+            pt:{every:"Todos os",day:"Sábados",day1:"Sábado",km:"KM",paces:"Grupos por ritmo",meet:"Encontro",at:"às",run:"Corrida",point:"Ponto de encontro · a anunciar",coffee:"Café",after:"Depois",where:"Ponto de encontro a anunciar, ",details:"Ver detalhes",share:"Partilhar",rsvp:"RSVP",more:"5 km em grupos por ritmo, cada um com o seu pacer, com host. Café a seguir. Lugares limitados: faz RSVP para receber o ponto de encontro.",copied:"Link copiado",none:"Próxima data em breve",noneLine:"Ainda não há corrida marcada aqui. Sabe a data primeiro.",cta:"Saber primeiro",loading:"A carregar a próxima corrida",onluma:"RSVP no Luma, o ponto de encontro chega por email."}};
+  var TDCITY="braga"; try{ var sc=localStorage.getItem("bmb-city"); if(sc) TDCITY=sc; }catch(e){}
+  /* Events come from the BAMOBORA backend, which mirrors Luma (times, place, cover). Luma is always right. */
+  var SB_URL="https://cdmsvjermsfcxqdauzaq.supabase.co", SB_KEY="sb_publishable_sAkrOc2avXmZDxMRYhlFlQ_5iBdUODM";
+  var CITY_OF={braga:"braga",lisboa:"lisbon",porto:"porto"}, EVENTS=null, EV_FAIL=false, EV_LOADING=false;
+  var LUMA_URL=/^https:\/\/(www\.)?(luma\.com|lu\.ma)\/[A-Za-z0-9_-]{3,64}\/?$/, LUMA_IMG=/^https:\/\/images\.lumacdn\.com\//;
+  function loadEvents(){ if(EVENTS||EV_LOADING) return; EV_LOADING=true;
+    fetch(SB_URL+"/rest/v1/rpc/list_upcoming_events",{method:"POST",headers:{"Content-Type":"application/json","apikey":SB_KEY},body:JSON.stringify({p_limit:20})})
+      .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function(rows){ EVENTS=Array.isArray(rows)?rows:[]; })
+      .catch(function(){ EVENTS=[]; EV_FAIL=true; })
+      .then(function(){ EV_LOADING=false; if((location.hash||"").slice(1)==="training-division") renderTraining(); }); }
+  function fmtWhen(ev){ var loc=LANG==="pt"?"pt-PT":"en-GB", tz=ev.timezone||"Europe/Lisbon", s=new Date(ev.starts_at), e=ev.ends_at?new Date(ev.ends_at):null;
+    var d=new Intl.DateTimeFormat(loc,{timeZone:tz,weekday:"long",day:"numeric",month:"long"}).format(s), tf=new Intl.DateTimeFormat(loc,{timeZone:tz,hour:"2-digit",minute:"2-digit",hour12:false});
+    return d.charAt(0).toUpperCase()+d.slice(1)+" · "+tf.format(s)+(e?"–"+tf.format(e):""); }
+  function tdEvent(ev,c){ var t=TD[LANG], name=c[LANG], img=LUMA_IMG.test(ev.cover_url||"")?ev.cover_url:"", href=LUMA_URL.test(ev.rsvp_url||"")?ev.rsvp_url:"";
+    var info=ev.description?esc(ev.description).replace(/\n+/g,"<br>"):t.more;
+    return '<article class="tdc">'+
+      '<div class="tp tp--luma">'+(img?'<img src="'+esc(img)+'" alt="'+esc(ev.title)+'" loading="lazy" referrerpolicy="no-referrer">':'')+'</div>'+
+      '<h3>'+esc(ev.title)+'</h3>'+
+      '<p class="tdc__when">'+esc(fmtWhen(ev))+'</p>'+
+      '<p class="tdc__where">'+esc(name)+'</p>'+
+      '<div class="tdc__row"><button type="button" class="tdc__more" aria-expanded="false">'+t.details+'</button><span aria-hidden="true">→</span><button type="button" class="tdc__share" data-city="'+esc(name)+'" data-url="'+esc(href)+'">'+t.share+'</button></div>'+
+      '<p class="tdc__info" hidden>'+info+'<br><br>'+t.onluma+'</p>'+
+      (href?'<a class="tdc__rsvp" href="'+esc(href)+'" target="_blank" rel="noopener noreferrer">'+t.rsvp+'</a>':'')+
+    '</article>'; }
+  function tdNone(c){ var t=TD[LANG], name=c[LANG], up=name.toUpperCase(), fs=Math.min(44,250/up.length), bg=""; for(var i=0;i<5;i++) bg+='<span'+(i%2?' class="o"':'')+'>'+esc(up)+'</span>';
+    return '<article class="tdc tdc--soon"><div class="tp" style="--fs:'+fs.toFixed(1)+'cqw"><div class="tp__bg" aria-hidden="true">'+bg+'</div><div class="tp__txt"><div class="r sp"><span>BAMOBORA</span><span>'+esc(up)+'</span></div><div class="r c"><span class="ov">'+t.none+'</span></div><div class="r sp"><span>Training</span><b>Division</b></div></div></div>'+
+      '<h3>Training Division · '+esc(name)+'</h3><p class="tdc__when">'+t.none+'</p><p class="tdc__where">'+t.noneLine+'</p><a class="tdc__rsvp" href="#signup">'+t.cta+'</a></article>'; }
+  function tdWait(){ return '<article class="tdc" aria-busy="true"><div class="tp tp--wait"></div><h3>&nbsp;</h3><p class="tdc__when">'+TD[LANG].loading+'</p></article>'; }
+  function renderTraining(){ var g=document.getElementById("tdgrid"), cb=document.getElementById("tdcities"); if(!g) return;
+    if(!CITIES.some(function(c){return c.k===TDCITY})) TDCITY="braga";
+    cb.innerHTML=CITIES.map(function(c){return '<button type="button" data-city="'+c.k+'" aria-pressed="'+(c.k===TDCITY)+'">'+esc(c[LANG])+(c.soon?'<small>'+SOON[LANG].lab+'</small>':'')+'</button>'}).join("");
+    cb.querySelectorAll("button").forEach(function(b){ b.addEventListener("click",function(){ TDCITY=b.getAttribute("data-city"); try{ localStorage.setItem("bmb-city",TDCITY); }catch(e){} renderTraining(); }); });
+    var city=CITIES.filter(function(c){return c.k===TDCITY})[0];
+    if(city.soon){ g.innerHTML=tdSoon(city); return; }
+    if(EVENTS===null){ g.innerHTML=tdWait(); loadEvents(); return; }
+    var mine=EVENTS.filter(function(ev){ return CITY_OF[ev.city]===city.k; });
+    g.innerHTML=mine.length?mine.slice(0,4).map(function(ev){return tdEvent(ev,city)}).join(""):tdNone(city);
+    g.querySelectorAll(".tdc__more").forEach(function(btn){ btn.addEventListener("click",function(){ var info=btn.closest(".tdc").querySelector(".tdc__info"), open=info.hidden; info.hidden=!open; btn.setAttribute("aria-expanded",String(open)); }); });
+    g.querySelectorAll(".tdc__share").forEach(function(btn){ btn.addEventListener("click",function(){ var url=btn.getAttribute("data-url")||(location.href.split("#")[0]+"#training-division"), title="BAMOBORA Training Division · "+btn.getAttribute("data-city");
+      if(navigator.share){ navigator.share({title:title,url:url}).catch(function(){}); }
+      else if(navigator.clipboard){ navigator.clipboard.writeText(url).then(function(){ if(typeof say==="function") say(TD[LANG].copied); }).catch(function(){}); } }); }); }
+  var PICKS=[["t38-asfalto","t38-nata"],["short-black","short-brown","short-grey"],["bora-nata"],["tee-nata","tee-asfalto"]];
+  function pickCard(ids,i){ var p=P[ids[i]];
+    return '<a class="pk__img" href="#'+ids[i]+'"><img src="'+(p.card||p.img)+'" alt="'+esc(L(p,"alt"))+'" loading="lazy">'+(p.soon?'<span class="soon-stamp">'+u("soonst")+'</span>':'')+'</a>'+
+      '<h3><a href="#'+ids[i]+'">'+esc(p.name)+'</a></h3><p class="pk__price">XX EUR</p>'+
+      '<div class="pk__dots">'+ids.map(function(k,j){ return '<button type="button" data-i="'+j+'" aria-pressed="'+(j===i)+'" aria-label="'+esc(L(P[k],"variant"))+'" style="--c:'+P[k].swatch+'"></button>'; }).join("")+'</div>'; }
+  function renderPicks(){ var g=document.getElementById("picks"); if(!g) return;
+    g.innerHTML=PICKS.map(function(ids,n){ return '<article class="pk" data-n="'+n+'">'+pickCard(ids,0)+'</article>'; }).join("");
+    if(g.dataset.on) return; g.dataset.on="1";
+    g.addEventListener("click",function(e){ var b=e.target.closest(".pk__dots button"); if(!b) return; var a=b.closest(".pk"); if(!a) return; var ids=PICKS[+a.getAttribute("data-n")]; a.innerHTML=pickCard(ids,+b.getAttribute("data-i")); }); }
+  var hdr=document.getElementById("hdr");
+  function route(){
+    var h=(location.hash||"").slice(1), sb=document.getElementById("stickbuy");
+    var V={home:document.querySelector('[data-view="home"]'),product:document.querySelector('[data-view="product"]'),shop:document.querySelector('[data-view="shop"]'),prints:document.querySelector('[data-view="prints"]'),events:document.querySelector('[data-view="events"]'),training:document.querySelector('[data-view="training"]')};
+    var wasAway=V.home.hidden;
+    function show(k){ document.documentElement.classList.toggle("on-home",k==="home"); for(var n in V) V[n].hidden=(n!==k); if(sb) sb.hidden=(k!=="home"); hdr.classList.toggle("solid",k!=="home"); }
+    var hb=h.split("/"); if(hb[0]==="collection"){ SHOPF=hb[1]||""; h="collection"; } document.documentElement.classList.toggle("on-coll",h==="collection"); document.documentElement.classList.toggle("on-prints",h==="prints"); document.documentElement.dataset.page=h;
+    if(P[h]){ document.getElementById("pdp").innerHTML=pdp(h); show("product"); window.scrollTo(0,0); return; }
+    if(h==="collection"){ renderShop(); show("shop"); window.scrollTo(0,0); return; }
+    if(h==="prints"){ show("prints"); window.scrollTo(0,0); return; }
+    if(h==="events"){ show("events"); window.scrollTo(0,0); return; }
+    if(h==="training-division"){ renderTraining(); show("training"); window.scrollTo(0,0); return; }
+    show("home");
+    if(h && h!=="home"){ var el=document.getElementById(h); if(el){ if(wasAway){ setTimeout(function(){el.scrollIntoView()},0);} else el.scrollIntoView({behavior:"smooth"}); } }
+    else window.scrollTo(0,0);
+  }
+  (function(){ var link=document.getElementById("navcoll"), mega=document.getElementById("mega"), t=null;
+    if(!link||!mega) return;
+    function open(){ clearTimeout(t); mega.style.top=hdr.offsetHeight+"px"; mega.hidden=false; hdr.classList.add("menu-open"); link.setAttribute("aria-expanded","true"); }
+    function close(){ mega.hidden=true; hdr.classList.remove("menu-open"); link.setAttribute("aria-expanded","false"); }
+    function later(){ clearTimeout(t); t=setTimeout(close,180); }
+    if(window.matchMedia && matchMedia("(hover:hover)").matches){
+      link.addEventListener("mouseenter",open); link.addEventListener("mouseleave",later);
+      mega.addEventListener("mouseenter",function(){ clearTimeout(t); }); mega.addEventListener("mouseleave",later); }
+    link.addEventListener("focus",open);
+    mega.addEventListener("focusout",function(e){ if(!mega.contains(e.relatedTarget) && e.relatedTarget!==link) close(); });
+    document.addEventListener("keydown",function(e){ if(e.key==="Escape"&&!mega.hidden){ close(); link.focus(); } });
+    mega.addEventListener("click",function(e){ if(e.target.closest("a")) close(); });
+    window.addEventListener("hashchange",close);
+  })();
+  renderPicks();
+  (function(){ var b=document.getElementById("mbtn"), m=document.getElementById("mpanel"); if(!b||!m) return;
+    function set(o){ m.hidden=!o; b.setAttribute("aria-expanded",String(o)); document.documentElement.classList.toggle("m-open",o); b.textContent=o?(LANG==="pt"?"Fechar":"Close"):(LANG==="pt"?"Menu":"Menu"); }
+    b.addEventListener("click",function(){ set(m.hidden); });
+    m.addEventListener("click",function(e){ if(e.target.closest("a")) set(false); });
+    document.addEventListener("keydown",function(e){ if(e.key==="Escape"&&!m.hidden) set(false); });
+    window.addEventListener("resize",function(){ if(innerWidth>760&&!m.hidden) set(false); });
+  })();
+  (function(){ var sx=null; document.getElementById("pdp").addEventListener("touchstart",function(e){ if(e.target.closest(".car")) sx=e.touches[0].clientX; },{passive:true});
+    document.getElementById("pdp").addEventListener("touchend",function(e){ if(sx===null) return; var dx=e.changedTouches[0].clientX-sx; sx=null; if(Math.abs(dx)<35) return; var btn=document.querySelector(dx<0?".car__next":".car__prev"); if(btn) btn.click(); });
+  })();
+  window.addEventListener("hashchange",route); route(); setLang(LANG,false);
+  function over(){ var home=document.querySelector('[data-view="home"]'), hero=document.querySelector(".sx-hero");
+    var on=!home.hidden && hero && window.scrollY < hero.offsetHeight-70; hdr.classList.toggle("over",!!on); }
+  window.addEventListener("scroll",over,{passive:true}); window.addEventListener("resize",over); window.addEventListener("hashchange",function(){setTimeout(over,0)}); over();
+
+
+  var count=0, bag=document.getElementById("bag"), toast=document.getElementById("toast"), t;
+  function say(m){ toast.textContent=m; toast.classList.add("on"); clearTimeout(t); t=setTimeout(function(){toast.classList.remove("on")},2600); }
+  document.addEventListener("click",function(e){
+    var s=e.target.closest(".sizes button");
+    if(s){ s.parentNode.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed","false")}); s.setAttribute("aria-pressed","true"); return; }
+    var b=e.target.closest("[data-add]"); if(!b) return;
+    var p=P[b.getAttribute("data-add")], sel=document.querySelector('.sizes button[aria-pressed="true"]');
+    count++; bag.textContent=count;
+    say(p.name+" "+L(p,"variant")+(sel?" · "+sel.textContent:"")+u("added"));
+  });
+  document.querySelectorAll("[data-signup]").forEach(function(f){
+    f.addEventListener("submit",function(e){ e.preventDefault();
+      var v=f.querySelector("input").value.trim(), m=f.nextElementSibling;
+      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){ m.textContent=u("bad"); return; }
+      m.textContent=u("ok");
+    });
+  });
+})();
+</script>
+<script>
+(function(){
+  var touch=window.matchMedia&&!matchMedia("(hover:hover)").matches;
+  document.querySelectorAll(".fc").forEach(function(c){
+    c.addEventListener("click",function(e){
+      if(!touch||c.classList.contains("flip")) return;
+      e.preventDefault();
+      document.querySelectorAll(".fc.flip").forEach(function(x){x.classList.remove("flip");});
+      c.classList.add("flip");
+    });
+  });
+})();
+</script>
+<script>
+(function(){var v=document.querySelector(".sx-film video");if(!v)return;
+  v.muted=true; v.defaultMuted=true; v.loop=true; v.setAttribute("muted",""); v.controls=false;
+  function go(){ var p=v.play(); if(p&&p.catch) p.catch(function(){}); }
+  go(); v.addEventListener("loadeddata",go); v.addEventListener("pause",function(){ if(!document.hidden) go(); });
+  document.addEventListener("visibilitychange",function(){ if(!document.hidden) go(); });
+  ["touchstart","click","scroll","keydown"].forEach(function(ev){ window.addEventListener(ev,go,{once:true,passive:true}); });
+})();
+</script>
+</body>
+</html>
